@@ -10,32 +10,26 @@ export function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
           <div className="lg:col-span-3">
-            <div className="font-body text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight space-y-3">
-              <p>
-                Hey, how’s it going? I’m{' '}
-                <HoverableText imageUrl="https://picsum.photos/seed/hardik/200/200" imageHint="portrait person" className="font-headline">
-                  Hardik.
-                </HoverableText>
-              </p>
-              <p>
-                A{' '}
+            <div className="font-body text-4xl sm:text-5xl md:text-6xl tracking-tight !leading-tight space-y-1 text-left">
+              <div>
+                I'm Hardik, a{' '}
                 <HoverableText imageUrl="https://picsum.photos/seed/student/200/200" imageHint="student technology" className="font-headline">
-                  B.Tech Student
+                  student
                 </HoverableText>{' '}
-                &{' '}
+                and{' '}
                 <HoverableText imageUrl="https://picsum.photos/seed/developer/200/200" imageHint="code editor" className="font-headline">
-                  Web Developer.
+                  developer
                 </HoverableText>
-              </p>
-              <p>
-                Hoping to build meaningful products
+                ,
+              </div>
+              <div>
+                building things for the web. I love to
                 <br />
-                that help and{' '}
                 <HoverableText imageUrl="https://picsum.photos/seed/inspire/200/200" imageHint="inspiration lightbulb" className="font-headline">
                   inspire
                 </HoverableText>{' '}
-                others.
-              </p>
+                and create meaningful products.
+              </div>
             </div>
           </div>
           <div className="lg:col-span-2 relative h-80 w-80 lg:h-96 lg:w-96 mx-auto">
