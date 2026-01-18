@@ -50,7 +50,7 @@ export default function ProjectDetailsPage({ params }: { params: { slug:string }
             </div>
 
             {projectImage && (
-              <div className="relative aspect-video mb-8 rounded-lg overflow-hidden">
+              <div className="relative aspect-video mb-8 rounded-lg overflow-hidden border">
                 <Image 
                   src={projectImage.imageUrl}
                   alt={project.title}

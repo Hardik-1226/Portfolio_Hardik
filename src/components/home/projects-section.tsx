@@ -34,14 +34,14 @@ export function ProjectsSection() {
             return (
               <ScrollAnimation key={project.title} delay={index * 150}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                  <div className={`relative aspect-video rounded-lg overflow-hidden bg-background group ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className={`relative aspect-video rounded-lg overflow-hidden bg-background group border ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                     {projectImage && (
                       <Image
                         src={projectImage.imageUrl}
                         alt={project.title}
                         width={1280}
                         height={720}
-                        className="object-cover w-full h-full rounded-md transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                         data-ai-hint={projectImage.imageHint}
                       />
                     )}
@@ -51,13 +51,13 @@ export function ProjectsSection() {
                       {project.logo}
                     </div>
                     <h3 className="font-headline text-4xl tracking-tight">{project.title}</h3>
-                    <h4 className="font-headline text-2xl text-muted-foreground">{project.subtitle}</h4>
+                    <h4 className="font-headline text-3xl text-muted-foreground">{project.subtitle}</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <Badge key={tag} variant="secondary">{tag}</Badge>
                       ))}
                     </div>
-                    <p className="text-xl text-muted-foreground pt-2">{project.description}</p>
+                    <p className="text-2xl text-muted-foreground pt-2">{project.description}</p>
                     <Button asChild className="rounded-full mt-4">
                       <Link href={`/projects/${slug}`}>
                         View Case Study <ArrowRight className="ml-2" />
