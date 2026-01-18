@@ -60,7 +60,7 @@ export default function ProjectDetailsPage({ params }: { params: { slug: string 
             </div>
           )}
           
-          <div className="space-y-6 text-lg text-muted-foreground">
+          <div className="space-y-6 text-lg text-muted-foreground text-justify">
             <p className="lead text-xl">{project.description}</p>
             
             <h3 className="font-headline text-2xl pt-4 border-t mt-12">Project Goals</h3>

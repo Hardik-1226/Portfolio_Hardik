@@ -9,7 +9,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6">
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">About Me</h2>
-            <div className="space-y-4 text-lg text-muted-foreground">
+            <div className="space-y-4 text-lg text-muted-foreground text-justify">
               <p>
                 I’m a B.Tech student who loves building clean interfaces, scalable systems, and practical tools that help people.
               </p>

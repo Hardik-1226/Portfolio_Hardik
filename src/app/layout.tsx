@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from "@/components/ui/toaster";
+import { ChatbotWidget } from '@/components/common/chatbot-widget';
 
 export const metadata: Metadata = {
   title: 'Hardik HQ',
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={cn("font-body antialiased")}>
         {children}
         <Toaster />
+        <ChatbotWidget />
       </body>
     </html>
   );

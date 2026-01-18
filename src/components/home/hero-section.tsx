@@ -16,10 +16,10 @@ export function HeroSection() {
             <div className="text-xl sm:text-2xl text-muted-foreground font-headline">
               <HoverableText imageUrl="https://picsum.photos/seed/student/200/200" imageHint="student technology">B.Tech Student</HoverableText> & <HoverableText imageUrl="https://picsum.photos/seed/developer/200/200" imageHint="code editor">Web Developer.</HoverableText>
             </div>
-            <p className="text-xl sm:text-2xl text-muted-foreground/90">
+            <p className="text-xl sm:text-2xl text-muted-foreground/90 text-justify">
               Building modern, scalable digital products that actually solve problems.
             </p>
-            <p className="max-w-xl mx-auto lg:mx-0 text-lg text-muted-foreground/80">
+            <p className="max-w-xl mx-auto lg:mx-0 text-lg text-muted-foreground/80 text-justify">
               Passionate about full-stack development, UI engineering, and practical AI integration. Always learning. Always shipping.
             </p>
           </div>

@@ -16,7 +16,7 @@ export function ProjectsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Work</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">A selection of projects I've built, showcasing my skills in web development and problem-solving.</p>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-justify">A selection of projects I've built, showcasing my skills in web development and problem-solving.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => {

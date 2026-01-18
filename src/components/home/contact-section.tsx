@@ -20,7 +20,7 @@ export function ContactSection() {
     <section id="contact" className="py-24 sm:py-32 bg-card/50">
       <div className="container mx-auto px-4 text-center">
         <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">Get In Touch</h2>
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-justify">
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team.
         </p>
         <div className="mt-12 flex flex-wrap justify-center gap-4">

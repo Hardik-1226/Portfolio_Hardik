@@ -8,9 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/common/logo";
 
 const navLinks = [
-  { href: "/#projects", label: "Work" },
+  { href: "/#projects", label: "Projects" },
   { href: "/#about", label: "About" },
-  { href: "/explore", label: "Explore" },
 ];
 
 export function Header() {
