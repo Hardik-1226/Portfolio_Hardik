@@ -31,7 +31,7 @@ export default function ProjectDetailsPage({ params }: { params: { slug:string }
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow pt-32 sm:pt-40 pb-16 sm:pb-24 bg-violet-100/25 dark:bg-violet-950/[.125]">
+      <main className="flex-grow pt-32 sm:pt-40 pb-16 sm:pb-24 bg-violet-100/50 dark:bg-violet-950/[.25]">
         <div className="container mx-auto px-4">
           <div className="mb-8">
             <Button asChild variant="ghost" className="pl-0">
@@ -49,7 +49,7 @@ export default function ProjectDetailsPage({ params }: { params: { slug:string }
             </div>
 
             {projectImage && (
-              <div className="relative aspect-video mb-8 rounded-lg overflow-hidden border">
+              <div className="relative aspect-video mb-8 rounded-lg overflow-hidden">
                 <Image 
                   src={projectImage.imageUrl}
                   alt={project.title}

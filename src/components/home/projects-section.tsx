@@ -14,7 +14,7 @@ export function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="py-24 sm:py-32 bg-violet-100/25 dark:bg-violet-950/[.125]">
+    <section id="projects" className="py-24 sm:py-32 bg-violet-100/50 dark:bg-violet-950/[.25]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <ScrollAnimation>
@@ -33,7 +33,7 @@ export function ProjectsSection() {
             return (
               <ScrollAnimation key={project.title} delay={index * 150}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                  <div className={`relative aspect-video rounded-lg overflow-hidden border-2 p-4 bg-background shadow-lg group ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className={`relative aspect-video rounded-lg overflow-hidden border p-2 bg-background shadow-lg group ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                     {projectImage && (
                       <Image
                         src={projectImage.imageUrl}
