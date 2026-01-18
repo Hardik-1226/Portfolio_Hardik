@@ -15,7 +15,7 @@ export function HoverableText({ children, imageUrl, imageHint, className }: Hove
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <span 
+    <div 
       className="relative inline-block"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -29,6 +29,6 @@ export function HoverableText({ children, imageUrl, imageHint, className }: Hove
       >
         <Image src={imageUrl} alt="" fill className="object-cover" data-ai-hint={imageHint} sizes="10rem" />
       </div>
-    </span>
+    </div>
   );
 }

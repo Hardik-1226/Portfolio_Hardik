@@ -10,12 +10,12 @@ export function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
           <div className="lg:col-span-3 space-y-6 text-center lg:text-left">
-            <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl tracking-tight">
+            <div role="heading" aria-level={1} className="font-headline text-4xl sm:text-5xl md:text-6xl tracking-tight">
               Hey, how’s it going? I’m <HoverableText imageUrl="https://picsum.photos/seed/hardik/200/200" imageHint="portrait person">Hardik.</HoverableText>
-            </h1>
-            <p className="text-xl sm:text-2xl text-muted-foreground font-headline">
+            </div>
+            <div className="text-xl sm:text-2xl text-muted-foreground font-headline">
               <HoverableText imageUrl="https://picsum.photos/seed/student/200/200" imageHint="student technology">B.Tech Student</HoverableText> & <HoverableText imageUrl="https://picsum.photos/seed/developer/200/200" imageHint="code editor">Web Developer.</HoverableText>
-            </p>
+            </div>
             <p className="text-xl sm:text-2xl text-muted-foreground/90">
               Building modern, scalable digital products that actually solve problems.
             </p>
