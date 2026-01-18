@@ -203,7 +203,7 @@ export function ChatbotWidget() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="dark fixed bottom-6 right-6 z-50 w-80 max-w-full bg-card rounded-xl shadow-2xl border border-primary/30 flex flex-col"
+            className="fixed bottom-6 right-6 z-50 w-80 max-w-full bg-card rounded-xl shadow-2xl border border-primary/30 flex flex-col"
           >
             <div className="px-4 py-3 font-bold border-b border-primary/20 flex justify-between items-center bg-gradient-to-r from-primary to-accent rounded-t-xl">
               <div className="flex items-center space-x-2">
