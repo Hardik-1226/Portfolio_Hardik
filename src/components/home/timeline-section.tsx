@@ -3,7 +3,7 @@ import { ScrollAnimation } from "@/components/common/scroll-animation";
 
 export function TimelineSection() {
   return (
-    <section id="timeline" className="py-32 sm:py-40 bg-sky-100 dark:bg-sky-950">
+    <section id="timeline" className="py-32 sm:py-40">
       <div className="container mx-auto px-4">
         <div className="text-left mb-24">
           <ScrollAnimation>

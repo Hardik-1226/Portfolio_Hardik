@@ -34,7 +34,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-slate-100 dark:bg-slate-950">
+    <section id="contact" className="py-24 sm:py-32 bg-muted">
       <div className="container mx-auto px-4 text-center">
         <p className="text-muted-foreground mb-4">Thanks for visiting... I hope you enjoyed your stay!</p>
         <h2 className="font-headline text-4xl sm:text-5xl tracking-tight mb-4">Always curious. Constantly learning.</h2>
