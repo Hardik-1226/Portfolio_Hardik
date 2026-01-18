@@ -19,8 +19,8 @@ export function ProjectsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <ScrollAnimation>
-            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">Featured Projects</h2>
-            <div className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="font-headline text-5xl sm:text-6xl tracking-tight">Featured Projects</h2>
+            <div className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
               A selection of projects where I've turned <HoverableText imageUrl="https://picsum.photos/seed/ideas/200/200" imageHint="lightbulb idea" className="font-headline font-bold text-4xl">ideas</HoverableText> into <HoverableText imageUrl="https://picsum.photos/seed/reality/200/200" imageHint="abstract reality" className="font-headline font-bold text-4xl">reality</HoverableText>.
             </div>
           </ScrollAnimation>
@@ -50,14 +50,14 @@ export function ProjectsSection() {
                     <div className="w-12 h-12 bg-secondary text-secondary-foreground flex items-center justify-center rounded-full font-headline font-bold text-xl mb-4">
                       {project.logo}
                     </div>
-                    <h3 className="font-headline text-3xl tracking-tight">{project.title}</h3>
-                    <h4 className="font-headline text-xl text-muted-foreground">{project.subtitle}</h4>
+                    <h3 className="font-headline text-4xl tracking-tight">{project.title}</h3>
+                    <h4 className="font-headline text-2xl text-muted-foreground">{project.subtitle}</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <Badge key={tag} variant="secondary">{tag}</Badge>
                       ))}
                     </div>
-                    <p className="text-lg text-muted-foreground pt-2">{project.description}</p>
+                    <p className="text-xl text-muted-foreground pt-2">{project.description}</p>
                     <Button asChild className="rounded-full mt-4">
                       <Link href={`/projects/${slug}`}>
                         View Case Study <ArrowRight className="ml-2" />
