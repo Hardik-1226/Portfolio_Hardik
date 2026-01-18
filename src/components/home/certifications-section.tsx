@@ -14,8 +14,13 @@ export function CertificationsSection() {
   return (
     <section id="certifications" className="py-24 sm:py-32">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <ScrollAnimation>
+        <div className="text-center mb-16 relative">
+          <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+            <span className="text-[15vw] font-headline font-extrabold text-foreground/10 select-none">
+                CERTIFY
+            </span>
+          </div>
+          <ScrollAnimation className="relative z-10">
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Certifications</h2>
             <div className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
               A testament to my commitment to continuous <HoverableText imageUrl="https://picsum.photos/seed/learning/200/200" imageHint="books study" className="font-headline font-bold text-3xl">learning</HoverableText> and skill <HoverableText imageUrl="https://picsum.photos/seed/development/200/200" imageHint="growing plant" className="font-headline font-bold text-3xl">development</HoverableText>.

@@ -21,9 +21,18 @@ export function AboutSection() {
   return (
     <section id="about" className="py-24 sm:py-32 bg-muted">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-16 relative">
+          <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+            <span className="text-[15vw] font-headline font-extrabold text-foreground/10 select-none">
+              ABOUT
+            </span>
+          </div>
+          <ScrollAnimation className="relative z-10">
+            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">About Me</h2>
+          </ScrollAnimation>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6 text-center lg:text-left">
-            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">About Me</h2>
             <div className="space-y-4 text-2xl text-muted-foreground text-justify">
               <Typewriter>
                 I’m a B.Tech student who loves building clean <HoverableText
