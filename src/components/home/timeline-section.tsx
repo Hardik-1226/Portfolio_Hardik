@@ -11,7 +11,7 @@ export function TimelineSection() {
   }
 
   return (
-    <section id="timeline" className="py-32 sm:py-40 bg-sky-100/50 dark:bg-sky-950/25">
+    <section id="timeline" className="py-32 sm:py-40 bg-sky-100/25 dark:bg-sky-950/[.125]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-24">
           <ScrollAnimation>

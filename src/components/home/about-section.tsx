@@ -9,7 +9,7 @@ export function AboutSection() {
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-visual');
 
   return (
-    <section id="about" className="py-24 sm:py-32 bg-emerald-100/50 dark:bg-emerald-950/25">
+    <section id="about" className="py-24 sm:py-32 bg-emerald-100/25 dark:bg-emerald-950/[.125]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6 text-center lg:text-left">
