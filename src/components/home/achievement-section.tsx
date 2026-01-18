@@ -17,13 +17,15 @@ export function AchievementSection() {
     }
 
   return (
-    <section id="achievements" className="py-24 sm:py-32 bg-muted/50 relative">
-        <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-            <span className="text-[25vw] font-headline font-extrabold text-foreground/10 select-none">ACHIEVE</span>
-        </div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <ScrollAnimation>
+    <section id="achievements" className="py-24 sm:py-32 bg-muted/50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 relative">
+          <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+            <span className="text-[15vw] font-headline font-extrabold text-foreground/10 select-none">
+              ACHIEVE
+            </span>
+          </div>
+          <ScrollAnimation className="relative z-10">
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Achievements</h2>
             <p className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
               A few of the milestones I'm proud of.
