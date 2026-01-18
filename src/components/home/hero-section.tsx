@@ -10,7 +10,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
           <div className="lg:col-span-3">
-            <div className="font-body text-4xl sm:text-5xl md:text-6xl tracking-tight !leading-tight space-y-1 text-left">
+            <div className="font-body text-3xl sm:text-4xl md:text-5xl tracking-tight !leading-tight space-y-1 text-left">
               <div>
                 I'm Hardik, a{' '}
                 <HoverableText imageUrl="https://picsum.photos/seed/student/200/200" imageHint="student technology" className="font-headline">
