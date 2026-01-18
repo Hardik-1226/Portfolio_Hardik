@@ -33,14 +33,14 @@ export function ProjectsSection() {
             return (
               <ScrollAnimation key={project.title} delay={index * 150}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                  <div className={`relative aspect-video rounded-lg overflow-hidden border-2 p-4 bg-background shadow-lg ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className={`relative aspect-video rounded-lg overflow-hidden border-2 p-4 bg-background shadow-lg group ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                     {projectImage && (
                       <Image
                         src={projectImage.imageUrl}
                         alt={project.title}
                         width={1280}
                         height={720}
-                        className="object-cover w-full h-full rounded-md"
+                        className="object-cover w-full h-full rounded-md transition-transform duration-500 group-hover:scale-105"
                         data-ai-hint={projectImage.imageHint}
                       />
                     )}
