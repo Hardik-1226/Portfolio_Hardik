@@ -53,8 +53,8 @@ export function Header() {
               className={cn(
                 "px-4 py-2 rounded-full text-sm font-medium transition-colors",
                 (pathname === link.href || (link.href.startsWith('/#') && pathname === '/'))
-                  ? "text-primary-foreground bg-primary/70"
-                  : "hover:bg-secondary/80 text-muted-foreground hover:text-secondary-foreground"
+                  ? "text-foreground font-semibold"
+                  : "text-muted-foreground hover:text-foreground"
               )}
             >
               {link.label}
