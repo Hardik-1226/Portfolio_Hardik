@@ -7,9 +7,9 @@ export function AboutSection() {
     <section id="about" className="py-24 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div className="space-y-6">
+          <div className="space-y-6 text-center lg:text-left">
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">About Me</h2>
-            <div className="space-y-4 text-lg text-muted-foreground text-justify">
+            <div className="space-y-4 text-lg text-muted-foreground text-center">
               <p>
                 I’m a B.Tech student who loves building clean interfaces, scalable systems, and practical tools that help people.
               </p>
@@ -19,7 +19,7 @@ export function AboutSection() {
             </div>
           </div>
           <div className="space-y-8">
-            <h3 className="font-headline text-3xl tracking-tight">My Skillset</h3>
+            <h3 className="font-headline text-3xl tracking-tight text-center lg:text-left">My Skillset</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {Object.entries(skills).map(([category, skillList]) => (
                 <Card key={category} className="shadow-sm bg-card/80">

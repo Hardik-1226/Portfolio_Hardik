@@ -16,7 +16,7 @@ export function ProjectsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Work</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-justify">A selection of projects I've built, showcasing my skills in web development and problem-solving.</p>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-center">A selection of projects I've built, showcasing my skills in web development and problem-solving.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => {
@@ -24,7 +24,7 @@ export function ProjectsSection() {
             const slug = slugify(project.title);
             return (
               <Link href={`/projects/${slug}`} key={project.title} className="block group">
-                <Card className="flex flex-col h-full overflow-hidden transform group-hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-lg hover:shadow-2xl">
+                <Card className="flex flex-col h-full overflow-hidden transform group-hover:-translate-y-2 transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl border-2 border-transparent group-hover:border-primary">
                   {projectImage && (
                     <div className="aspect-video overflow-hidden">
                       <Image

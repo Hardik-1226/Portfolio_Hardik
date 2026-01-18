@@ -3,7 +3,7 @@
 import { contact } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Download, Linkedin, Github } from "lucide-react";
+import { Mail, Download, Linkedin, Github, AtSign, Send } from "lucide-react";
 
 export function ContactSection() {
   const { toast } = useToast();
@@ -17,10 +17,12 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-card/50">
-      <div className="container mx-auto px-4 text-center">
+    <section id="contact" className="py-24 sm:py-32 bg-card/50 relative overflow-hidden">
+      <AtSign className="absolute -left-4 -top-4 text-primary/10 w-32 h-32 animate-pulse" />
+      <Send className="absolute -right-8 -bottom-8 text-accent/10 w-40 h-40 animate-pulse" style={{ animationDelay: '500ms' }} />
+      <div className="container mx-auto px-4 text-center relative z-10">
         <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">Get In Touch</h2>
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-justify">
+        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-center">
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team.
         </p>
         <div className="mt-12 flex flex-wrap justify-center gap-4">

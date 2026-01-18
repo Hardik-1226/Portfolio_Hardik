@@ -41,9 +41,9 @@ export default function ProjectDetailsPage({ params }: { params: { slug: string 
           </Button>
         </div>
         <article className="max-w-4xl mx-auto">
-          <h1 className="font-headline text-4xl sm:text-5xl tracking-tight mb-4">{project.title}</h1>
+          <h1 className="font-headline text-4xl sm:text-5xl tracking-tight mb-4 text-center">{project.title}</h1>
           
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="flex flex-wrap gap-2 mb-8 justify-center">
             {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
           </div>
 
@@ -60,7 +60,7 @@ export default function ProjectDetailsPage({ params }: { params: { slug: string 
             </div>
           )}
           
-          <div className="space-y-6 text-lg text-muted-foreground text-justify">
+          <div className="space-y-6 text-lg text-muted-foreground text-center">
             <p className="lead text-xl">{project.description}</p>
             
             <h3 className="font-headline text-2xl pt-4 border-t mt-12">Project Goals</h3>
