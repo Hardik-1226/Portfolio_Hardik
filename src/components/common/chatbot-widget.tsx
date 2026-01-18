@@ -17,7 +17,7 @@ export function ChatbotWidget() {
           <TooltipTrigger asChild>
             <Button
               size="icon"
-              className="rounded-full w-16 h-16 bg-primary text-primary-foreground shadow-lg animate-pulse hover:animate-none"
+              className="rounded-full w-16 h-16 bg-primary text-primary-foreground shadow-lg"
               onClick={() => {
                 // Chatbot functionality to be added later
                 // You can open a chat modal here.
