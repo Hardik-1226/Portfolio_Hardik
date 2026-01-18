@@ -190,7 +190,7 @@ export function ChatbotWidget() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsExpanded(true)}
-            className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-accent text-accent-foreground rounded-full shadow-lg flex items-center justify-center text-2xl overflow-hidden"
+            className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-primary text-primary-foreground rounded-full shadow-lg flex items-center justify-center text-2xl overflow-hidden"
             aria-label="Open AI Chat"
           >
             <Bot className="w-8 h-8" />
@@ -207,7 +207,7 @@ export function ChatbotWidget() {
             transition={{ type: "spring", duration: 0.5 }}
             className="fixed bottom-6 right-6 z-50 w-80 max-w-full bg-card rounded-xl shadow-2xl border border-primary/30 flex flex-col"
           >
-            <div className="px-4 py-3 font-bold border-b border-primary/20 flex justify-between items-center bg-gradient-to-r from-primary to-accent rounded-t-xl">
+            <div className="px-4 py-3 font-bold border-b border-primary/20 flex justify-between items-center bg-primary rounded-t-xl">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 rounded-full bg-background/20 flex items-center justify-center overflow-hidden">
                   <Bot className="w-6 h-6 text-primary-foreground" />
@@ -242,14 +242,14 @@ export function ChatbotWidget() {
                     }`}
                   >
                     <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 ${
-                      msg.from === 'user' ? 'bg-primary' : 'bg-accent'
+                      msg.from === 'user' ? 'bg-primary' : 'bg-secondary'
                     }`}>
-                      {msg.from === 'user' ? <User className="text-primary-foreground text-xs" /> : <Bot className="w-4 h-4 text-accent-foreground" />}
+                      {msg.from === 'user' ? <User className="text-primary-foreground text-xs" /> : <Bot className="w-4 h-4 text-secondary-foreground" />}
                     </div>
                     <div className={`text-sm rounded-lg px-3 py-2 max-w-[80%] ${
                       msg.from === 'user' 
                         ? 'bg-primary text-primary-foreground' 
-                        : 'bg-accent text-accent-foreground'
+                        : 'bg-secondary text-secondary-foreground'
                     }`}>
                       {msg.text}
                     </div>
@@ -265,10 +265,10 @@ export function ChatbotWidget() {
                   transition={{ duration: 0.3 }}
                   className="flex items-start space-x-2"
                 >
-                  <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                    <Bot className="w-4 h-4 text-accent-foreground" />
+                  <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                    <Bot className="w-4 h-4 text-secondary-foreground" />
                   </div>
-                  <div className="bg-accent text-accent-foreground rounded-lg px-3 py-2">
+                  <div className="bg-secondary text-secondary-foreground rounded-lg px-3 py-2">
                     <span className="typing-indicator"></span>
                   </div>
                 </motion.div>
