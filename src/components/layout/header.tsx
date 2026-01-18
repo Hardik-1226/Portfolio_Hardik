@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/#projects", label: "Projects" },
   { href: "/#timeline", label: "Timeline" },
   { href: "/#about", label: "About" },
+  { href: "/#certifications", label: "Certifications" },
 ];
 
 export function Header() {
@@ -37,8 +38,8 @@ export function Header() {
         className={cn(
           "flex items-center mx-auto transition-all duration-300 p-2",
           isScrolled
-            ? "w-[95%] max-w-4xl rounded-full bg-card/70 backdrop-blur-lg border shadow-sm"
-            : "max-w-5xl bg-transparent"
+            ? "w-[95%] max-w-5xl rounded-full bg-card/70 backdrop-blur-lg border shadow-sm"
+            : "max-w-6xl bg-transparent"
         )}
       >
         <Link href="/" className="flex items-center gap-2 font-bold text-lg p-2" aria-label="Back to homepage">

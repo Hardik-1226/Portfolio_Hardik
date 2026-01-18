@@ -45,25 +45,48 @@ export const timeline = [
     year: "2020",
     title: "Started B.Tech in Computer Science",
     description: "Began my journey into the world of technology at University, building a strong foundation in programming and computer science fundamentals.",
+    image: "timeline-2020",
   },
   {
     year: "2021",
     title: "Dived into Web Development",
     description: "Fell in love with creating for the web. Spent the year mastering JavaScript, React, and the fundamentals of building interactive user interfaces.",
+    image: "timeline-2021",
   },
   {
     year: "2022",
     title: "First Major Project & Backend Exploration",
     description: "Built my first full-stack application and started exploring backend technologies like Node.js and Express, connecting databases and building APIs.",
+    image: "timeline-2022",
   },
   {
     year: "2023",
     title: "Developed SheSecure & Explored AI",
     description: "Led the development of an AI-powered women's safety application, integrating computer vision and real-time data processing.",
+    image: "timeline-2023",
   },
   {
     year: "2024",
     title: "Advanced Frontend & GenAI",
     description: "Focusing on advanced Next.js concepts, performance optimization, and integrating generative AI to build smarter, more capable applications.",
+    image: "timeline-2024",
   },
+];
+
+export const certifications = [
+    {
+        title: "Google AI Essentials",
+        issuer: "Google",
+        image: "cert-google-ai"
+    },
+    {
+        title: "Responsive Web Design",
+        issuer: "freeCodeCamp",
+        image: "cert-fcc"
+    },
+    {
+        title: "JavaScript Algorithms and Data Structures",
+        issuer: "freeCodeCamp",
+        image: "cert-js"
+    }
 ];
