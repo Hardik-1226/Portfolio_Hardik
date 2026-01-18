@@ -31,7 +31,7 @@ export default function ProjectDetailsPage({ params }: { params: { slug:string }
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow pt-32 sm:pt-40 pb-16 sm:pb-24 bg-violet-100/50 dark:bg-violet-950/[.25]">
+      <main className="flex-grow pt-32 sm:pt-40 pb-16 sm:pb-24 bg-violet-100 dark:bg-violet-950">
         <div className="container mx-auto px-4">
           <div className="mb-8">
             <Button asChild variant="ghost" className="pl-0">

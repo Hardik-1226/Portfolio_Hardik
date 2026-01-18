@@ -11,7 +11,7 @@ export function CertificationsSection() {
     }
 
   return (
-    <section id="certifications" className="py-24 sm:py-32 bg-amber-100/50 dark:bg-amber-950/[.25]">
+    <section id="certifications" className="py-24 sm:py-32 bg-amber-100 dark:bg-amber-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <ScrollAnimation>
