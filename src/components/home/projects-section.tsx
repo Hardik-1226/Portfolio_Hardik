@@ -34,7 +34,7 @@ export function ProjectsSection() {
             return (
               <ScrollAnimation key={project.title} delay={index * 150}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                  <div className={`relative aspect-video rounded-lg overflow-hidden bg-background group border ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className={`relative aspect-video rounded-lg overflow-hidden bg-background group border-2 border-white ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                     {projectImage && (
                       <Image
                         src={projectImage.imageUrl}
@@ -57,7 +57,7 @@ export function ProjectsSection() {
                         <Badge key={tag} variant="secondary">{tag}</Badge>
                       ))}
                     </div>
-                    <p className="text-2xl text-muted-foreground pt-2">{project.description}</p>
+                    <p className="text-3xl text-muted-foreground pt-2">{project.description}</p>
                     <Button asChild className="rounded-full mt-4">
                       <Link href={`/projects/${slug}`}>
                         View Case Study <ArrowRight className="ml-2" />
