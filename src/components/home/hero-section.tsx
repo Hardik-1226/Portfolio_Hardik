@@ -10,25 +10,48 @@ export function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
           <div className="lg:col-span-3">
-            <div className="font-body text-3xl sm:text-4xl md:text-5xl tracking-tight !leading-tight space-y-1 text-left">
+            <div className="font-body text-2xl sm:text-3xl md:text-4xl tracking-tight leading-snug space-y-3 text-left">
               <div>
-                I'm Hardik, a{' '}
-                <HoverableText imageUrl="https://picsum.photos/seed/student/200/200" imageHint="student technology" className="font-headline">
+                Hey, how's it going? I'm{' '}
+                <HoverableText
+                  imageUrl="https://picsum.photos/seed/portrait/200/200"
+                  imageHint="portrait person"
+                  className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl"
+                >
+                  Hardik
+                </HoverableText>
+                .
+              </div>
+              <div>
+                A{' '}
+                <HoverableText
+                  imageUrl="https://picsum.photos/seed/student/200/200"
+                  imageHint="student technology"
+                  className="font-headline"
+                >
                   student
                 </HoverableText>{' '}
                 and{' '}
-                <HoverableText imageUrl="https://picsum.photos/seed/developer/200/200" imageHint="code editor" className="font-headline">
+                <HoverableText
+                  imageUrl="https://picsum.photos/seed/developer/200/200"
+                  imageHint="code editor"
+                  className="font-headline"
+                >
                   developer
                 </HoverableText>
-                ,
+                .
               </div>
+              <div>Hoping to build meaningful products</div>
               <div>
-                building things for the web. I love to
-                <br />
-                <HoverableText imageUrl="https://picsum.photos/seed/inspire/200/200" imageHint="inspiration lightbulb" className="font-headline">
+                that help and{' '}
+                <HoverableText
+                  imageUrl="https://picsum.photos/seed/inspire/200/200"
+                  imageHint="inspiration lightbulb"
+                  className="font-headline"
+                >
                   inspire
                 </HoverableText>{' '}
-                and create meaningful products.
+                others.
               </div>
             </div>
           </div>
