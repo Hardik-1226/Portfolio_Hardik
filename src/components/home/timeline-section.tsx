@@ -9,8 +9,8 @@ export function TimelineSection() {
         <div className="text-left mb-24">
           <ScrollAnimation>
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Journey</h2>
-            <div className="mt-4 text-lg text-muted-foreground max-w-2xl">
-              A timeline of my key <HoverableText imageUrl="https://picsum.photos/seed/milestones/200/200" imageHint="stone path" className="font-headline text-xl">milestones</HoverableText> and <HoverableText imageUrl="https://picsum.photos/seed/experiences/200/200" imageHint="personal journey" className="font-headline text-xl">experiences</HoverableText> in the world of tech.
+            <div className="mt-4 text-2xl text-muted-foreground max-w-2xl">
+              A timeline of my key <HoverableText imageUrl="https://picsum.photos/seed/milestones/200/200" imageHint="stone path" className="font-headline font-bold text-3xl">milestones</HoverableText> and <HoverableText imageUrl="https://picsum.photos/seed/experiences/200/200" imageHint="personal journey" className="font-headline font-bold text-3xl">experiences</HoverableText> in the world of tech.
             </div>
           </ScrollAnimation>
         </div>
@@ -27,7 +27,7 @@ export function TimelineSection() {
                       delay={100}
                       className="pl-12 md:pl-0 md:text-right"
                     >
-                      <p className="font-body font-bold text-8xl sm:text-9xl text-foreground/10 leading-none">
+                      <p className="font-body font-extrabold text-9xl sm:text-[10rem] text-foreground leading-none">
                         {(index + 1).toString().padStart(2, '0')}.
                       </p>
                     </ScrollAnimation>
@@ -37,8 +37,8 @@ export function TimelineSection() {
                       delay={200}
                       className="pl-12 md:pl-0 mt-8 md:mt-0"
                     >
-                      <h4 className="font-body text-3xl sm:text-4xl font-bold">{item.title}</h4>
-                      <p className="text-muted-foreground text-lg mt-4">{item.description}</p>
+                      <h4 className="font-body text-4xl sm:text-5xl font-bold">{item.title}</h4>
+                      <p className="text-xl text-muted-foreground mt-4">{item.description}</p>
                     </ScrollAnimation>
                   </div>
                 </li>

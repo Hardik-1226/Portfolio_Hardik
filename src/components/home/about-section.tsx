@@ -5,6 +5,7 @@ import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ScrollAnimation } from "../common/scroll-animation";
 import { HoverableText } from "../common/hoverable-text";
+import { Typewriter } from "../common/typewriter";
 
 const categoryIcons: { [key: string]: React.ReactNode } = {
   "Frontend": <Code2 className="h-6 w-6 text-accent" />,
@@ -23,31 +24,31 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6 text-center lg:text-left">
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">About Me</h2>
-            <div className="space-y-4 text-lg text-muted-foreground text-justify">
-              <div>
+            <div className="space-y-4 text-2xl text-muted-foreground text-justify">
+              <Typewriter>
                 I’m a B.Tech student who loves building clean <HoverableText
                   imageUrl="https://picsum.photos/seed/interfaces/200/200"
                   imageHint="clean interface"
-                  className="font-headline text-xl"
+                  className="font-headline font-bold text-3xl"
                 >
                   interfaces
                 </HoverableText>, scalable <HoverableText
                   imageUrl="https://picsum.photos/seed/systems/200/200"
                   imageHint="scalable systems"
-                  className="font-headline text-xl"
+                  className="font-headline font-bold text-3xl"
                 >
                   systems
                 </HoverableText>, and practical <HoverableText
                   imageUrl="https://picsum.photos/seed/tools/200/200"
                   imageHint="practical tools"
-                  className="font-headline text-xl"
+                  className="font-headline font-bold text-3xl"
                 >
                   tools
                 </HoverableText> that help people.
-              </div>
-              <div>
+              </Typewriter>
+              <Typewriter>
                 I enjoy experimenting with modern web stacks, shipping fast, and continuously improving my craft. My passion lies at the intersection of design, technology, and user experience.
-              </div>
+              </Typewriter>
             </div>
             {aboutImage && (
               <div className="pt-8 flex justify-center lg:justify-start">

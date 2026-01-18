@@ -17,8 +17,8 @@ export function CertificationsSection() {
         <div className="text-center mb-16">
           <ScrollAnimation>
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Certifications</h2>
-            <div className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              A testament to my commitment to continuous <HoverableText imageUrl="https://picsum.photos/seed/learning/200/200" imageHint="books study" className="font-headline text-xl">learning</HoverableText> and skill <HoverableText imageUrl="https://picsum.photos/seed/development/200/200" imageHint="growing plant" className="font-headline text-xl">development</HoverableText>.
+            <div className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
+              A testament to my commitment to continuous <HoverableText imageUrl="https://picsum.photos/seed/learning/200/200" imageHint="books study" className="font-headline font-bold text-3xl">learning</HoverableText> and skill <HoverableText imageUrl="https://picsum.photos/seed/development/200/200" imageHint="growing plant" className="font-headline font-bold text-3xl">development</HoverableText>.
             </div>
           </ScrollAnimation>
         </div>

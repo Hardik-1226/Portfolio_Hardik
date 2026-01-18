@@ -10,8 +10,8 @@ export default function ExplorePage() {
       <main className="flex-grow container mx-auto px-4 pt-32 sm:pt-40 pb-16 sm:pb-24">
         <div className="text-center mb-12">
           <h1 className="font-headline text-4xl sm:text-5xl tracking-tight">Code Readability Analyzer</h1>
-          <div className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto text-justify">
-            Powered by GenAI, this tool analyzes your code snippets for <HoverableText imageUrl="https://picsum.photos/seed/readability/200/200" imageHint="open book" className="font-headline text-xl">readability</HoverableText> and <HoverableText imageUrl="https://picsum.photos/seed/maintainability/200/200" imageHint="tools wrench" className="font-headline text-xl">maintainability</HoverableText>, providing scores and suggestions for improvement.
+          <div className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto text-justify">
+            Powered by GenAI, this tool analyzes your code snippets for <HoverableText imageUrl="https://picsum.photos/seed/readability/200/200" imageHint="open book" className="font-headline font-bold text-3xl">readability</HoverableText> and <HoverableText imageUrl="https://picsum.photos/seed/maintainability/200/200" imageHint="tools wrench" className="font-headline font-bold text-3xl">maintainability</HoverableText>, providing scores and suggestions for improvement.
           </div>
         </div>
         <CodeAnalyzerForm />

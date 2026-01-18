@@ -20,8 +20,8 @@ export function ProjectsSection() {
         <div className="text-center mb-16">
           <ScrollAnimation>
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">Featured Projects</h2>
-            <div className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              A selection of projects where I've turned <HoverableText imageUrl="https://picsum.photos/seed/ideas/200/200" imageHint="lightbulb idea" className="font-headline text-xl">ideas</HoverableText> into <HoverableText imageUrl="https://picsum.photos/seed/reality/200/200" imageHint="abstract reality" className="font-headline text-xl">reality</HoverableText>.
+            <div className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
+              A selection of projects where I've turned <HoverableText imageUrl="https://picsum.photos/seed/ideas/200/200" imageHint="lightbulb idea" className="font-headline font-bold text-3xl">ideas</HoverableText> into <HoverableText imageUrl="https://picsum.photos/seed/reality/200/200" imageHint="abstract reality" className="font-headline font-bold text-3xl">reality</HoverableText>.
             </div>
           </ScrollAnimation>
         </div>
@@ -57,7 +57,7 @@ export function ProjectsSection() {
                         <Badge key={tag} variant="secondary">{tag}</Badge>
                       ))}
                     </div>
-                    <p className="text-muted-foreground pt-2">{project.description}</p>
+                    <p className="text-xl text-muted-foreground pt-2">{project.description}</p>
                     <Button asChild className="rounded-full mt-4">
                       <Link href={`/projects/${slug}`}>
                         View Case Study <ArrowRight className="ml-2" />

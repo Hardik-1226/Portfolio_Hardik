@@ -62,17 +62,17 @@ export default function ProjectDetailsPage({ params }: { params: { slug:string }
               </div>
             )}
             
-            <div className="space-y-6 text-lg text-muted-foreground text-center">
-              <div className="lead text-xl">{project.description}</div>
+            <div className="space-y-6 text-2xl text-muted-foreground text-center">
+              <div className="lead text-3xl">{project.description}</div>
               
               <h3 className="font-headline text-2xl pt-4 border-t mt-12">Project Goals</h3>
-              <div>The main goal of this project was to explore the <HoverableText imageUrl="https://picsum.photos/seed/possibilities/200/200" imageHint="galaxy stars" className="font-headline text-xl">possibilities</HoverableText> of integrating modern web <HoverableText imageUrl="https://picsum.photos/seed/technologies/200/200" imageHint="circuit board" className="font-headline text-xl">technologies</HoverableText> to solve a real-world problem. We focused on creating a seamless user experience, ensuring scalability, and maintaining a high level of code quality through best practices in frontend and backend development.</div>
+              <div>The main goal of this project was to explore the <HoverableText imageUrl="https://picsum.photos/seed/possibilities/200/200" imageHint="galaxy stars" className="font-headline font-bold text-3xl">possibilities</HoverableText> of integrating modern web <HoverableText imageUrl="https://picsum.photos/seed/technologies/200/200" imageHint="circuit board" className="font-headline font-bold text-3xl">technologies</HoverableText> to solve a real-world problem. We focused on creating a seamless user experience, ensuring scalability, and maintaining a high level of code quality through best practices in frontend and backend development.</div>
               
               <h3 className="font-headline text-2xl pt-4 border-t mt-12">Challenges Faced</h3>
-              <div>One of the biggest challenges was to ensure the application was <HoverableText imageUrl="https://picsum.photos/seed/performant/200/200" imageHint="fast car" className="font-headline text-xl">performant</HoverableText> across all devices. We overcame this by implementing server-side rendering with Next.js and optimizing our static assets. Another challenge was managing state in a complex application, which we solved using React's context API combined with custom hooks for a clean and <HoverableText imageUrl="https://picsum.photos/seed/maintainable/200/200" imageHint="gears machine" className="font-headline text-xl">maintainable</HoverableText> architecture.</div>
+              <div>One of the biggest challenges was to ensure the application was <HoverableText imageUrl="https://picsum.photos/seed/performant/200/200" imageHint="fast car" className="font-headline font-bold text-3xl">performant</HoverableText> across all devices. We overcame this by implementing server-side rendering with Next.js and optimizing our static assets. Another challenge was managing state in a complex application, which we solved using React's context API combined with custom hooks for a clean and <HoverableText imageUrl="https://picsum.photos/seed/maintainable/200/200" imageHint="gears machine" className="font-headline font-bold text-3xl">maintainable</HoverableText> architecture.</div>
 
               <h3 className="font-headline text-2xl pt-4 border-t mt-12">What I Learned</h3>
-              <div>This project was a great <HoverableText imageUrl="https://picsum.photos/seed/learning-exp/200/200" imageHint="brain lightbulb" className="font-headline text-xl">learning experience</HoverableText>. I deepened my understanding of full-stack development, especially in building and deploying scalable applications with Vercel. I also improved my skills in creating responsive and accessible user interfaces with Tailwind CSS and ShadCN UI.</div>
+              <div>This project was a great <HoverableText imageUrl="https://picsum.photos/seed/learning-exp/200/200" imageHint="brain lightbulb" className="font-headline font-bold text-3xl">learning experience</HoverableText>. I deepened my understanding of full-stack development, especially in building and deploying scalable applications with Vercel. I also improved my skills in creating responsive and accessible user interfaces with Tailwind CSS and ShadCN UI.</div>
             </div>
           </article>
         </div>
