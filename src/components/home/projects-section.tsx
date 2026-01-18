@@ -69,6 +69,13 @@ export function ProjectsSection() {
             );
           })}
         </div>
+        <div className="text-center mt-20">
+          <Button asChild size="lg" className="rounded-full" variant="outline">
+            <Link href="/explore">
+              More Projects <ArrowRight className="ml-2" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
