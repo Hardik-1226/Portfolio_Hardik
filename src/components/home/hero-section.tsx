@@ -11,8 +11,12 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
           <div className="lg:col-span-3 space-y-6 text-center">
             <div role="heading" aria-level={1} className="font-headline text-4xl sm:text-5xl md:text-6xl tracking-tight">
-              <span className="inline-block animate-typing-main overflow-hidden whitespace-nowrap border-r-2 border-r-primary pr-1 align-bottom">Hey, how’s it going? I’m&nbsp;</span>
-              <HoverableText imageUrl="https://picsum.photos/seed/hardik/200/200" imageHint="portrait person">Hardik.</HoverableText>
+              <div>
+                <span className="inline-block animate-typing-main overflow-hidden whitespace-nowrap border-r-2 border-r-primary pr-1 align-bottom">Hey, how’s it going? I’m</span>
+              </div>
+              <div className="pt-1">
+                <HoverableText imageUrl="https://picsum.photos/seed/hardik/200/200" imageHint="portrait person">Hardik.</HoverableText>
+              </div>
             </div>
             <div className="text-xl sm:text-2xl text-muted-foreground font-headline">
                 <div className="inline-block animate-typing-subtitle overflow-hidden whitespace-nowrap border-r-2 border-r-primary pr-1 align-bottom">

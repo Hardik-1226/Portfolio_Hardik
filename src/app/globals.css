@@ -20,7 +20,7 @@
     --secondary-foreground: 211 33% 25%;
 
     --muted: 220 13% 91%;
-    --muted-foreground: 220 9% 45%;
+    --muted-foreground: 220 9% 30%;
 
     --accent: 220 14% 75%;
     --accent-foreground: 220 14% 15%;
@@ -81,7 +81,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: radial-gradient(hsl(var(--muted-foreground) / 0.65) 1.5px, transparent 1.5px),
+    background-image: radial-gradient(hsl(var(--muted-foreground) / 0.52) 1.5px, transparent 1.5px),
                       linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
     background-attachment: fixed;
     background-size: 1.8rem 1.8rem, cover;

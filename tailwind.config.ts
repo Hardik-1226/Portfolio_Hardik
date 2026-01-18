@@ -100,7 +100,7 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'typing-main': 'typing 2s steps(28, end) forwards, blink-caret .75s step-end 5',
+        'typing-main': 'typing 2s steps(24, end) forwards, blink-caret .75s step-end 5',
         'typing-subtitle': 'typing 3.5s steps(40, end) 2s forwards, blink-caret .75s step-end infinite 2s',
       },
     },
