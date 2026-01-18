@@ -161,14 +161,16 @@ export function ChatbotWidget() {
   };
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages, isTyping]);
+    if (isExpanded) {
+      scrollToBottom();
+    }
+  }, [messages, isTyping, isExpanded]);
 
   const handleSend = () => {
     if (!input.trim()) return;
     
-    setMessages(msgs => [...msgs, { from: 'user', text: input }]);
     const currentInput = input;
+    setMessages(msgs => [...msgs, { from: 'user', text: currentInput }]);
     setInput('');
     
     setIsTyping(true);
@@ -247,30 +249,30 @@ export function ChatbotWidget() {
                     <div className={`text-sm rounded-lg px-3 py-2 max-w-[80%] ${
                       msg.from === 'user' 
                         ? 'bg-primary text-primary-foreground' 
-                        : 'bg-secondary text-secondary-foreground'
+                        : 'bg-accent text-accent-foreground'
                     }`}>
                       {msg.text}
                     </div>
                   </motion.div>
                 ))}
-                {isTyping && (
-                  <motion.div
-                    key="typing-indicator"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3 }}
-                    className="flex items-start space-x-2"
-                  >
-                    <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                      <Bot className="w-4 h-4 text-accent-foreground" />
-                    </div>
-                    <div className="bg-secondary text-secondary-foreground rounded-lg px-3 py-2">
-                      <span className="typing-indicator"></span>
-                    </div>
-                  </motion.div>
-                )}
               </AnimatePresence>
+              {isTyping && (
+                <motion.div
+                  key="typing-indicator"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex items-start space-x-2"
+                >
+                  <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                    <Bot className="w-4 h-4 text-accent-foreground" />
+                  </div>
+                  <div className="bg-accent text-accent-foreground rounded-lg px-3 py-2">
+                    <span className="typing-indicator"></span>
+                  </div>
+                </motion.div>
+              )}
               <div ref={messagesEndRef} />
             </div>
 
