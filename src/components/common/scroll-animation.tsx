@@ -22,10 +22,8 @@ export function ScrollAnimation({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
+        // Set visibility based on whether the element is intersecting
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.1 }
     );
