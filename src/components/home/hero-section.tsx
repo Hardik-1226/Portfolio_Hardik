@@ -4,6 +4,7 @@ import { HoverableText } from "@/components/common/hoverable-text";
 
 export function HeroSection() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-image');
+  const hardikPortraitImage = PlaceHolderImages.find(img => img.id === 'hardik-portrait');
 
   return (
     <section className="py-24 sm:py-32">
@@ -14,8 +15,8 @@ export function HeroSection() {
               <div>
                 Hey, how's it going? I'm{' '}
                 <HoverableText
-                  imageUrl="https://picsum.photos/seed/portrait/200/200"
-                  imageHint="portrait person"
+                  imageUrl={hardikPortraitImage?.imageUrl || "https://picsum.photos/seed/portrait/200/200"}
+                  imageHint={hardikPortraitImage?.imageHint || "portrait person"}
                   className="font-headline font-bold text-4xl sm:text-5xl md:text-6xl"
                 >
                   Hardik
