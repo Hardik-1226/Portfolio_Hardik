@@ -73,6 +73,27 @@ export const timeline = [
   },
 ];
 
+export const achievements = [
+    {
+        title: "Hackathon Winner - 1st Place",
+        description: "Awarded first place in the National Innovation Hackathon 2023 for developing a novel solution for urban mobility.",
+        image: "achievement-hackathon",
+        icon: "hackathon"
+    },
+    {
+        title: "Dean's List for Academic Excellence",
+        description: "Consistently placed on the Dean's List for outstanding academic performance, maintaining a GPA above 3.8.",
+        image: "achievement-academic",
+        icon: "academic"
+    },
+    {
+        title: "Published Technical Article",
+        description: "Authored a well-received article on modern frontend architecture, published on a popular tech blog, reaching over 20,000 readers.",
+        image: "achievement-article",
+        icon: "publication"
+    }
+];
+
 export const certifications = [
     {
         title: "Google AI Essentials",
