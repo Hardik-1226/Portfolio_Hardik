@@ -17,9 +17,9 @@ export function AchievementSection() {
     }
 
   return (
-    <section id="achievements" className="py-24 sm:py-32 bg-muted/50 relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center z-0">
-            <span className="text-[20vw] font-headline font-extrabold text-foreground/5 opacity-50 select-none">ACHIEVE</span>
+    <section id="achievements" className="py-24 sm:py-32 bg-muted/50 relative">
+        <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+            <span className="text-[25vw] font-headline font-extrabold text-foreground/10 select-none">ACHIEVE</span>
         </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
