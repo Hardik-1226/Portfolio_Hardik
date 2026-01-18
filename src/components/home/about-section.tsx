@@ -21,12 +21,26 @@ export function AboutSection() {
                 I enjoy experimenting with modern web stacks, shipping fast, and continuously improving my craft. My passion lies at the intersection of design, technology, and user experience.
               </p>
             </div>
+            {aboutImage && (
+              <div className="pt-8 flex justify-center lg:justify-start">
+                <div className="relative w-full max-w-sm aspect-square rounded-lg overflow-hidden border">
+                  <Image 
+                    src={aboutImage.imageUrl} 
+                    alt={aboutImage.description} 
+                    fill 
+                    className="object-cover" 
+                    data-ai-hint={aboutImage.imageHint}
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            )}
           </div>
           <div className="space-y-8">
             <h3 className="font-headline text-3xl tracking-tight text-center lg:text-left">My Skillset</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
               {Object.entries(skills).map(([category, skillList]) => (
-                <Card key={category} className="shadow-sm bg-card/80">
+                <Card key={category} className="shadow-sm bg-card/80 border-2 border-secondary">
                   <CardHeader>
                     <CardTitle className="font-headline text-xl">{category}</CardTitle>
                   </CardHeader>
@@ -42,20 +56,6 @@ export function AboutSection() {
                   </CardContent>
                 </Card>
               ))}
-              {aboutImage && Object.keys(skills).length % 2 !== 0 && (
-                <div className="hidden sm:flex justify-center items-center p-4">
-                  <div className="relative w-full aspect-square rounded-lg overflow-hidden">
-                    <Image 
-                      src={aboutImage.imageUrl} 
-                      alt={aboutImage.description} 
-                      fill 
-                      className="object-cover" 
-                      data-ai-hint={aboutImage.imageHint} 
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                    />
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>

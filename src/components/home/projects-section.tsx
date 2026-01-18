@@ -24,7 +24,7 @@ export function ProjectsSection() {
             const slug = slugify(project.title);
             return (
               <Link href={`/projects/${slug}`} key={project.title} className="block group">
-                <Card className="flex flex-col h-full overflow-hidden transform group-hover:-translate-y-2 transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl border-2 border-transparent group-hover:border-primary">
+                <Card className="flex flex-col h-full overflow-hidden transform group-hover:-translate-y-2 transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl border-2 border-secondary group-hover:border-primary">
                   {projectImage && (
                     <div className="aspect-video overflow-hidden">
                       <Image
