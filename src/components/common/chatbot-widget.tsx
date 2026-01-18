@@ -17,7 +17,7 @@ export function ChatbotWidget() {
           <TooltipTrigger asChild>
             <Button
               size="icon"
-              className="rounded-full w-16 h-16 bg-primary text-primary-foreground shadow-lg"
+              className="rounded-full w-16 h-16 bg-accent text-accent-foreground shadow-lg hover:bg-accent/90"
               onClick={() => {
                 // Chatbot functionality to be added later
                 // You can open a chat modal here.
@@ -27,7 +27,7 @@ export function ChatbotWidget() {
             </Button>
           </TooltipTrigger>
           <TooltipContent side="left">
-            <p>Chat with my AI assistant!</p>
+            <p>Ask me</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
