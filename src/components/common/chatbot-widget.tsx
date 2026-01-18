@@ -162,17 +162,18 @@ export function ChatbotWidget() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, isTyping]);
 
   const handleSend = () => {
     if (!input.trim()) return;
     
     setMessages(msgs => [...msgs, { from: 'user', text: input }]);
+    const currentInput = input;
     setInput('');
     
     setIsTyping(true);
     setTimeout(() => {
-      setMessages(msgs => [...msgs, { from: 'ai', text: getAIAnswer(input) }]);
+      setMessages(msgs => [...msgs, { from: 'ai', text: getAIAnswer(currentInput) }]);
       setIsTyping(false);
     }, 1000);
   };
@@ -235,7 +236,7 @@ export function ChatbotWidget() {
               <AnimatePresence>
                 {messages.map((msg, i) => (
                   <motion.div
-                    key={i}
+                    key={`message-${i}`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -260,8 +261,11 @@ export function ChatbotWidget() {
                 ))}
                 {isTyping && (
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    key="typing-indicator"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
                     className="flex items-start space-x-2"
                   >
                     <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
@@ -272,8 +276,8 @@ export function ChatbotWidget() {
                     </div>
                   </motion.div>
                 )}
-                <div ref={messagesEndRef} />
               </AnimatePresence>
+              <div ref={messagesEndRef} />
             </div>
 
             <div className="flex border-t border-primary/20 bg-white dark:bg-card rounded-b-xl">
