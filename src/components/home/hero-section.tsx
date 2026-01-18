@@ -9,26 +9,34 @@ export function HeroSection() {
     <section className="py-24 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
-          <div className="lg:col-span-3 space-y-6 text-center">
-            <div role="heading" aria-level={1} className="font-headline text-4xl sm:text-5xl md:text-6xl tracking-tight">
-              <div>
-                <span className="inline-block animate-typing-main overflow-hidden whitespace-nowrap border-r-2 border-r-primary pr-1 align-bottom">Hey, how’s it going? I’m</span>
-              </div>
-              <div className="pt-1">
-                <HoverableText imageUrl="https://picsum.photos/seed/hardik/200/200" imageHint="portrait person">Hardik.</HoverableText>
-              </div>
+          <div className="lg:col-span-3">
+            <div className="font-body text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight space-y-3">
+              <p>
+                Hey, how’s it going? I’m{' '}
+                <HoverableText imageUrl="https://picsum.photos/seed/hardik/200/200" imageHint="portrait person" className="font-headline">
+                  Hardik.
+                </HoverableText>
+              </p>
+              <p>
+                A{' '}
+                <HoverableText imageUrl="https://picsum.photos/seed/student/200/200" imageHint="student technology" className="font-headline">
+                  B.Tech Student
+                </HoverableText>{' '}
+                &{' '}
+                <HoverableText imageUrl="https://picsum.photos/seed/developer/200/200" imageHint="code editor" className="font-headline">
+                  Web Developer.
+                </HoverableText>
+              </p>
+              <p>
+                Hoping to build meaningful products
+                <br />
+                that help and{' '}
+                <HoverableText imageUrl="https://picsum.photos/seed/inspire/200/200" imageHint="inspiration lightbulb" className="font-headline">
+                  inspire
+                </HoverableText>{' '}
+                others.
+              </p>
             </div>
-            <div className="text-xl sm:text-2xl text-muted-foreground font-headline">
-                <div className="inline-block animate-typing-subtitle overflow-hidden whitespace-nowrap border-r-2 border-r-primary pr-1 align-bottom">
-                    <HoverableText imageUrl="https://picsum.photos/seed/student/200/200" imageHint="student technology">B.Tech Student</HoverableText> & <HoverableText imageUrl="https://picsum.photos/seed/developer/200/200" imageHint="code editor">Web Developer.</HoverableText>
-                </div>
-            </div>
-            <p className="text-xl sm:text-2xl text-muted-foreground/90 text-center">
-              Building modern, scalable digital products that actually solve problems.
-            </p>
-            <p className="max-w-xl mx-auto text-lg text-muted-foreground/80 text-center">
-              Passionate about full-stack development, UI engineering, and practical AI integration. Always learning. Always shipping.
-            </p>
           </div>
           <div className="lg:col-span-2 relative h-80 w-80 lg:h-96 lg:w-96 mx-auto">
             {heroImage && (
