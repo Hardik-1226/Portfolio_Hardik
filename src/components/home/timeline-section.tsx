@@ -1,5 +1,6 @@
 import { timeline } from "@/lib/data";
 import { ScrollAnimation } from "@/components/common/scroll-animation";
+import { HoverableText } from "../common/hoverable-text";
 
 export function TimelineSection() {
   return (
@@ -8,9 +9,9 @@ export function TimelineSection() {
         <div className="text-left mb-24">
           <ScrollAnimation>
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Journey</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
-              A timeline of my key milestones and experiences in the world of tech.
-            </p>
+            <div className="mt-4 text-lg text-muted-foreground max-w-2xl">
+              A timeline of my key <HoverableText imageUrl="https://picsum.photos/seed/milestones/200/200" imageHint="stone path" className="font-headline text-xl">milestones</HoverableText> and <HoverableText imageUrl="https://picsum.photos/seed/experiences/200/200" imageHint="personal journey" className="font-headline text-xl">experiences</HoverableText> in the world of tech.
+            </div>
           </ScrollAnimation>
         </div>
         <div className="relative max-w-5xl mx-auto">

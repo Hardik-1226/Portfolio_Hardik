@@ -4,6 +4,7 @@ import { CheckCircle2, Code2, Server, GitMerge, BrainCircuit, Boxes } from "luci
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ScrollAnimation } from "../common/scroll-animation";
+import { HoverableText } from "../common/hoverable-text";
 
 const categoryIcons: { [key: string]: React.ReactNode } = {
   "Frontend": <Code2 className="h-6 w-6 text-accent" />,
@@ -17,18 +18,36 @@ export function AboutSection() {
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-visual');
 
   return (
-    <section id="about" className="py-24 sm:py-32">
+    <section id="about" className="py-24 sm:py-32 bg-muted">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6 text-center lg:text-left">
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">About Me</h2>
             <div className="space-y-4 text-lg text-muted-foreground text-justify">
-              <p>
-                I’m a B.Tech student who loves building clean interfaces, scalable systems, and practical tools that help people.
-              </p>
-              <p>
+              <div>
+                I’m a B.Tech student who loves building clean <HoverableText
+                  imageUrl="https://picsum.photos/seed/interfaces/200/200"
+                  imageHint="clean interface"
+                  className="font-headline text-xl"
+                >
+                  interfaces
+                </HoverableText>, scalable <HoverableText
+                  imageUrl="https://picsum.photos/seed/systems/200/200"
+                  imageHint="scalable systems"
+                  className="font-headline text-xl"
+                >
+                  systems
+                </HoverableText>, and practical <HoverableText
+                  imageUrl="https://picsum.photos/seed/tools/200/200"
+                  imageHint="practical tools"
+                  className="font-headline text-xl"
+                >
+                  tools
+                </HoverableText> that help people.
+              </div>
+              <div>
                 I enjoy experimenting with modern web stacks, shipping fast, and continuously improving my craft. My passion lies at the intersection of design, technology, and user experience.
-              </p>
+              </div>
             </div>
             {aboutImage && (
               <div className="pt-8 flex justify-center lg:justify-start">

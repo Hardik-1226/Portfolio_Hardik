@@ -4,6 +4,7 @@ import { ScrollAnimation } from "@/components/common/scroll-animation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { HoverableText } from "../common/hoverable-text";
 
 export function CertificationsSection() {
     const getImage = (id: string) => {
@@ -11,14 +12,14 @@ export function CertificationsSection() {
     }
 
   return (
-    <section id="certifications" className="py-24 sm:py-32 bg-muted">
+    <section id="certifications" className="py-24 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <ScrollAnimation>
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Certifications</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              A testament to my commitment to continuous learning and skill development.
-            </p>
+            <div className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              A testament to my commitment to continuous <HoverableText imageUrl="https://picsum.photos/seed/learning/200/200" imageHint="books study" className="font-headline text-xl">learning</HoverableText> and skill <HoverableText imageUrl="https://picsum.photos/seed/development/200/200" imageHint="growing plant" className="font-headline text-xl">development</HoverableText>.
+            </div>
           </ScrollAnimation>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

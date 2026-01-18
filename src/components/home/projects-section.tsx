@@ -7,6 +7,7 @@ import { slugify } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { ScrollAnimation } from "@/components/common/scroll-animation";
+import { HoverableText } from "../common/hoverable-text";
 
 export function ProjectsSection() {
   const getImage = (id: string) => {
@@ -19,9 +20,9 @@ export function ProjectsSection() {
         <div className="text-center mb-16">
           <ScrollAnimation>
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">Featured Projects</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              A selection of projects where I've turned ideas into reality.
-            </p>
+            <div className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              A selection of projects where I've turned <HoverableText imageUrl="https://picsum.photos/seed/ideas/200/200" imageHint="lightbulb idea" className="font-headline text-xl">ideas</HoverableText> into <HoverableText imageUrl="https://picsum.photos/seed/reality/200/200" imageHint="abstract reality" className="font-headline text-xl">reality</HoverableText>.
+            </div>
           </ScrollAnimation>
         </div>
         <div className="space-y-28">
