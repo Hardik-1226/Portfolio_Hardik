@@ -16,7 +16,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectDetailsPage({ params }: { params: { slug: string } }) {
+export default function ProjectDetailsPage({ params }: { params: { slug:string } }) {
   const project = projects.find(p => slugify(p.title) === params.slug);
 
   if (!project) {
@@ -31,48 +31,50 @@ export default function ProjectDetailsPage({ params }: { params: { slug: string 
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow container mx-auto px-4 pt-32 sm:pt-40 pb-16 sm:pb-24">
-        <div className="mb-8">
-          <Button asChild variant="ghost" className="pl-0">
-            <Link href="/#projects">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Projects
-            </Link>
-          </Button>
-        </div>
-        <article className="max-w-4xl mx-auto">
-          <h1 className="font-headline text-4xl sm:text-5xl tracking-tight mb-4 text-center">{project.title}</h1>
-          
-          <div className="flex flex-wrap gap-2 mb-8 justify-center">
-            {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
+      <main className="flex-grow pt-32 sm:pt-40 pb-16 sm:pb-24 bg-violet-50/50 dark:bg-violet-950/20">
+        <div className="container mx-auto px-4">
+          <div className="mb-8">
+            <Button asChild variant="ghost" className="pl-0">
+              <Link href="/#projects">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to Projects
+              </Link>
+            </Button>
           </div>
-
-          {projectImage && (
-            <div className="relative aspect-video mb-8 rounded-lg overflow-hidden border">
-              <Image 
-                src={projectImage.imageUrl}
-                alt={project.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                data-ai-hint={projectImage.imageHint}
-              />
+          <article className="max-w-4xl mx-auto">
+            <h1 className="font-headline text-4xl sm:text-5xl tracking-tight mb-4 text-center">{project.title}</h1>
+            
+            <div className="flex flex-wrap gap-2 mb-8 justify-center">
+              {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
             </div>
-          )}
-          
-          <div className="space-y-6 text-lg text-muted-foreground text-center">
-            <p className="lead text-xl">{project.description}</p>
-            
-            <h3 className="font-headline text-2xl pt-4 border-t mt-12">Project Goals</h3>
-            <p>The main goal of this project was to explore the possibilities of integrating modern web technologies to solve a real-world problem. We focused on creating a seamless user experience, ensuring scalability, and maintaining a high level of code quality through best practices in frontend and backend development.</p>
-            
-            <h3 className="font-headline text-2xl pt-4 border-t mt-12">Challenges Faced</h3>
-            <p>One of the biggest challenges was to ensure the application was performant across all devices. We overcame this by implementing server-side rendering with Next.js and optimizing our static assets. Another challenge was managing state in a complex application, which we solved using React's context API combined with custom hooks for a clean and maintainable architecture.</p>
 
-            <h3 className="font-headline text-2xl pt-4 border-t mt-12">What I Learned</h3>
-            <p>This project was a great learning experience. I deepened my understanding of full-stack development, especially in building and deploying scalable applications with Vercel. I also improved my skills in creating responsive and accessible user interfaces with Tailwind CSS and ShadCN UI.</p>
-          </div>
-        </article>
+            {projectImage && (
+              <div className="relative aspect-video mb-8 rounded-lg overflow-hidden border">
+                <Image 
+                  src={projectImage.imageUrl}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  data-ai-hint={projectImage.imageHint}
+                />
+              </div>
+            )}
+            
+            <div className="space-y-6 text-lg text-muted-foreground text-center">
+              <p className="lead text-xl">{project.description}</p>
+              
+              <h3 className="font-headline text-2xl pt-4 border-t mt-12">Project Goals</h3>
+              <p>The main goal of this project was to explore the possibilities of integrating modern web technologies to solve a real-world problem. We focused on creating a seamless user experience, ensuring scalability, and maintaining a high level of code quality through best practices in frontend and backend development.</p>
+              
+              <h3 className="font-headline text-2xl pt-4 border-t mt-12">Challenges Faced</h3>
+              <p>One of the biggest challenges was to ensure the application was performant across all devices. We overcame this by implementing server-side rendering with Next.js and optimizing our static assets. Another challenge was managing state in a complex application, which we solved using React's context API combined with custom hooks for a clean and maintainable architecture.</p>
+
+              <h3 className="font-headline text-2xl pt-4 border-t mt-12">What I Learned</h3>
+              <p>This project was a great learning experience. I deepened my understanding of full-stack development, especially in building and deploying scalable applications with Vercel. I also improved my skills in creating responsive and accessible user interfaces with Tailwind CSS and ShadCN UI.</p>
+            </div>
+          </article>
+        </div>
       </main>
       <Footer />
     </div>
