@@ -62,13 +62,13 @@
     },
     {
       "id": "cert-google-ai",
-      "description": "Google AI logo.",
+      "description": "Oracle Generative AI Certification",
       "imageUrl": "https://images.unsplash.com/photo-1758626036095-676b425c4288?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8QUklMjBsb2dvfGVufDB8fHx8MTc2ODY2OTE3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "AI logo"
     },
     {
       "id": "cert-fcc",
-      "description": "freeCodeCamp logo.",
+      "description": "Diploma in Office Automation & Publishing",
       "imageUrl": "https://images.unsplash.com/photo-1742641922324-4d64cb71d56e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2RlJTIwY2FtcHxlbnwwfHx8fDE3Njg3NDM1OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "code camp"
     },
@@ -99,7 +99,7 @@
     {
       "id": "hardik-portrait",
       "description": "Portrait image for Hardik hover.",
-      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY5MzE0MDk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/project-spark-3e9c7.appspot.com/uploads/19c72e7d-94d5-455b-9d41-45cd5d0b9041/hardik-portrait.jpg",
       "imageHint": "male portrait"
     }
   ]
