@@ -1,9 +1,17 @@
 import { skills } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Code2, Server, GitMerge, BrainCircuit, Boxes } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ScrollAnimation } from "../common/scroll-animation";
+
+const categoryIcons: { [key: string]: React.ReactNode } = {
+  "Frontend": <Code2 className="h-6 w-6 text-accent" />,
+  "Backend": <Server className="h-6 w-6 text-accent" />,
+  "Tools": <GitMerge className="h-6 w-6 text-accent" />,
+  "AI": <BrainCircuit className="h-6 w-6 text-accent" />,
+  "Other": <Boxes className="h-6 w-6 text-accent" />,
+};
 
 export function AboutSection() {
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-visual');
@@ -42,16 +50,19 @@ export function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
               {Object.entries(skills).map(([category, skillList], index) => (
                 <ScrollAnimation key={category} delay={index * 150}>
-                  <Card className="shadow-sm bg-card/80 border-2 border-secondary h-full">
+                  <Card className="h-full bg-card/60 backdrop-blur-sm border-border/50 transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1.5 hover:border-primary">
                     <CardHeader>
-                      <CardTitle className="font-headline text-xl">{category}</CardTitle>
+                      <CardTitle className="flex items-center gap-4 font-headline text-xl">
+                        {categoryIcons[category] || <CheckCircle2 className="h-6 w-6 text-accent" />}
+                        <span>{category}</span>
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-2">
+                      <ul className="space-y-3 pt-2">
                         {skillList.map((skill) => (
-                          <li key={skill} className="flex items-center gap-2">
-                            <CheckCircle2 className="h-4 w-4 text-accent" />
-                            <span>{skill}</span>
+                          <li key={skill} className="flex items-center gap-3">
+                            <CheckCircle2 className="h-4 w-4 text-chart-2 shrink-0" />
+                            <span className="text-muted-foreground">{skill}</span>
                           </li>
                         ))}
                       </ul>
