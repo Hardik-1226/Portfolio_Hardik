@@ -15,13 +15,13 @@ export function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="py-24 sm:py-32 bg-muted">
+    <section id="projects" className="py-24 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <ScrollAnimation>
             <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">Featured Projects</h2>
-            <div className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
-              A selection of projects where I've turned <HoverableText imageUrl="https://picsum.photos/seed/ideas/200/200" imageHint="lightbulb idea" className="font-headline font-bold text-3xl">ideas</HoverableText> into <HoverableText imageUrl="https://picsum.photos/seed/reality/200/200" imageHint="abstract reality" className="font-headline font-bold text-3xl">reality</HoverableText>.
+            <div className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
+              A selection of projects where I've turned <HoverableText imageUrl="https://picsum.photos/seed/ideas/200/200" imageHint="lightbulb idea" className="font-headline font-bold text-4xl">ideas</HoverableText> into <HoverableText imageUrl="https://picsum.photos/seed/reality/200/200" imageHint="abstract reality" className="font-headline font-bold text-4xl">reality</HoverableText>.
             </div>
           </ScrollAnimation>
         </div>
@@ -34,7 +34,7 @@ export function ProjectsSection() {
             return (
               <ScrollAnimation key={project.title} delay={index * 150}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                  <div className={`relative aspect-video rounded-lg overflow-hidden bg-background shadow-lg group ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className={`relative aspect-video rounded-lg overflow-hidden bg-background group ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                     {projectImage && (
                       <Image
                         src={projectImage.imageUrl}
@@ -57,7 +57,7 @@ export function ProjectsSection() {
                         <Badge key={tag} variant="secondary">{tag}</Badge>
                       ))}
                     </div>
-                    <p className="text-xl text-muted-foreground pt-2">{project.description}</p>
+                    <p className="text-lg text-muted-foreground pt-2">{project.description}</p>
                     <Button asChild className="rounded-full mt-4">
                       <Link href={`/projects/${slug}`}>
                         View Case Study <ArrowRight className="ml-2" />
@@ -71,7 +71,7 @@ export function ProjectsSection() {
         </div>
         <div className="text-center mt-20">
           <Button asChild size="lg" className="rounded-full" variant="outline">
-            <Link href="/explore">
+            <Link href="/more-projects">
               More Projects <ArrowRight className="ml-2" />
             </Link>
           </Button>
