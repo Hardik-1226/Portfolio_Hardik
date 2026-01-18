@@ -1,14 +1,8 @@
 import { timeline } from "@/lib/data";
 import { ScrollAnimation } from "@/components/common/scroll-animation";
 import { HoverableText } from "../common/hoverable-text";
-import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function TimelineSection() {
-    const getImage = (id: string) => {
-        return PlaceHolderImages.find(img => img.id === id);
-    }
-
   return (
     <section id="timeline" className="py-32 sm:py-40">
       <div className="container mx-auto px-4">
@@ -24,7 +18,6 @@ export function TimelineSection() {
           <div className="absolute top-0 h-full w-0.5 bg-border left-4 md:left-1/2 md:-translate-x-1/2" aria-hidden="true"></div>
           <ul className="space-y-24">
             {timeline.map((item, index) => {
-              const timelineImage = getImage(item.image);
               return (
                 <li key={index} className="relative">
                   <div className="absolute top-1 left-4 w-5 h-5 bg-primary rounded-full -translate-x-1/2 border-4 border-background md:left-1/2"></div>
@@ -35,18 +28,6 @@ export function TimelineSection() {
                       className="pl-12 md:pl-0 md:text-right"
                     >
                       <div className="flex justify-end items-center gap-8">
-                        {timelineImage && (
-                          <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-border hidden md:block">
-                            <Image
-                              src={timelineImage.imageUrl}
-                              alt={timelineImage.description}
-                              fill
-                              className="object-cover"
-                              data-ai-hint={timelineImage.imageHint}
-                              sizes="6rem"
-                            />
-                          </div>
-                        )}
                         <p className="font-body font-extrabold text-9xl sm:text-[10rem] text-black leading-none">
                           {(index + 1).toString().padStart(2, '0')}.
                         </p>
@@ -58,20 +39,6 @@ export function TimelineSection() {
                       delay={200}
                       className="pl-12 md:pl-0 mt-8 md:mt-0"
                     >
-                       <div className="flex items-center gap-4 md:hidden mb-6">
-                         {timelineImage && (
-                            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-border">
-                                <Image
-                                    src={timelineImage.imageUrl}
-                                    alt={timelineImage.description}
-                                    fill
-                                    className="object-cover"
-                                    data-ai-hint={timelineImage.imageHint}
-                                    sizes="4rem"
-                                />
-                            </div>
-                        )}
-                      </div>
                       <h4 className="font-body text-4xl sm:text-5xl font-bold">{item.title}</h4>
                       <p className="text-xl text-muted-foreground mt-4">{item.description}</p>
                     </ScrollAnimation>
