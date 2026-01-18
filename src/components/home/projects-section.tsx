@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { slugify } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export function ProjectsSection() {
   const getImage = (id: string) => {
@@ -15,41 +16,50 @@ export function ProjectsSection() {
     <section id="projects" className="py-24 sm:py-32 bg-card/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Work</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-center">A selection of projects I've built, showcasing my skills in web development and problem-solving.</p>
+          <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">Featured Projects</h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            A selection of projects where I've turned ideas into reality.
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => {
+        <div className="space-y-28">
+          {projects.map((project, index) => {
             const projectImage = getImage(project.image);
             const slug = slugify(project.title);
+            const isEven = index % 2 === 0;
+
             return (
-              <Link href={`/projects/${slug}`} key={project.title} className="block group">
-                <Card className="flex flex-col h-full overflow-hidden transform group-hover:-translate-y-2 transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl border-2 border-secondary group-hover:border-primary">
+              <div key={project.title} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <div className={`relative aspect-video rounded-lg overflow-hidden border-2 p-4 bg-background shadow-lg ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   {projectImage && (
-                    <div className="aspect-video overflow-hidden">
-                      <Image
-                        src={projectImage.imageUrl}
-                        alt={project.title}
-                        width={600}
-                        height={400}
-                        className="object-cover w-full h-full"
-                        data-ai-hint={projectImage.imageHint}
-                      />
-                    </div>
+                    <Image
+                      src={projectImage.imageUrl}
+                      alt={project.title}
+                      width={1280}
+                      height={720}
+                      className="object-cover w-full h-full rounded-md"
+                      data-ai-hint={projectImage.imageHint}
+                    />
                   )}
-                  <CardHeader>
-                    <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow flex flex-col">
-                    <CardDescription className="flex-grow">{project.description}</CardDescription>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary">{tag}</Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
+                </div>
+                <div className={`space-y-4 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                  <div className="w-12 h-12 bg-secondary text-secondary-foreground flex items-center justify-center rounded-full font-headline font-bold text-xl mb-4">
+                    {project.logo}
+                  </div>
+                  <h3 className="font-headline text-3xl tracking-tight">{project.title}</h3>
+                  <h4 className="font-headline text-xl text-muted-foreground">{project.subtitle}</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary">{tag}</Badge>
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground pt-2">{project.description}</p>
+                  <Button asChild className="rounded-full mt-4">
+                    <Link href={`/projects/${slug}`}>
+                      View Case Study <ArrowRight className="ml-2" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
             );
           })}
         </div>

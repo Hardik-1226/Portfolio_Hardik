@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/home/hero-section";
 import { ProjectsSection } from "@/components/home/projects-section";
 import { AboutSection } from "@/components/home/about-section";
 import { ContactSection } from "@/components/home/contact-section";
+import { TimelineSection } from "@/components/home/timeline-section";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <ProjectsSection />
+        <TimelineSection />
         <AboutSection />
         <ContactSection />
       </main>
