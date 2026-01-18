@@ -38,10 +38,10 @@ export function ContactSection() {
     <section id="contact" className="py-24 sm:py-32 bg-muted">
       <div className="container mx-auto px-4 text-center">
         <p className="text-muted-foreground mb-4">Thanks for visiting... I hope you enjoyed your stay!</p>
-        <h2 className="font-headline text-4xl sm:text-5xl tracking-tight mb-4">
-          Always <HoverableText imageUrl="https://picsum.photos/seed/curious/200/200" imageHint="magnifying glass" className="font-headline font-bold text-7xl sm:text-8xl">curious</HoverableText>. Constantly <HoverableText imageUrl="https://picsum.photos/seed/learning-contact/200/200" imageHint="brain gears" className="font-headline font-bold text-7xl sm:text-8xl">learning</HoverableText>.
+        <h2 className="font-headline text-3xl sm:text-4xl tracking-tight mb-4">
+          Always <HoverableText imageUrl="https://picsum.photos/seed/curious/200/200" imageHint="magnifying glass" className="font-headline font-bold text-6xl sm:text-7xl">curious</HoverableText>. Constantly <HoverableText imageUrl="https://picsum.photos/seed/learning-contact/200/200" imageHint="brain gears" className="font-headline font-bold text-6xl sm:text-7xl">learning</HoverableText>.
         </h2>
-        <a href={`mailto:${contact.email}`} className="font-headline text-4xl sm:text-5xl inline-block border-b-2 border-foreground pb-1 hover:text-primary transition-colors group">
+        <a href={`mailto:${contact.email}`} className="font-headline text-3xl sm:text-4xl inline-block border-b-2 border-foreground pb-1 hover:text-primary transition-colors group">
           <Mail className="inline-block mr-2 -mt-1 h-7 w-7 transition-transform group-hover:scale-110"/>{contact.email}
         </a>
 

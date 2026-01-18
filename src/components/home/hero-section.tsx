@@ -10,13 +10,13 @@ export function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
           <div className="lg:col-span-3">
-            <div className="font-body text-4xl sm:text-5xl md:text-6xl tracking-tight leading-snug text-center space-y-4">
+            <div className="font-body text-3xl sm:text-4xl md:text-5xl tracking-tight leading-snug text-center space-y-4">
               <div>
                 Hey, how's it going? I'm{' '}
                 <HoverableText
                   imageUrl="https://picsum.photos/seed/portrait/200/200"
                   imageHint="portrait person"
-                  className="font-headline font-bold text-6xl sm:text-7xl md:text-8xl"
+                  className="font-headline font-bold text-5xl sm:text-6xl md:text-7xl"
                 >
                   Hardik
                 </HoverableText>
@@ -27,7 +27,7 @@ export function HeroSection() {
                 <HoverableText
                   imageUrl="https://picsum.photos/seed/student/200/200"
                   imageHint="student technology"
-                  className="font-headline font-bold text-5xl"
+                  className="font-headline font-bold text-4xl"
                 >
                   student
                 </HoverableText>{' '}
@@ -35,7 +35,7 @@ export function HeroSection() {
                 <HoverableText
                   imageUrl="https://picsum.photos/seed/developer/200/200"
                   imageHint="code editor"
-                  className="font-headline font-bold text-5xl"
+                  className="font-headline font-bold text-4xl"
                 >
                   developer
                 </HoverableText>
@@ -47,7 +47,7 @@ export function HeroSection() {
                 <HoverableText
                   imageUrl="https://picsum.photos/seed/inspire/200/200"
                   imageHint="inspiration lightbulb"
-                  className="font-headline font-bold text-5xl"
+                  className="font-headline font-bold text-4xl"
                 >
                   inspire
                 </HoverableText>{' '}
