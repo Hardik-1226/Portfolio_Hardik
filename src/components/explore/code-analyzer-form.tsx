@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { analyzeCode } from "@/app/explore/actions";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -28,7 +29,7 @@ function SubmitButton() {
 }
 
 export function CodeAnalyzerForm() {
-  const [state, formAction] = useFormState(analyzeCode, initialState);
+  const [state, formAction] = useActionState(analyzeCode, initialState);
 
   return (
     <div className="max-w-4xl mx-auto">
