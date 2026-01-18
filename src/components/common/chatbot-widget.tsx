@@ -7,7 +7,35 @@ import { Bot, User, Send, X } from 'lucide-react';
 const QAPairs = [
   {
     q: ["name", "who are you", "your name", "tell me about yourself", "introduce yourself", "tell me about hardik", "who is hardik", "about hardik", "about you"],
-    a: "My name is Hardik Varshney. I'm a B.Tech student specializing in AI and ML at GL Bajaj Institute of Management and Technology. I'm passionate about building intelligent systems that combine hardware and software to solve real-world problems. I've worked on projects like a gesture-controlled cursor system and have participated in various hackathons, including winning the IIIT Delhi National Hackathon."
+    a: "I'm Hardik Varshney, a B.Tech Computer Science (AIML) student at GL Bajaj Institute. I have hands-on experience in full-stack development, hackathons, and technical leadership. I'm skilled in Java, Python, React, and modern web technologies, with a passion for building scalable real-world applications."
+  },
+  {
+    q: ["contact", "email", "phone", "number", "reach", "connect", "how to contact", "contact details"],
+    a: "You can reach me via email at hardikvarshney5@gmail.com or by phone at 7668850124. You can also find me on LinkedIn (hardik-varshney) and GitHub (Hardik-1226)."
+  },
+  {
+    q: ["education", "studies", "academic", "college", "where do you study", "institute", "university", "school", "qualification", "cgpa"],
+    a: "I am currently pursuing a B.Tech in Computer Science (AIML) at GL Bajaj Institute of Technology and Management (2023-2027), with a current CGPA of 7.76. Before that, I graduated from Rajni Public School, scoring 86% in Class XII and 90% in Class X."
+  },
+  {
+    q: ["experience", "club", "abhyudaya"],
+    a: "I am the PR Lead for the Abhyudaya Club at GL Bajaj Institute, starting from July 2025. My role involves leading PR initiatives, organizing events like the 'Supernova' hackathon with 200+ participants, and building production-level projects."
+  },
+  {
+    q: ["projects", "project", "work", "what have you built", "gestureguy", "shesecure", "schemeease"],
+    a: "I've built several projects, including 'GestureGuy,' a gesture-controlled interface using MediaPipe; 'SheSecure,' a women's safety app with AI and real-time alerts; and 'SchemeEase,' an AI-powered government scheme recommender using FastAPI and Supabase."
+  },
+  {
+    q: ["skills", "technical skills", "programming", "languages", "tools", "technologies", "what do you know"],
+    a: "My technical skills include: Programming in Java, Python, and C; SQL for queries; Frontend with React and Next.js; Backend with Node.js, FastAPI, and Supabase; and tools like Git, OpenCV, and MediaPipe. I have a strong foundation in Data Structures, Algorithms, and OOP."
+  },
+  {
+    q: ["achievements", "accomplishments", "awards", "hackathon", "leetcode"],
+    a: "I was a winner at the IIIT Delhi Hackathon (Infronix'25), I've solved over 150+ DSA problems on LeetCode, and I also organized my college's hackathon, 'Supernova'."
+  },
+  {
+    q: ["certifications", "certified"],
+    a: "I have an Oracle Generative AI Certification and a Diploma in Office Automation & Publishing (SEO)."
   },
   {
     q: ["gender", "are you male", "are you female", "what is your gender", "are you a boy", "are you a girl"],
@@ -18,84 +46,12 @@ const QAPairs = [
     a: "I am from Greater Noida, Uttar Pradesh, India."
   },
   {
-    q: ["nationality", "are you indian", "what is your nationality", "where are you from"],
-    a: "I am Indian."
-  },
-  {
-    q: ["language", "what languages do you speak", "do you know hindi", "do you know english"],
-    a: "I am fluent in English and Hindi."
-  },
-  {
-    q: ["age", "how old", "your age"],
-    a: "I am 20 years old."
-  },
-  {
-    q: ["education", "studies", "academic", "college", "where do you study", "institute", "university", "school", "qualification"],
-    a: "I'm currently pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning at GL Bajaj Institute of Management and Technology. I'm in my 2nd year. My academic journey includes scoring 90% in Class 10th, 86% in Class 12th (PCM), and securing 90+ percentile in JEE Mains."
-  },
-  {
-    q: ["course", "program", "degree", "what do you study", "branch", "specialization"],
-    a: "I'm pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning. This program combines core computer science concepts with advanced AI/ML technologies, preparing me for a career in cutting-edge technology development."
-  },
-  {
-    q: ["year", "which year", "current year", "semester"],
-    a: "I'm currently in my 2nd year of B.Tech. I'm actively involved in various projects and hackathons while maintaining my academic performance."
-  },
-  {
-    q: ["achievements", "academic", "scores", "marks", "10th", "12th", "jee", "accomplishments", "awards"],
-    a: "My academic achievements include scoring 90% in Class 10th, 86% in Class 12th (PCM), and securing 90+ percentile in JEE Mains. I've also won the IIIT Delhi National Hackathon and been a top 10 finalist in the GGSIPU Vespera Hackathon."
-  },
-  {
-    q: ["contact", "email", "phone", "number", "reach", "connect", "how to contact", "contact details"],
-    a: "You can reach me through my email at hardikvarshney5@gmail.com or call me at 7668850124. I'm also active on LinkedIn, GitHub, and other professional platforms."
-  },
-  {
-    q: ["club", "abhyudaya", "community", "team", "branch", "extracurricular", "activities"],
-    a: "I'm an active member of the Abhyudaya Club from the CSAIML Branch at GL Bajaj. I'm part of the PR team, where I help organize and promote tech events and workshops."
-  },
-  {
-    q: ["projects", "project", "work", "gesture", "cursor", "mini project", "portfolio", "what have you built"],
-    a: "I've worked on several projects, including: 1) A gesture-controlled cursor system using Python and ADXL345 sensor, 2) AI Scheme Recommender (winner at IIIT Delhi Hackathon), 3) SunShare - a solar community sharing platform, and 4) SpendWise - a student budgeting web app. Each project combines different technologies and focuses on solving real-world problems."
-  },
-  {
-    q: ["gesture", "cursor project", "mini project details", "gesture control"],
-    a: "I developed a gesture-controlled cursor system that allows users to control their computer cursor using wrist movements. It uses Python, C/C++, and the ADXL345 sensor. The system features real-time cursor movement, smooth X-Y tracking, and is designed for wearable integration. It also has future scope for gesture-based virtual keyboard typing."
-  },
-  {
-    q: ["hackathon", "hackathons", "competitions", "wins", "prizes"],
-    a: "I've participated in several hackathons: 1) Winner at IIIT Delhi National Hackathon for AI Scheme Recommender, 2) Top 10 Finalist at GGSIPU Vespera Hackathon for SunShare, 3) Built SpendWise at GFG Hackathon. These experiences have helped me develop practical problem-solving skills and work under pressure."
-  },
-  {
-    q: ["skills", "technical skills", "programming", "languages", "tools", "technologies", "what do you know"],
-    a: "My technical skills include: Programming Languages: Python, C++, C; Tools & IDEs: Arduino IDE, VS Code; Concepts: Embedded Systems, Human-Computer Interaction, Real-time Systems; Areas: AI, Machine Learning, Wearable Tech. I'm constantly learning and expanding my skill set."
-  },
-  {
     q: ["interests", "areas", "what interests you", "passion", "hobbies", "what do you like"],
-    a: "I'm deeply interested in AI, Machine Learning, Embedded Systems, Human-Computer Interaction, and wearable technology. I enjoy building intelligent systems that interact with users naturally, combining software with hardware to solve real-world problems."
+    a: "I'm passionate about blending hardware and software to build real-world tech that feels intuitive and futuristic. I enjoy exploring AI, embedded systems, and creating impactful solutions."
   },
   {
     q: ["future", "goals", "aim", "dream", "plans", "career", "aspirations"],
-    a: "My future goals include working on innovative AI and embedded systems projects, contributing to open-source communities, and creating impactful, user-friendly tech solutions. I aim to make technology more accessible and intuitive for everyone."
-  },
-  {
-    q: ["quote", "motto", "philosophy", "belief", "saying"],
-    a: "I'm passionate about blending hardware and software to build real-world tech that feels intuitive and futuristic. I believe in creating technology that enhances human capabilities and makes a positive impact on society."
-  },
-  {
-    q: ["smartphone", "phone", "device", "what phone do you use"],
-    a: "I use a good camera smartphone for content and project documentation."
-  },
-  {
-    q: ["team", "collaboration", "group work", "team projects"],
-    a: "Yes, I have worked on collaborative technical projects and participated in club activities that require team coordination. I enjoy working in teams as it helps in learning from others and developing better solutions."
-  },
-  {
-    q: ["learning", "what do you enjoy learning", "favorite subjects", "what do you study"],
-    a: "I enjoy exploring new technologies, especially in the fields of AI, ML, IoT, and how humans interact with machines. I'm constantly learning and expanding my knowledge in these areas."
-  },
-  {
-    q: ["future projects", "what will you build", "upcoming projects", "next project"],
-    a: "I'm interested in developing smart systems that improve day-to-day life, like AI-powered tools, gesture-based interfaces, and embedded IoT solutions. I'm always looking for new challenges and opportunities to create innovative solutions."
+    a: "My goal is to work on cutting-edge projects in AI and embedded technology, contribute to open-source communities, and build smart, intuitive software that enhances user experience."
   }
 ];
 
@@ -183,19 +139,17 @@ export function ChatbotWidget() {
   return (
     <>
       {!isExpanded && (
-        <>
-          <motion.button
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setIsExpanded(true)}
-            className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-accent text-accent-foreground rounded-full shadow-lg flex items-center justify-center text-2xl overflow-hidden"
-            aria-label="Open AI Chat"
-          >
-            <Bot className="w-8 h-8" />
-          </motion.button>
-        </>
+        <motion.button
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setIsExpanded(true)}
+          className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-accent text-accent-foreground rounded-full shadow-lg flex items-center justify-center text-2xl overflow-hidden"
+          aria-label="Open AI Chat"
+        >
+          <Bot className="w-8 h-8" />
+        </motion.button>
       )}
       
       <AnimatePresence>
@@ -205,7 +159,7 @@ export function ChatbotWidget() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="fixed bottom-6 right-6 z-50 w-80 max-w-full bg-card rounded-xl shadow-2xl border border-accent/30 flex flex-col"
+            className="fixed bottom-6 right-6 z-50 w-80 max-w-full bg-background rounded-xl shadow-2xl border border-accent/30 flex flex-col"
           >
             <div className="px-4 py-3 font-bold border-b border-accent/20 flex justify-between items-center bg-accent rounded-t-xl">
               <div className="flex items-center space-x-2">
@@ -276,7 +230,7 @@ export function ChatbotWidget() {
               <div ref={messagesEndRef} />
             </div>
 
-            <div className="flex border-t border-accent/20 bg-card rounded-b-xl">
+            <div className="flex border-t border-accent/20 bg-background rounded-b-xl">
               <input
                 className="flex-1 px-3 py-2 rounded-bl-xl bg-transparent outline-none text-sm"
                 placeholder="Ask me anything about Hardik..."
