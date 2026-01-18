@@ -14,7 +14,7 @@ export function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="py-24 sm:py-32 bg-violet-50/50 dark:bg-violet-950/20">
+    <section id="projects" className="py-24 sm:py-32 bg-violet-100/50 dark:bg-violet-950/25">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <ScrollAnimation>
