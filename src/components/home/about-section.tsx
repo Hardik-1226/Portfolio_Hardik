@@ -28,7 +28,7 @@ export function AboutSection() {
             </span>
           </div>
           <ScrollAnimation className="relative z-10">
-            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">About Me</h2>
+            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight font-bold text-foreground">About Me</h2>
           </ScrollAnimation>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">

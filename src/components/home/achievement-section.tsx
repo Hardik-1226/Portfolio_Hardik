@@ -26,7 +26,7 @@ export function AchievementSection() {
             </span>
           </div>
           <ScrollAnimation className="relative z-10">
-            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Achievements</h2>
+            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight font-bold text-foreground">My Achievements</h2>
             <p className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
               A few of the milestones I'm proud of.
             </p>

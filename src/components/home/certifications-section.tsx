@@ -21,7 +21,7 @@ export function CertificationsSection() {
             </span>
           </div>
           <ScrollAnimation className="relative z-10">
-            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Certifications</h2>
+            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight font-bold text-foreground">My Certifications</h2>
             <div className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
               A testament to my commitment to continuous <HoverableText imageUrl="https://picsum.photos/seed/learning/200/200" imageHint="books study" className="font-headline font-bold text-3xl">learning</HoverableText> and skill <HoverableText imageUrl="https://picsum.photos/seed/development/200/200" imageHint="growing plant" className="font-headline font-bold text-3xl">development</HoverableText>.
             </div>

@@ -6,13 +6,18 @@ export function TimelineSection() {
   return (
     <section id="timeline" className="py-32 sm:py-40">
       <div className="container mx-auto px-4">
-        <div className="text-left mb-24">
-          <ScrollAnimation>
-            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight">My Journey</h2>
-            <div className="mt-4 text-2xl text-muted-foreground max-w-2xl">
-              A timeline of my key <HoverableText imageUrl="https://picsum.photos/seed/milestones/200/200" imageHint="stone path" className="font-headline font-bold text-3xl">milestones</HoverableText> and <HoverableText imageUrl="https://picsum.photos/seed/experiences/200/200" imageHint="personal journey" className="font-headline font-bold text-3xl">experiences</HoverableText> in the world of tech.
+        <div className="text-center mb-16 relative">
+            <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+                <span className="text-[15vw] font-headline font-extrabold text-foreground/10 select-none">
+                    JOURNEY
+                </span>
             </div>
-          </ScrollAnimation>
+            <ScrollAnimation className="relative z-10">
+                <h2 className="font-headline text-4xl sm:text-5xl tracking-tight font-bold text-foreground">My Journey</h2>
+                <div className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
+                A timeline of my key <HoverableText imageUrl="https://picsum.photos/seed/milestones/200/200" imageHint="stone path" className="font-headline font-bold text-3xl">milestones</HoverableText> and <HoverableText imageUrl="https://picsum.photos/seed/experiences/200/200" imageHint="personal journey" className="font-headline font-bold text-3xl">experiences</HoverableText> in the world of tech.
+                </div>
+            </ScrollAnimation>
         </div>
         <div className="relative max-w-5xl mx-auto">
           <div className="absolute top-0 h-full w-0.5 bg-border left-4 md:left-1/2 md:-translate-x-1/2" aria-hidden="true"></div>
