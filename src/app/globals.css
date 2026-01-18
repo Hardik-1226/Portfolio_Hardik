@@ -81,9 +81,9 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: radial-gradient(hsl(var(--muted-foreground)) 1px, transparent 1px),
+    background-image: radial-gradient(hsl(var(--muted-foreground)) 1.5px, transparent 1.5px),
                       linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
     background-attachment: fixed;
-    background-size: 2rem 2rem, cover;
+    background-size: 1.5rem 1.5rem, cover;
   }
 }
