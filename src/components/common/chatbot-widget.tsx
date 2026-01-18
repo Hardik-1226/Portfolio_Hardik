@@ -182,18 +182,13 @@ export function ChatbotWidget() {
     <>
       {!isExpanded && (
         <>
-          <div className="fixed bottom-24 right-6 z-50 flex flex-col items-center">
-            <div className="mb-1 px-0 py-0 text-xs font-semibold text-primary flex items-center gap-1 animate-wave">
-              <span role="img" aria-label="wave" className="animate-waving-hand">👋</span> Any doubt?
-            </div>
-          </div>
           <motion.button
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsExpanded(true)}
-            className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-primary text-primary-foreground rounded-full shadow-lg flex items-center justify-center text-2xl overflow-hidden"
+            className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-accent text-accent-foreground rounded-full shadow-lg flex items-center justify-center text-2xl overflow-hidden"
             aria-label="Open AI Chat"
           >
             <Bot className="w-8 h-8" />
