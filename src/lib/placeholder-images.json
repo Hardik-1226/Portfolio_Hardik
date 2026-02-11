@@ -1,106 +1,136 @@
 {
   "placeholderImages": [
     {
+      "id": "hero-main",
+      "description": "Upload as: hero-main.png — Main hero section image (developer with laptop).",
+      "imageUrl": "/images/hero-main.png",
+      "imageHint": "developer seated laptop"
+    },
+    {
       "id": "hero-image",
-      "description": "A stylised illustration for the hero section.",
-      "imageUrl": "https://images.unsplash.com/photo-1665159693565-ef9ea8198cec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtaW5pbWFsaXN0JTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc2ODc0MDU4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: hero-image.png — Fallback hero section image (minimalist illustration).",
+      "imageUrl": "/images/hero-image.png",
       "imageHint": "minimalist illustration"
     },
     {
       "id": "about-visual",
-      "description": "Abstract visual for about section",
-      "imageUrl": "https://images.unsplash.com/photo-1482053450283-3e0b78b09a70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMGdlb21ldHJpY3xlbnwwfHx8fDE3Njg2NDE1OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: about-visual.png — About section image (abstract geometric).",
+      "imageUrl": "/images/about-visual.png",
       "imageHint": "abstract geometric"
     },
     {
       "id": "project-shesecure",
-      "description": "Abstract visualization of security and safety.",
-      "imageUrl": "https://images.unsplash.com/photo-1691435828932-911a7801adfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzZWN1cml0eSUyMG5ldHdvcmt8ZW58MHx8fHwxNzY4NzM5OTcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: project-shesecure.png — SheSecure project image (security visualization).",
+      "imageUrl": "/images/project-shesecure.png",
       "imageHint": "security network"
     },
     {
       "id": "project-portfolio",
-      "description": "Clean and modern user interface design for a portfolio.",
-      "imageUrl": "https://images.unsplash.com/photo-1680016661694-1cd3faf31c3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWJzaXRlJTIwZGVzaWdufGVufDB8fHx8MTc2ODcyODU4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: project-portfolio.png — Portfolio project image (web design).",
+      "imageUrl": "/images/project-portfolio.png",
       "imageHint": "website design"
     },
     {
       "id": "project-dashboard",
-      "description": "Dashboard with charts and graphs.",
-      "imageUrl": "https://images.unsplash.com/photo-1748125399869-226ab129a876?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXNoYm9hcmQlMjBjaGFydHN8ZW58MHx8fHwxNzY4NjM4NjExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: project-dashboard.png — Dashboard project image (analytics charts).",
+      "imageUrl": "/images/project-dashboard.png",
       "imageHint": "dashboard charts"
     },
     {
+      "id": "project-gestureguy",
+      "description": "Upload as: project-gestureguy.png — GestureGuy project (gesture-controlled interface).",
+      "imageUrl": "/images/project-gestureguy.png",
+      "imageHint": "gesture controlled software"
+    },
+    {
+      "id": "project-shesecure",
+      "description": "Upload as: SheSecure.png — SheSecure project image (women safety system).",
+      "imageUrl": "/images/SheSecure.png",
+      "imageHint": "women safety system"
+    },
+    {
+      "id": "project-schemease",
+      "description": "Upload as: SchemeEasee.png — SchemeEase project image (IoT system architecture).",
+      "imageUrl": "/images/SchemeEasee.png",
+      "imageHint": "IoT system architecture"
+    },
+    {
+      "id": "project-",
+      "description": "Upload as: project-.png — Placeholder project image (rename as needed).",
+      "imageUrl": "/images/project-.png",
+      "imageHint": "project placeholder"
+    },
+    {
       "id": "timeline-2020",
-      "description": "Student starting university.",
-      "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dW5pdmVyc2l0eSUyMHN0dWRlbnR8ZW58MHx8fHwxNzY4NzAzMDY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: timeline-2020.png — Timeline 2020 (university student).",
+      "imageUrl": "/images/timeline-2020.png",
       "imageHint": "university student"
     },
     {
       "id": "timeline-2021",
-      "description": "Code on a screen representing web development.",
-      "imageUrl": "https://images.unsplash.com/photo-1753998943413-8cba1b923c0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2RlJTIwc2NyZWVufGVufDB8fHx8MTc2ODY2NDg0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: timeline-2021.png — Timeline 2021 (web development).",
+      "imageUrl": "/images/timeline-2021.png",
       "imageHint": "code screen"
     },
     {
       "id": "timeline-2022",
-      "description": "Server racks representing backend development.",
-      "imageUrl": "https://images.unsplash.com/photo-1584169417032-d34e8d805e8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYXRhJTIwY2VudGVyfGVufDB8fHx8MTc2ODcwMDgxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: timeline-2022.png — Timeline 2022 (backend development).",
+      "imageUrl": "/images/timeline-2022.png",
       "imageHint": "data center"
     },
     {
       "id": "timeline-2023",
-      "description": "Abstract representation of AI.",
-      "imageUrl": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHx8MTc2ODY5NTM4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: timeline-2023.png — Timeline 2023 (AI/ML).",
+      "imageUrl": "/images/timeline-2023.png",
       "imageHint": "artificial intelligence"
     },
     {
       "id": "timeline-2024",
-      "description": "Advanced user interface design.",
-      "imageUrl": "https://images.unsplash.com/photo-1720962158789-9389a4f399da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmdXR1cmUlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzY4NzA2OTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: timeline-2024.png — Timeline 2024 (future tech/interface).",
+      "imageUrl": "/images/timeline-2024.png",
       "imageHint": "future interface"
     },
     {
       "id": "cert-google-ai",
-      "description": "Oracle Generative AI Certification",
-      "imageUrl": "https://images.unsplash.com/photo-1758626036095-676b425c4288?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8QUklMjBsb2dvfGVufDB8fHx8MTc2ODY2OTE3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: cert-google-ai.png — Certification (Oracle Generative AI).",
+      "imageUrl": "/images/cert-google-ai.png",
       "imageHint": "AI logo"
     },
     {
       "id": "cert-fcc",
-      "description": "Diploma in Office Automation & Publishing",
-      "imageUrl": "https://images.unsplash.com/photo-1742641922324-4d64cb71d56e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2RlJTIwY2FtcHxlbnwwfHx8fDE3Njg3NDM1OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: cert-fcc.png — Certification (Office Automation & Publishing).",
+      "imageUrl": "/images/cert-fcc.png",
       "imageHint": "code camp"
     },
     {
       "id": "cert-js",
-      "description": "JavaScript logo.",
-      "imageUrl": "https://images.unsplash.com/photo-1761624159464-686d31623aa7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxqYXZhc2NyaXB0JTIwbG9nb3xlbnwwfHx8fDE3Njg2OTM5MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: cert-js.png — Certification (JavaScript).",
+      "imageUrl": "/images/cert-js.png",
       "imageHint": "javascript logo"
     },
     {
       "id": "achievement-hackathon",
-      "description": "A trophy for winning a competition.",
-      "imageUrl": "https://images.unsplash.com/photo-1594514934145-ca474322f676?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cm9waHl8ZW58MHx8fHwxNzY4NzQ0MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: achievement-hackathon.png — Achievement (hackathon trophy).",
+      "imageUrl": "/images/achievement-hackathon.png",
       "imageHint": "trophy award"
     },
     {
       "id": "achievement-academic",
-      "description": "A graduation cap and diploma.",
-      "imageUrl": "https://images.unsplash.com/photo-1599495888860-f6556e4221a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjZXJ0aWZpY2F0ZSUyMGF3YXJkfGVufDB8fHx8MTc2ODc0NDAzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: achievement-academic.png — Achievement (academic/graduation).",
+      "imageUrl": "/images/achievement-academic.png",
       "imageHint": "certificate award"
     },
     {
       "id": "achievement-article",
-      "description": "A person writing on a laptop.",
-      "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3cml0aW5nJTIwYXJ0aWNsZXxlbnwwfHx8fDE3Njg3NDQwNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Upload as: achievement-article.png — Achievement (article/writing).",
+      "imageUrl": "/images/achievement-article.png",
       "imageHint": "writing article"
     },
     {
       "id": "hardik-portrait",
-      "description": "Portrait image for Hardik hover.",
-      "imageUrl": "https://storage.googleapis.com/project-spark-3e9c7.appspot.com/uploads/19c72e7d-94d5-455b-9d41-45cd5d0b9041/hardik-portrait.jpg",
-      "imageHint": "male portrait"
+      "description": "Upload as: hardik-portrait.png — Hardik portrait (hover on name).",
+      "imageUrl": "/images/hardik-portrait.png",
+      "imageHint": "Hardik portrait outdoor"
     }
   ]
 }

@@ -12,11 +12,11 @@ export function CertificationsSection() {
     }
 
   return (
-    <section id="certifications" className="py-24 sm:py-32">
+    <section id="certifications"  className="py-24 sm:py-32 bg-[#D3D1CE]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 relative">
           <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-            <span className="text-[15vw] font-headline font-extrabold text-foreground/10 select-none">
+            <span className="text-[15vw] font-headline text-center font-extra-bold text-black/10 select-none">
                 CERTIFY
             </span>
           </div>
@@ -39,7 +39,7 @@ export function CertificationsSection() {
                         src={certImage.imageUrl}
                         alt={cert.title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover bg-[#FAF3E0] transition-transform duration-500 group-hover:scale-105"
                         data-ai-hint={certImage.imageHint}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />

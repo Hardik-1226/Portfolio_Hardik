@@ -19,23 +19,23 @@ export function AboutSection() {
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-visual');
 
   return (
-    <section id="about" className="py-24 sm:py-32 bg-muted">
+    <section id="about" className="py-24 sm:py-32 bg-[#708090]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 relative">
           <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-            <span className="text-[15vw] font-headline font-extrabold text-foreground/10 select-none">
+            <span className="text-[13vw] font-headline font-extrabold text-white/10 select-none">
               ABOUT
             </span>
           </div>
           <ScrollAnimation className="relative z-10">
-            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight font-bold text-foreground">About Me</h2>
+            <h1 className="font-headline text-8xl sm:text-6xl tracking-tight font-bold text-white">About Me</h1>
           </ScrollAnimation>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6 text-center lg:text-left">
-            <div className="space-y-4 text-2xl text-muted-foreground text-justify">
+            <div className="space-y-5 text-2xl font-serif font-light text-white text-pretty">
               <Typewriter>
-                I’m a B.Tech student who loves building clean <HoverableText
+                   m I'm a B.Tech student who loves building clean <HoverableText
                   imageUrl="https://picsum.photos/seed/interfaces/200/200"
                   imageHint="clean interface"
                   className="font-headline font-bold text-3xl"
@@ -56,7 +56,7 @@ export function AboutSection() {
                 </HoverableText> that help people.
               </Typewriter>
               <Typewriter>
-                I enjoy experimenting with modern web stacks, shipping fast, and continuously improving my craft. My passion lies at the intersection of design, technology, and user experience.
+                 m I enjoy experimenting with modern web stacks, shipping fast, and continuously improving my craft. My passion lies at the intersection of design, technology, and user experience.
               </Typewriter>
             </div>
             {aboutImage && (

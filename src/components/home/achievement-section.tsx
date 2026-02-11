@@ -17,7 +17,7 @@ export function AchievementSection() {
     }
 
   return (
-    <section id="achievements" className="py-24 sm:py-32 bg-muted/50">
+    <section id="achievements" className="py-24 sm:py-32 bg-[#FFFBF0]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 relative">
           <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">

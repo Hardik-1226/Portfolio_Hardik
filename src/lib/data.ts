@@ -5,7 +5,7 @@ export const projects = [
     logo: "GG",
     description: "Built real-time gesture recognition using MediaPipe and OpenCV, featuring a responsive UI with 90% detection accuracy.",
     tags: ["React", "Next.js", "MediaPipe", "OpenCV", "Python"],
-    image: "project-shesecure",
+    image: "project-gestureguy",
   },
   {
     title: "SheSecure",
@@ -13,7 +13,7 @@ export const projects = [
     logo: "SS",
     description: "A smart safety system to assist women in distress through real-time hotspot mapping, AI-powered voice alerts, and rapid SOS support.",
     tags: ["AI", "Real-time", "Mobile", "SOS"],
-    image: "project-portfolio",
+    image: "project-shesecure",
   },
   {
     title: "SchemeEase",
@@ -21,7 +21,7 @@ export const projects = [
     logo: "SE",
     description: "An AI-powered recommendation system to match users with eligible government schemes, with a backend using FastAPI and Supabase.",
     tags: ["AI", "FastAPI", "Supabase", "Python"],
-    image: "project-dashboard",
+    image: "project-schemease",
   },
 ];
 
