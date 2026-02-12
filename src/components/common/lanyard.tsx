@@ -52,6 +52,38 @@ export default function Lanyard({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  if (isMobile) {
+    const imageWidth = Math.round(180 * imageScale[0]);
+    const imageHeight = Math.round(220 * imageScale[1]);
+    const textSize = Math.max(14, Math.round(fontSize * 80));
+
+    return (
+      <div className="lanyard-wrapper flex items-center justify-center">
+        <div className="bg-[#0f0b16] rounded-[22px] border border-white/10 shadow-[0_12px_30px_rgba(0,0,0,0.45)] px-6 py-6">
+          <div className="flex flex-col items-center gap-4">
+            <div
+              className="rounded-[16px] overflow-hidden"
+              style={{ width: imageWidth, height: imageHeight }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={imageUrl}
+                alt={name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              className="text-[#e8d4ff] text-center"
+              style={{ fontSize: textSize, fontWeight }}
+            >
+              {name}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="lanyard-wrapper">
       <Canvas

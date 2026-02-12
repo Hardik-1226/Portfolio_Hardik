@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import type { SpringOptions } from "framer-motion";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -60,9 +60,19 @@ export default function TiltedCard({
   });
 
   const [lastY, setLastY] = useState(0);
+  const [isMobile, setIsMobile] = useState(() => typeof window !== "undefined" && window.innerWidth < 768);
   const borderGlow = useSpring(0, springValues);
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const enableMotion = !isMobile;
+
   function handleMouse(e: React.MouseEvent<HTMLElement>) {
+    if (!enableMotion) return;
     if (!ref.current) return;
 
     const rect = ref.current.getBoundingClientRect();
@@ -84,12 +94,14 @@ export default function TiltedCard({
   }
 
   function handleMouseEnter() {
+    if (!enableMotion) return;
     scale.set(scaleOnHover);
     opacity.set(1);
     borderGlow.set(1);
   }
 
   function handleMouseLeave() {
+    if (!enableMotion) return;
     opacity.set(0);
     scale.set(1);
     rotateX.set(0);
@@ -109,9 +121,9 @@ export default function TiltedCard({
         height: containerHeight,
         width: containerWidth,
       }}
-      onMouseMove={handleMouse}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseMove={enableMotion ? handleMouse : undefined}
+      onMouseEnter={enableMotion ? handleMouseEnter : undefined}
+      onMouseLeave={enableMotion ? handleMouseLeave : undefined}
     >
       {showMobileWarning && (
         <div className="absolute top-4 text-center text-sm block sm:hidden">
@@ -124,9 +136,9 @@ export default function TiltedCard({
         style={{
           width: imageWidth,
           height: imageHeight,
-          rotateX,
-          rotateY,
-          scale,
+          rotateX: enableMotion ? rotateX : 0,
+          rotateY: enableMotion ? rotateY : 0,
+          scale: enableMotion ? scale : 1,
         }}
       >
         <motion.img
@@ -139,7 +151,7 @@ export default function TiltedCard({
           style={{
             width: imageWidth,
             height: imageHeight,
-            boxShadow: borderGlow.get && borderGlow.get() > 0 
+            boxShadow: enableMotion && borderGlow.get && borderGlow.get() > 0
               ? `0 0 30px rgba(232, 212, 255, ${borderGlow.get()}), 0 0 60px rgba(147, 51, 234, ${borderGlow.get() * 0.6}), inset 0 0 25px rgba(232, 212, 255, ${borderGlow.get() * 0.4})`
               : '0 0 0 rgba(232, 212, 255, 0)',
           }}
@@ -152,7 +164,7 @@ export default function TiltedCard({
         )}
       </motion.div>
 
-      {showTooltip && (
+      {showTooltip && enableMotion && (
         <motion.figcaption
           className="pointer-events-none absolute left-0 top-0 rounded-[4px] bg-white px-[10px] py-[4px] text-[10px] text-[#2d2d2d] opacity-0 z-[3] hidden sm:block"
           style={{

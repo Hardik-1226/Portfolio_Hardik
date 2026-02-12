@@ -1,14 +1,22 @@
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 
 export function Interactive3D() {
   const mountRef = useRef<HTMLDivElement>(null);
   const mouse = useRef({ x: 0, y: 0 });
   const animationFrameRef = useRef<number | undefined>(null);
+  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
 
   useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
     if (!mountRef.current) return;
 
     const currentMount = mountRef.current;
@@ -96,7 +104,16 @@ export function Interactive3D() {
       geometry.dispose();
       material.dispose();
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) {
+    return (
+      <div
+        ref={mountRef}
+        className="w-full h-full rounded-2xl bg-gradient-to-br from-[#1b1120] via-[#2b1730] to-[#4e1d41] shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+      />
+    );
+  }
 
   return <div ref={mountRef} className="w-full h-full" />;
 }
