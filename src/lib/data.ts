@@ -7,7 +7,7 @@ export const projects = [
     tags: ["React", "Next.js", "MediaPipe", "OpenCV", "Python"],
     image: "project-gestureguy",
     github: "https://github.com/Hardik-1226/GestureGuy",
-    demo: "https://gestureguy.vercel.app",
+    demo: "https://hey-bro-ynbd-git-main-hardik-1226s-projects.vercel.app/"
   },
   {
     title: "SheSecure",
@@ -16,7 +16,7 @@ export const projects = [
     description: "A smart safety system to assist women in distress through real-time hotspot mapping, AI-powered voice alerts, and rapid SOS support.",
     tags: ["AI", "Real-time", "Mobile", "SOS"],
     image: "project-shesecure",
-    github: "https://github.com/Hardik-1226/SheSecure",
+    github: "https://github.com/Hardik-1226/SheSecure_backend",
     demo: "https://shesecure.vercel.app",
   },
   {
@@ -26,7 +26,7 @@ export const projects = [
     description: "An AI-powered recommendation system to match users with eligible government schemes, with a backend using FastAPI and Supabase.",
     tags: ["AI", "FastAPI", "Supabase", "Python"],
     image: "project-schemease",
-    github: "https://github.com/Hardik-1226/SchemeEase",
+    github: "https://github.com/Hardik-1226/dhrati",
     demo: "https://schemease.vercel.app",
   },
 ];
