@@ -43,7 +43,7 @@ export const contact = {
   email: "hardikvarshney5@gmail.com",
   linkedin: "https://www.linkedin.com/in/hardik-varshney-83052127b/",
   github: "https://github.com/Hardik-1226",
-  resume: "/Hardik-Resume.pdf",
+  resume: "/hardik-resume.pdf",
 };
 
 export const timeline = [
