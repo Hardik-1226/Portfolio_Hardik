@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { HoverableText } from '@/components/common/hoverable-text';
+import Prism from '@/components/common/Prism';
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -32,8 +33,21 @@ export default function ProjectDetailsPage({ params }: { params: { slug:string }
   return (
     <div className="flex flex-col min-h-screen dark">
       <Header />
-      <main className="flex-grow pt-32 sm:pt-40 pb-16 sm:pb-24 bg-background">
-        <div className="container mx-auto px-4">
+      <main className="flex-grow pt-32 sm:pt-40 pb-16 sm:pb-24 bg-[#0f0b16] relative overflow-hidden">
+        <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0, opacity: 0.4 }}>
+          <Prism
+            animationType="rotate"
+            timeScale={0.3}
+            height={3.5}
+            baseWidth={5.5}
+            scale={3.6}
+            hueShift={0}
+            colorFrequency={1}
+            noise={0.2}
+            glow={1.2}
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="mb-8">
             <Button asChild variant="ghost" className="pl-0">
               <Link href="/#projects">

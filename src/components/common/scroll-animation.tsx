@@ -13,7 +13,7 @@ export function ScrollAnimation({
   children,
   className,
   delay = 0,
-  as: Comp = 'div',
+  as: Comp = 'div' as React.ElementType,
   ...props
 }: ScrollAnimationProps) {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,18 +40,20 @@ export function ScrollAnimation({
     };
   }, []);
 
+  const { style, ...restProps } = props;
+  const CompAsAny = Comp as any;
   return (
-    <Comp
+    <CompAsAny
       ref={domRef}
       className={cn(
         'transition-all duration-1000 ease-out',
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12',
         className
       )}
-      style={{ transitionDelay: `${delay}ms`, ...props.style }}
-      {...props}
+      style={{ transitionDelay: `${delay}ms`, ...style }}
+      {...restProps}
     >
       {children}
-    </Comp>
+    </CompAsAny>
   );
 }

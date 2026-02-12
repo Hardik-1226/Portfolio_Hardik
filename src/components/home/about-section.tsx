@@ -6,6 +6,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ScrollAnimation } from "../common/scroll-animation";
 import { HoverableText } from "../common/hoverable-text";
 import { Typewriter } from "../common/typewriter";
+import Grainient from "../common/Grainient";
 
 const categoryIcons: { [key: string]: React.ReactNode } = {
   "Frontend": <Code2 className="h-6 w-6 text-accent" />,
@@ -19,8 +20,34 @@ export function AboutSection() {
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-visual');
 
   return (
-    <section id="about" className="py-24 sm:py-32 bg-[#708090]">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-24 sm:py-32 bg-[#708090] relative">
+      <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.4 }}>
+        <Grainient 
+          timeSpeed={0.15}
+          colorBalance={0.1}
+          warpStrength={0.8}
+          warpFrequency={4.0}
+          warpSpeed={1.5}
+          warpAmplitude={40.0}
+          blendAngle={45.0}
+          blendSoftness={0.1}
+          rotationAmount={400.0}
+          noiseScale={1.5}
+          grainAmount={0.08}
+          grainScale={2.5}
+          grainAnimated={true}
+          contrast={1.3}
+          gamma={1.0}
+          saturation={1.1}
+          centerX={0.0}
+          centerY={0.0}
+          zoom={0.8}
+          color1="#FF9FFC"
+          color2="#5227FF"
+          color3="#B19EEF"
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 relative">
           <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
             <span className="text-[13vw] font-headline font-extrabold text-white/10 select-none">
@@ -35,7 +62,7 @@ export function AboutSection() {
           <div className="space-y-6 text-center lg:text-left">
             <div className="space-y-5 text-2xl font-serif font-light text-white text-pretty">
               <Typewriter>
-                   m I'm a B.Tech student who loves building clean <HoverableText
+                    I'm a B.Tech student who loves building clean <HoverableText
                   imageUrl="https://picsum.photos/seed/interfaces/200/200"
                   imageHint="clean interface"
                   className="font-headline font-bold text-3xl"
@@ -56,19 +83,19 @@ export function AboutSection() {
                 </HoverableText> that help people.
               </Typewriter>
               <Typewriter>
-                 m I enjoy experimenting with modern web stacks, shipping fast, and continuously improving my craft. My passion lies at the intersection of design, technology, and user experience.
+                  I enjoy experimenting with modern web stacks, shipping fast, and continuously improving my craft. My passion lies at the intersection of design, technology, and user experience.
               </Typewriter>
             </div>
             {aboutImage && (
               <div className="pt-8 flex justify-center lg:justify-start">
-                <div className="relative w-full max-w-sm aspect-square rounded-lg overflow-hidden border">
+                <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square rounded-lg overflow-hidden border">
                   <Image 
                     src={aboutImage.imageUrl} 
                     alt={aboutImage.description} 
                     fill 
                     className="object-cover" 
                     data-ai-hint={aboutImage.imageHint}
-                    sizes="(max-width: 640px) 100vw, 50vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                   />
                 </div>
               </div>

@@ -6,6 +6,8 @@ export const projects = [
     description: "Built real-time gesture recognition using MediaPipe and OpenCV, featuring a responsive UI with 90% detection accuracy.",
     tags: ["React", "Next.js", "MediaPipe", "OpenCV", "Python"],
     image: "project-gestureguy",
+    github: "https://github.com/Hardik-1226/GestureGuy",
+    demo: "https://gestureguy.vercel.app",
   },
   {
     title: "SheSecure",
@@ -14,6 +16,8 @@ export const projects = [
     description: "A smart safety system to assist women in distress through real-time hotspot mapping, AI-powered voice alerts, and rapid SOS support.",
     tags: ["AI", "Real-time", "Mobile", "SOS"],
     image: "project-shesecure",
+    github: "https://github.com/Hardik-1226/SheSecure",
+    demo: "https://shesecure.vercel.app",
   },
   {
     title: "SchemeEase",
@@ -22,6 +26,8 @@ export const projects = [
     description: "An AI-powered recommendation system to match users with eligible government schemes, with a backend using FastAPI and Supabase.",
     tags: ["AI", "FastAPI", "Supabase", "Python"],
     image: "project-schemease",
+    github: "https://github.com/Hardik-1226/SchemeEase",
+    demo: "https://schemease.vercel.app",
   },
 ];
 
@@ -35,7 +41,7 @@ export const skills = {
 
 export const contact = {
   email: "hardikvarshney5@gmail.com",
-  linkedin: "https://www.linkedin.com/in/hardik-varshney",
+  linkedin: "https://www.linkedin.com/in/hardik-varshney-83052127b/",
   github: "https://github.com/Hardik-1226",
   resume: "/Hardik-Resume.pdf",
 };

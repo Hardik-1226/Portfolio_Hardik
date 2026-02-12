@@ -1,11 +1,25 @@
 import { timeline } from "@/lib/data";
 import { ScrollAnimation } from "@/components/common/scroll-animation";
 import { HoverableText } from "../common/hoverable-text";
+import Orb from "../common/Orb";
 
 export function TimelineSection() {
   return (
-    <section id="timeline" className="py-32 sm:py-40">
-      <div className="container mx-auto px-4">
+    <section id="timeline" className="py-32 sm:py-40 relative overflow-hidden">
+      {/* Orb Background */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-30">
+        <div className="w-[600px] h-[600px]">
+          <Orb 
+            hue={270} 
+            hoverIntensity={0.3}
+            rotateOnHover={true}
+            forceHoverState={false}
+            backgroundColor="#000000"
+          />
+        </div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 relative">
             <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
                 <span className="text-[15vw] font-headline font-extrabold text-foreground/10 select-none">

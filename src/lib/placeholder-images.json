@@ -20,9 +20,9 @@
     },
     {
       "id": "project-shesecure",
-      "description": "Upload as: project-shesecure.png — SheSecure project image (security visualization).",
-      "imageUrl": "/images/project-shesecure.png",
-      "imageHint": "security network"
+      "description": "Upload as: SheSecure.png — SheSecure project image (women safety system).",
+      "imageUrl": "/images/SheSecure.png",
+      "imageHint": "women safety system"
     },
     {
       "id": "project-portfolio",
@@ -131,6 +131,12 @@
       "description": "Upload as: hardik-portrait.png — Hardik portrait (hover on name).",
       "imageUrl": "/images/hardik-portrait.png",
       "imageHint": "Hardik portrait outdoor"
+    },
+    {
+      "id": "lanyard-image",
+      "description": "Upload as: lanyard-image.png — Developer portrait for hero section.",
+      "imageUrl": "/images/lanyard-image.png",
+      "imageHint": "developer with laptop"
     }
   ]
 }

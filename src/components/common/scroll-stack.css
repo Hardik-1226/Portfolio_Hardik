@@ -1,0 +1,36 @@
+.scroll-stack-card {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.scroll-stack-inner {
+  overflow: visible;
+}
+
+@media (max-width: 1024px) {
+  .scroll-stack-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .scroll-stack-card {
+    height: 22rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-stack-inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 12vh;
+    padding-bottom: 24rem;
+  }
+
+  .scroll-stack-card {
+    height: 20rem;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+  }
+}

@@ -3,6 +3,8 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from "@/components/ui/toaster";
 import { ChatbotWidget } from '@/components/common/chatbot-widget';
+import SplashCursor from '@/components/common/splash-cursor';
+import MagicBentoController from '@/components/common/magic-bento-controller';
 
 export const metadata: Metadata = {
   title: 'Hardik HQ',
@@ -30,6 +32,8 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased")}>
+        <SplashCursor />
+        <MagicBentoController />
         {children}
         <Toaster />
         <ChatbotWidget />

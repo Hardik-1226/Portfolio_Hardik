@@ -4,6 +4,7 @@ import { ScrollAnimation } from "@/components/common/scroll-animation";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import Image from "next/image";
 import { Award, BookOpen, Mic } from "lucide-react";
+import Lightning from "../common/Lightning";
 
 const achievementIcons: { [key: string]: React.ReactNode } = {
     "hackathon": <Award className="h-8 w-8 text-primary" />,
@@ -17,11 +18,21 @@ export function AchievementSection() {
     }
 
   return (
-    <section id="achievements" className="py-24 sm:py-32 bg-[#FFFBF0]">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 relative">
+    <section id="achievements" className="py-24 sm:py-32 bg-[#f8feff] relative overflow-hidden">
+      {/* Lightning Background */}
+      <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.3 }}>
+        <Lightning 
+          hue={230}
+          xOffset={0}
+          speed={1.0}
+          intensity={0.8}
+          size={1.5}
+        />
+      </div>
+      <div className="container mx-auto px-4 text-white relative z-10">
+        <div className="text-center text-white mb-16 relative">
           <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-            <span className="text-[15vw] font-headline font-extrabold text-foreground/10 select-none">
+            <span className="text-[15vw] font-headline font-extrabold text-white/10 select-none">
               ACHIEVE
             </span>
           </div>
@@ -48,7 +59,7 @@ export function AchievementSection() {
                   <CardContent className="flex-grow flex flex-col">
                     <p className="text-muted-foreground flex-grow">{ach.description}</p>
                     {achImage && (
-                        <div className="relative aspect-video mt-4 rounded-md overflow-hidden">
+                      <div className="relative aspect-video mt-4 rounded-md overflow-hidden">
                         <Image
                             src={achImage.imageUrl}
                             alt={ach.title}

@@ -6,6 +6,7 @@ import * as THREE from 'three';
 export function Interactive3D() {
   const mountRef = useRef<HTMLDivElement>(null);
   const mouse = useRef({ x: 0, y: 0 });
+  const animationFrameRef = useRef<number | undefined>(null);
 
   useEffect(() => {
     if (!mountRef.current) return;
@@ -20,13 +21,13 @@ export function Interactive3D() {
     camera.position.z = 5;
 
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true });
     renderer.setSize(currentMount.clientWidth, currentMount.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     currentMount.appendChild(renderer.domElement);
 
-    // Geometry
-    const geometry = new THREE.TorusKnotGeometry(1.5, 0.5, 100, 16);
+    // Geometry - reduced polygon count for performance
+    const geometry = new THREE.TorusKnotGeometry(1.5, 0.5, 64, 12);
     const material = new THREE.MeshStandardMaterial({
       color: 0xD8CEE6, // Muted Lavender
       metalness: 0.3,
@@ -60,20 +61,16 @@ export function Interactive3D() {
     // Animation loop
     const clock = new THREE.Clock();
     const animate = () => {
-      requestAnimationFrame(animate);
+      animationFrameRef.current = requestAnimationFrame(animate);
       const elapsedTime = clock.getElapsedTime();
 
-      // Interaction
-      torusKnot.rotation.y += (mouse.current.x * 0.5 - torusKnot.rotation.y) * 0.05;
-      torusKnot.rotation.x += (-mouse.current.y * 0.5 - torusKnot.rotation.x) * 0.05;
-
-      // Default rotation
-      torusKnot.rotation.x = elapsedTime * 0.1;
-      torusKnot.rotation.y = elapsedTime * 0.1;
+      // Combined rotation: base + mouse interaction
+      torusKnot.rotation.x = elapsedTime * 0.1 + mouse.current.y * 0.3;
+      torusKnot.rotation.y = elapsedTime * 0.1 + mouse.current.x * 0.3;
       
       renderer.render(scene, camera);
     };
-    animate();
+    animationFrameRef.current = requestAnimationFrame(animate);
 
     // Handle resize
     const handleResize = () => {
@@ -89,9 +86,15 @@ export function Interactive3D() {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
-      if(currentMount && renderer.domElement) {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+      if (currentMount && renderer.domElement.parentNode === currentMount) {
         currentMount.removeChild(renderer.domElement);
       }
+      renderer.dispose();
+      geometry.dispose();
+      material.dispose();
     };
   }, []);
 
