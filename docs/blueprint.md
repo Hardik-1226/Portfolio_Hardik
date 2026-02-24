@@ -1,4 +1,4 @@
-# **App Name**: Hardik HQ
+# **App Name**: Hardik Varshney
 
 ## Core Features:
 
