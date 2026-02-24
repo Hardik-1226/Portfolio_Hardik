@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Hardik Varshney',
     description: 'Hardik\'s personal portfolio. B.Tech Student & Web Developer.',
-    url: 'https://hardik-hq.firebaseapp.com',
+    url: 'https://Hardikvarshney.xyz', // replace with your actual domain
     siteName: 'Hardik Varshney',
     locale: 'en_US',
     type: 'website',
