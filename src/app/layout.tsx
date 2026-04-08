@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { ChatbotWidget } from '@/components/common/chatbot-widget';
 import SplashCursor from '@/components/common/splash-cursor';
 import MagicBentoController from '@/components/common/magic-bento-controller';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'Hardik Varshney',
@@ -39,6 +40,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <ChatbotWidget />
+        <Analytics />
       </body>
     </html>
   );
