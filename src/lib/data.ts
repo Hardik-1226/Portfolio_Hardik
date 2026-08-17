@@ -1,108 +1,165 @@
 export const projects = [
   {
+    title: "SuvidhaAi",
+    subtitle: "AI Powered Hyperlocal Marketplace",
+    logo: "SA",
+    description: "Built a full-stack marketplace (React, MongoDB Atlas) serving 100+ active users with geospatial queries, a FastAPI fake-review detection & Random Forest demand-prediction microservice (85% accuracy), real-time Socket.io chat (93% delivery rate), and role-based access control.",
+    tags: ["React.js", "FastAPI", "MongoDB Atlas", "Socket.io", "Random Forest", "Python"],
+    image: "project-suvidhaai",
+    github: "https://github.com/Hardik-1226",
+    demo: "https://suvidhaai.vercel.app",
+  },
+  {
+    title: "UBlong",
+    subtitle: "Autonomous Legal Navigator for Stateless Children",
+    logo: "UB",
+    description: "Full-stack AI agent platform (React, FastAPI) adopted by 2+ NGOs that autonomously researches legal pathways, identifies missing documents, and drafts multilingual registration applications with an 82% success rate, real-time case tracking, and caseworker dashboards.",
+    tags: ["React.js", "FastAPI", "AI Agents", "Socket.io", "LegalTech", "JWT"],
+    image: "project-ublong",
+    github: "https://github.com/Hardik-1226",
+    demo: "https://ublong.vercel.app",
+  },
+  {
+    title: "DemoWebShop",
+    subtitle: "Selenium & JMeter Test Automation Framework",
+    logo: "DW",
+    description: "Architected a Java test automation framework (Selenium 4, TestNG, Cucumber/BDD) using Page Object Model, data-driven design with Apache POI/OpenCSV, 15+ automated test cases, and JMeter performance testing (93% success rate) with Allure and WebDriverManager reporting.",
+    tags: ["Java", "Selenium 4", "TestNG", "Cucumber/BDD", "JMeter", "Allure"],
+    image: "project-demowebshop",
+    github: "https://github.com/Hardik-1226",
+    demo: "https://github.com/Hardik-1226",
+  },
+  {
+    title: "Health Plus Innovation",
+    subtitle: "Pharmaceutical E-Commerce Platform",
+    logo: "HP",
+    description: "Rebuilt pharmaceutical e-commerce platform (11+ pages) from legacy PHP to modern React.js stack, deployed at hpi.co.in with optimized technical SEO, MongoDB Atlas REST APIs, Razorpay payment gateway, and CI/CD on Vercel.",
+    tags: ["React.js", "MongoDB Atlas", "Razorpay", "JWT", "Vercel", "SEO"],
+    image: "project-hpi",
+    github: "https://github.com/Hardik-1226",
+    demo: "https://hpi.co.in",
+  },
+  {
     title: "GestureGuy",
     subtitle: "Gesture Controlled Interface",
     logo: "GG",
-    description: "Built real-time gesture recognition using MediaPipe and OpenCV, featuring a responsive UI with 90% detection accuracy.",
-    tags: ["React", "Next.js", "MediaPipe", "OpenCV", "Python"],
+    description: "Built real-time hand gesture recognition using MediaPipe and OpenCV, featuring a responsive UI with 90% detection accuracy for touchless system control.",
+    tags: ["Python", "MediaPipe", "OpenCV", "React", "Next.js"],
     image: "project-gestureguy",
     github: "https://github.com/Hardik-1226/GestureGuy",
-    demo: "https://hey-bro-ynbd-git-main-hardik-1226s-projects.vercel.app/"
-  },
-  {
-    title: "SheSecure",
-    subtitle: "Women Safety Software",
-    logo: "SS",
-    description: "A smart safety system to assist women in distress through real-time hotspot mapping, AI-powered voice alerts, and rapid SOS support.",
-    tags: ["AI", "Real-time", "Mobile", "SOS"],
-    image: "project-shesecure",
-    github: "https://github.com/Hardik-1226/SheSecure_backend",
-    demo: "https://shesecure.vercel.app",
-  },
-  {
-    title: "SchemeEase",
-    subtitle: "AI Government Scheme Recommender",
-    logo: "SE",
-    description: "An AI-powered recommendation system to match users with eligible government schemes, with a backend using FastAPI and Supabase.",
-    tags: ["AI", "FastAPI", "Supabase", "Python"],
-    image: "project-schemease",
-    github: "https://github.com/Hardik-1226/dhrati",
-    demo: "https://schemease.vercel.app",
+    demo: "https://hey-bro-ynbd-git-main-hardik-1226s-projects.vercel.app/",
   },
 ];
 
 export const skills = {
-  "Programming": ["Java", "Python", "C", "SQL"],
-  "Frontend": ["React", "Next.js", "CSS", "JavaScript"],
-  "Backend": ["Node.Js", "FastAPI", "Supabase"],
-  "Tools": ["Git", "OpenCV", "MediaPipe"],
-  "Core Concepts": ["Data Structures", "Algorithms", "OOP", "DBMS"],
+  "Languages": ["Java", "JavaScript", "Python", "SQL", "HTML5", "CSS3"],
+  "Frontend": ["React.js", "Tailwind CSS", "Next.js", "HTML5/CSS3", "Three.js"],
+  "Backend & Database": ["FastAPI", "Node.js", "MySQL", "MongoDB Atlas", "Supabase"],
+  "Testing & CI/CD": ["Selenium", "Cucumber/BDD", "JMeter", "Jenkins", "Allure Report", "Postman", "Jira"],
+  "Data & ML": ["Pandas", "Matplotlib", "MediaPipe", "OpenCV", "Random Forest"],
+  "Infrastructure & Concepts": ["GitHub", "Socket.io", "Vercel", "Render", "OOP", "Data Structures & Algorithms", "System Design"],
 };
 
 export const contact = {
+  name: "Hardik Varshney",
+  role: "Graduate Engineer Trainee | B.Tech CSE (AIML), Class of 2027",
+  location: "Greater Noida, India",
   email: "hardikvarshney5@gmail.com",
-  linkedin: "https://www.linkedin.com/in/hardik-varshney-83052127b/",
+  phone: "+91 76688 50124",
+  linkedin: "https://www.linkedin.com/in/hardik-varshney",
   github: "https://github.com/Hardik-1226",
-  resume: "/hardik-resume.pdf",
+  leetcode: "https://leetcode.com/u/Hardik-1226",
+  instagram: "https://instagram.com/hardik.varshney",
+  resume: "/Hardik_Varshney.pdf",
 };
 
 export const timeline = [
   {
-    year: "2021",
-    title: "Completed Class X - 90%",
-    description: "Graduated from Rajni Public School with a score of 90% in Class X.",
+    year: "2020 – 2021",
+    title: "Completed Class X — 90%",
+    description: "Graduated Class X from Rajni Public School with an outstanding score of 90%.",
     image: "timeline-2020",
   },
   {
-    year: "2023",
-    title: "Completed Class XII - 86%",
-    description: "Graduated from Rajni Public School with a score of 86% in Class XII (PCM).",
+    year: "2022 – 2023",
+    title: "Completed Class XII — 86%",
+    description: "Graduated Class XII (PCM) from Rajni Public School with a top score of 86%.",
     image: "timeline-2021",
   },
   {
-    year: "2023",
-    title: "Began B.Tech at GL Bajaj",
-    description: "Started my B.Tech in Computer Science (AI & ML) at GL Bajaj Institute of Technology and Management.",
+    year: "2023 – 2027",
+    title: "B.Tech in Computer Science (AIML)",
+    description: "Pursuing B.Tech in CSE with specialization in AI & Machine Learning at GL Bajaj Institute of Technology and Management, Greater Noida.",
     image: "timeline-2022",
   },
   {
-    year: "2025",
-    title: "PR Lead at Abhyudaya Club",
-    description: "Took on the role of PR Lead for the Abhyudaya Club, strengthening brand presence and organizing the 'Supernova' hackathon.",
+    year: "July 2025 – Present",
+    title: "PR Lead — Abhyudaya Club",
+    description: "Serving as PR Lead for the Abhyudaya Club, driving community engagement, brand presence, and organizing the national-level 'Supernova' hackathon.",
     image: "timeline-2023",
+  },
+  {
+    year: "Jan 2026 – Present",
+    title: "Freelance Web Developer — Health Plus Innovation",
+    description: "Rebuilt a full pharmaceutical e-commerce platform (11+ pages) from legacy PHP to modern React.js stack, deployed at hpi.co.in with Razorpay payments and MongoDB Atlas.",
+    image: "timeline-hpi",
+  },
+  {
+    year: "June 2026 – Present",
+    title: "Graduate Engineer Trainee — Coforge",
+    description: "Authored and maintained 120+ automated test scripts (Selenium, Cucumber/BDD) achieving 95% pass rate, performed JMeter load testing, and integrated Jenkins CI/Allure pipelines.",
+    image: "timeline-coforge",
   },
 ];
 
 export const achievements = [
-    {
-        title: "Winner at IIIT Delhi Hackathon",
-        description: "Secured first place at Infronix'25, a national-level hackathon organized by IIIT Delhi.",
-        image: "achievement-hackathon",
-        icon: "hackathon"
-    },
-    {
-        title: "150+ DSA Problems Solved",
-        description: "Strengthened problem-solving skills by solving over 150 Data Structures and Algorithms problems on LeetCode.",
-        image: "achievement-academic",
-        icon: "academic"
-    },
-    {
-        title: "Hackathon Organizer - Supernova",
-        description: "Organized and led the college hackathon 'Supernova', managing over 200 participants and multiple sponsors.",
-        image: "achievement-article",
-        icon: "publication"
-    }
+  {
+    title: "Winner at IIIT Delhi Hackathon",
+    description: "Secured 1st place at Infronix’25, a national-level hackathon organized by IIIT Delhi.",
+    image: "achievement-hackathon",
+    icon: "hackathon",
+  },
+  {
+    title: "Top 10 at IIT Delhi Hackathon",
+    description: "Ranked in Top 10 finalists at CubeInnovators @Tryst’25 organized by IIT Delhi.",
+    image: "achievement-hackathon",
+    icon: "hackathon",
+  },
+  {
+    title: "Top 10 at GGSIPU Delhi Hackathon",
+    description: "Top 10 finalist at VesHack’25 organized by GGSIPU Delhi.",
+    image: "achievement-hackathon",
+    icon: "hackathon",
+  },
+  {
+    title: "Top 300 at Adobe National Hackathon",
+    description: "Selected in Top 300 nationwide in Adobe National Hackathon.",
+    image: "achievement-hackathon",
+    icon: "hackathon",
+  },
+  {
+    title: "300+ LeetCode DSA Problems Solved",
+    description: "Strengthened core problem-solving by solving over 300 Data Structures and Algorithms problems on LeetCode.",
+    image: "achievement-academic",
+    icon: "academic",
+  },
+  {
+    title: "PR Lead & Hackathon Organizer",
+    description: "Organized and led the 'Supernova' hackathon at GL Bajaj Institute, managing 200+ participants and industry sponsors.",
+    image: "achievement-article",
+    icon: "publication",
+  },
 ];
 
 export const certifications = [
-    {
-        title: "Oracle Generative AI Certification",
-        issuer: "Oracle",
-        image: "cert-google-ai"
-    },
-    {
-        title: "Diploma in Office Automation & Publishing (SEO)",
-        issuer: "Issued May 2021",
-        image: "cert-fcc"
-    }
+  {
+    title: "Oracle Generative AI Certification",
+    issuer: "Oracle",
+    image: "cert-google-ai",
+  },
+  {
+    title: "Diploma in Office Automation & Publishing (SEO)",
+    issuer: "Issued May 2021",
+    image: "cert-fcc",
+  },
 ];

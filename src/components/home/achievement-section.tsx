@@ -1,10 +1,11 @@
 import { achievements } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ScrollAnimation } from "@/components/common/scroll-animation";
+import { HoverableText } from "@/components/common/hoverable-text";
+import { StrokeText } from "@/components/common/StrokeText";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import Image from "next/image";
 import { Award, BookOpen, Mic } from "lucide-react";
-import Lightning from "../common/Lightning";
 
 const achievementIcons: { [key: string]: React.ReactNode } = {
     "hackathon": <Award className="h-8 w-8 text-primary" />,
@@ -18,27 +19,30 @@ export function AchievementSection() {
     }
 
   return (
-    <section id="achievements" className="py-24 sm:py-32 bg-[#f8feff] relative overflow-hidden">
-      {/* Lightning Background */}
-      <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.3 }}>
-        <Lightning 
-          hue={230}
-          xOffset={0}
-          speed={1.0}
-          intensity={0.8}
-          size={1.5}
-        />
-      </div>
+    <section id="achievements" className="py-24 sm:py-32 bg-transparent text-white relative overflow-hidden">
       <div className="container mx-auto px-4 text-white relative z-10">
-        <div className="text-center text-white mb-16 relative">
+        <div className="text-center text-white mb-16 relative space-y-3">
           <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-            <span className="text-[15vw] font-headline font-extrabold text-white/10 select-none">
+            <span className="text-[13vw] font-headline font-black text-white/[0.18] tracking-widest select-none drop-shadow-[0_2px_15px_rgba(0,0,0,0.6)]">
               ACHIEVE
             </span>
           </div>
-          <ScrollAnimation className="relative z-10">
-            <h2 className="font-headline text-4xl sm:text-5xl tracking-tight font-bold text-foreground">My Achievements</h2>
-            <p className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <ScrollAnimation className="relative z-10 space-y-3">
+
+            <div className="flex justify-center my-2">
+              <StrokeText
+                text="MY ACHIEVEMENTS"
+                fontSize={48}
+                strokeColor="#fb7185"
+                fillColor="#ffffff"
+                strokeWidth={1.8}
+                drawDuration={1.8}
+                trigger="scroll"
+                fillMode="wipe"
+                letterSpacing={2}
+              />
+            </div>
+            <p className="mt-4 text-2xl text-slate-200 max-w-2xl mx-auto">
               A few of the milestones I'm proud of.
             </p>
           </ScrollAnimation>
@@ -47,29 +51,35 @@ export function AchievementSection() {
           {achievements.map((ach, index) => {
             const achImage = getImage(ach.image);
             const icon = achievementIcons[ach.icon] || <Award className="h-8 w-8 text-primary" />;
+
             return (
               <ScrollAnimation key={ach.title} delay={index * 150}>
-                <Card className="overflow-hidden h-full flex flex-col group bg-background/80 backdrop-blur-sm border-border/50">
+                <Card className="overflow-hidden h-full flex flex-col group bg-white/5 backdrop-blur-md border-white/10 text-white hover:border-primary/50 transition-all">
+                  {achImage && (
+                    <div className="relative aspect-video overflow-hidden">
+                      <Image
+                        src={achImage.imageUrl}
+                        alt={ach.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        data-ai-hint={achImage.imageHint}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
                   <CardHeader>
                     <div className="flex items-center gap-4">
-                        {icon}
-                        <CardTitle>{ach.title}</CardTitle>
+                        <div className="p-3 bg-primary/10 rounded-full text-primary border border-primary/20">
+                            {icon}
+                        </div>
+                        <div>
+                            <CardTitle className="font-headline text-3xl text-white">{ach.title}</CardTitle>
+                            <CardDescription className="text-xl text-purple-300">{ach.year}</CardDescription>
+                        </div>
                     </div>
                   </CardHeader>
-                  <CardContent className="flex-grow flex flex-col">
-                    <p className="text-muted-foreground flex-grow">{ach.description}</p>
-                    {achImage && (
-                      <div className="relative aspect-video mt-4 rounded-md overflow-hidden">
-                        <Image
-                            src={achImage.imageUrl}
-                            alt={ach.title}
-                            fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
-                            data-ai-hint={achImage.imageHint}
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                        </div>
-                    )}
+                  <CardContent className="flex-grow">
+                    <p className="text-slate-300 text-lg">{ach.description}</p>
                   </CardContent>
                 </Card>
               </ScrollAnimation>
@@ -80,3 +90,5 @@ export function AchievementSection() {
     </section>
   );
 }
+
+export default AchievementSection;

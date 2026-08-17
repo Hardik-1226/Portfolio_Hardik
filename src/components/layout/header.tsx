@@ -1,47 +1,90 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import PillNav from "@/components/layout/pill-nav";
+import Link from "next/link";
+import BubbleMenu from "@/components/common/BubbleMenu";
+import CircularText from "@/components/common/CircularText";
 
-const navLinks = [
-  { href: "/#projects", label: "Projects" },
-  { href: "/#timeline", label: "Timeline" },
-  { href: "/#about", label: "About" },
-  { href: "/#achievements", label: "Achievements" },
-  { href: "/#certifications", label: "Certifications" },
-  { href: "/#contact", label: "Contact" },
+const menuItems = [
+  {
+    label: "home",
+    href: "#",
+    ariaLabel: "Home",
+    rotation: -6,
+    hoverStyles: { bgColor: "#a855f7", textColor: "#ffffff" },
+  },
+  {
+    label: "about",
+    href: "#about",
+    ariaLabel: "About",
+    rotation: 6,
+    hoverStyles: { bgColor: "#c084fc", textColor: "#0f0b16" },
+  },
+  {
+    label: "projects",
+    href: "#projects",
+    ariaLabel: "Projects",
+    rotation: -5,
+    hoverStyles: { bgColor: "#818cf8", textColor: "#ffffff" },
+  },
+  {
+    label: "journey",
+    href: "#timeline",
+    ariaLabel: "Timeline Journey",
+    rotation: 7,
+    hoverStyles: { bgColor: "#38bdf8", textColor: "#0f0b16" },
+  },
+  {
+    label: "awards",
+    href: "#achievements",
+    ariaLabel: "Achievements & Awards",
+    rotation: -6,
+    hoverStyles: { bgColor: "#fb7185", textColor: "#ffffff" },
+  },
+  {
+    label: "certifications",
+    href: "#certifications",
+    ariaLabel: "Certifications",
+    rotation: 5,
+    hoverStyles: { bgColor: "#34d399", textColor: "#0f0b16" },
+  },
+  {
+    label: "contact",
+    href: "#contact",
+    ariaLabel: "Contact Me",
+    rotation: -7,
+    hoverStyles: { bgColor: "#e879f9", textColor: "#0f0b16" },
+  },
 ];
 
 export function Header() {
-  const pathname = usePathname();
-  const [activeHref, setActiveHref] = useState<string | undefined>(undefined);
-
-  useEffect(() => {
-    const updateActive = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        setActiveHref(`/${hash}`);
-      } else if (pathname) {
-        setActiveHref(pathname);
-      }
-    };
-
-    updateActive();
-    window.addEventListener("hashchange", updateActive);
-    return () => window.removeEventListener("hashchange", updateActive);
-  }, [pathname]);
-
   return (
-    <header className="relative z-[1000]">
-      <PillNav
-        items={navLinks}
-        activeHref={activeHref}
-        baseColor="#0f0b16"
-        pillColor="#e8d4ff"
-        hoveredPillTextColor="#e8d4ff"
-        pillTextColor="#0f0b16"
+    <header className="relative z-[1001]">
+      <BubbleMenu
+        logo={
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center select-none"
+            title="Hardik Varshney — Home"
+          >
+            <CircularText
+              text="HARDIK*VARSHNEY*"
+              onHover="speedUp"
+              spinDuration={20}
+              className="hover:scale-105 transition-transform"
+            />
+          </Link>
+        }
+        items={menuItems}
+        menuAriaLabel="Toggle navigation"
+        menuBg="#10081d"
+        menuContentColor="#f8fafc"
+        useFixedPosition={true}
+        animationEase="back.out(1.5)"
+        animationDuration={0.45}
+        staggerDelay={0.08}
       />
     </header>
   );
 }
+
+export default Header;

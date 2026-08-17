@@ -22,10 +22,12 @@ export function ScrollAnimation({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Set visibility based on whether the element is intersecting
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (currentRef) observer.unobserve(currentRef);
+        }
       },
-      { threshold: 0.1 }
+      { threshold: 0.05, rootMargin: '50px' }
     );
 
     const currentRef = domRef.current;
@@ -33,7 +35,13 @@ export function ScrollAnimation({
       observer.observe(currentRef);
     }
 
+    // Safety fallback: ensure visible after 1.5s in case intersection didn't trigger
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1500);
+
     return () => {
+      clearTimeout(timer);
       if (currentRef) {
         observer.unobserve(currentRef);
       }

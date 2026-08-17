@@ -19,22 +19,28 @@
       "imageHint": "abstract geometric"
     },
     {
-      "id": "project-shesecure",
-      "description": "Upload as: SheSecure.png — SheSecure project image (women safety system).",
+      "id": "project-suvidhaai",
+      "description": "Upload as: project-suvidhaai.png — SuvidhaAi project image (AI Powered Hyperlocal Marketplace).",
+      "imageUrl": "/images/SchemeEasee.png",
+      "imageHint": "AI marketplace platform"
+    },
+    {
+      "id": "project-ublong",
+      "description": "Upload as: project-ublong.png — UBlong project image (Legal Navigator for Stateless Children).",
       "imageUrl": "/images/SheSecure.png",
-      "imageHint": "women safety system"
+      "imageHint": "legal tech dashboard"
     },
     {
-      "id": "project-portfolio",
-      "description": "Upload as: project-portfolio.png — Portfolio project image (web design).",
-      "imageUrl": "/images/project-portfolio.png",
-      "imageHint": "website design"
+      "id": "project-demowebshop",
+      "description": "Upload as: project-demowebshop.png — DemoWebShop Selenium test automation framework.",
+      "imageUrl": "/images/project-gestureguy.png",
+      "imageHint": "test automation code"
     },
     {
-      "id": "project-dashboard",
-      "description": "Upload as: project-dashboard.png — Dashboard project image (analytics charts).",
-      "imageUrl": "/images/project-dashboard.png",
-      "imageHint": "dashboard charts"
+      "id": "project-hpi",
+      "description": "Upload as: project-hpi.png — Health Plus Innovation pharmaceutical e-commerce.",
+      "imageUrl": "/images/about-visual.png",
+      "imageHint": "pharmaceutical ecommerce"
     },
     {
       "id": "project-gestureguy",
@@ -55,88 +61,76 @@
       "imageHint": "IoT system architecture"
     },
     {
-      "id": "project-",
-      "description": "Upload as: project-.png — Placeholder project image (rename as needed).",
-      "imageUrl": "/images/project-.png",
-      "imageHint": "project placeholder"
-    },
-    {
       "id": "timeline-2020",
-      "description": "Upload as: timeline-2020.png — Timeline 2020 (university student).",
+      "description": "Upload as: timeline-2020.png — Timeline 2020 (Class X).",
       "imageUrl": "/images/timeline-2020.png",
-      "imageHint": "university student"
+      "imageHint": "high school student"
     },
     {
       "id": "timeline-2021",
-      "description": "Upload as: timeline-2021.png — Timeline 2021 (web development).",
+      "description": "Upload as: timeline-2021.png — Timeline 2021 (Class XII).",
       "imageUrl": "/images/timeline-2021.png",
-      "imageHint": "code screen"
+      "imageHint": "graduation school"
     },
     {
       "id": "timeline-2022",
-      "description": "Upload as: timeline-2022.png — Timeline 2022 (backend development).",
+      "description": "Upload as: timeline-2022.png — Timeline 2023 (B.Tech at GL Bajaj).",
       "imageUrl": "/images/timeline-2022.png",
-      "imageHint": "data center"
+      "imageHint": "computer science college"
     },
     {
       "id": "timeline-2023",
-      "description": "Upload as: timeline-2023.png — Timeline 2023 (AI/ML).",
+      "description": "Upload as: timeline-2023.png — Timeline 2025 (PR Lead at Abhyudaya Club).",
       "imageUrl": "/images/timeline-2023.png",
-      "imageHint": "artificial intelligence"
+      "imageHint": "hackathon organizer"
     },
     {
-      "id": "timeline-2024",
-      "description": "Upload as: timeline-2024.png — Timeline 2024 (future tech/interface).",
+      "id": "timeline-hpi",
+      "description": "Upload as: timeline-hpi.png — Timeline 2026 (Health Plus Innovation).",
       "imageUrl": "/images/timeline-2024.png",
-      "imageHint": "future interface"
+      "imageHint": "web development freelance"
+    },
+    {
+      "id": "timeline-coforge",
+      "description": "Upload as: timeline-coforge.png — Timeline 2026 (Coforge GET).",
+      "imageUrl": "/images/cert-google-ai.png",
+      "imageHint": "engineer corporate office"
     },
     {
       "id": "cert-google-ai",
       "description": "Upload as: cert-google-ai.png — Certification (Oracle Generative AI).",
       "imageUrl": "/images/cert-google-ai.png",
-      "imageHint": "AI logo"
+      "imageHint": "Oracle AI logo"
     },
     {
       "id": "cert-fcc",
-      "description": "Upload as: cert-fcc.png — Certification (Office Automation & Publishing).",
+      "description": "Upload as: cert-fcc.png — Certification (Diploma in SEO & Automation).",
       "imageUrl": "/images/cert-fcc.png",
-      "imageHint": "code camp"
+      "imageHint": "automation certificate"
     },
     {
       "id": "cert-js",
-      "description": "Upload as: cert-js.png — Certification (JavaScript).",
+      "description": "Upload as: cert-js.png — Certification (Full Stack & Testing).",
       "imageUrl": "/images/cert-js.png",
-      "imageHint": "javascript logo"
+      "imageHint": "testing certificate"
     },
     {
       "id": "achievement-hackathon",
-      "description": "Upload as: achievement-hackathon.png — Achievement (hackathon trophy).",
+      "description": "Upload as: achievement-hackathon.png — Hackathon achievement badge.",
       "imageUrl": "/images/achievement-hackathon.png",
-      "imageHint": "trophy award"
+      "imageHint": "hackathon trophy"
     },
     {
       "id": "achievement-academic",
-      "description": "Upload as: achievement-academic.png — Achievement (academic/graduation).",
+      "description": "Upload as: achievement-academic.png — LeetCode 300+ DSA achievement badge.",
       "imageUrl": "/images/achievement-academic.png",
-      "imageHint": "certificate award"
+      "imageHint": "coding certificate"
     },
     {
       "id": "achievement-article",
-      "description": "Upload as: achievement-article.png — Achievement (article/writing).",
+      "description": "Upload as: achievement-article.png — Supernova Hackathon organizer badge.",
       "imageUrl": "/images/achievement-article.png",
-      "imageHint": "writing article"
-    },
-    {
-      "id": "hardik-portrait",
-      "description": "Upload as: hardik-portrait.png — Hardik portrait (hover on name).",
-      "imageUrl": "/images/hardik-portrait.png",
-      "imageHint": "Hardik portrait outdoor"
-    },
-    {
-      "id": "lanyard-image",
-      "description": "Upload as: lanyard-image.png — Developer portrait for hero section.",
-      "imageUrl": "/images/lanyard-image.png",
-      "imageHint": "developer with laptop"
+      "imageHint": "event badge"
     }
   ]
 }

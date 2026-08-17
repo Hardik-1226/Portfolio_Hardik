@@ -15,20 +15,20 @@ export function HoverableText({ children, imageUrl, imageHint, className }: Hove
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
+    <span 
       className="relative inline-block"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <span className={cn("italic text-accent-foreground/80", className)}>{children}</span>
-      <div
+      <span
         className={cn(
-          "absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-40 h-40 rounded-lg overflow-hidden shadow-2xl pointer-events-none transition-opacity duration-300 z-20",
+          "absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-40 h-40 rounded-lg overflow-hidden shadow-2xl pointer-events-none transition-opacity duration-300 z-20 block",
           isHovered ? "opacity-100" : "opacity-0"
         )}
       >
         <Image src={imageUrl} alt="" fill className="object-cover" data-ai-hint={imageHint} sizes="10rem" />
-      </div>
-    </div>
+      </span>
+    </span>
   );
 }

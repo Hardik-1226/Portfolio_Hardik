@@ -1,66 +1,256 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { timeline } from "@/lib/data";
 import { ScrollAnimation } from "@/components/common/scroll-animation";
 import { HoverableText } from "../common/hoverable-text";
-import Orb from "../common/Orb";
+import { MaskedHeading } from "@/components/common/MaskedHeading";
+import { StrokeText } from "@/components/common/StrokeText";
+import { GraduationCap, Briefcase, Award, Code, Sparkles, CheckCircle2 } from "lucide-react";
 
 export function TimelineSection() {
-  return (
-    <section id="timeline" className="py-32 sm:py-40 relative overflow-hidden">
-      {/* Orb Background */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-30">
-        <div className="w-[600px] h-[600px]">
-          <Orb 
-            hue={270} 
-            hoverIntensity={0.3}
-            rotateOnHover={true}
-            forceHoverState={false}
-            backgroundColor="#000000"
-          />
-        </div>
-      </div>
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [activeStep, setActiveStep] = useState(0);
+
+  const getIconForIndex = (idx: number) => {
+    switch (idx) {
+      case 0:
+      case 1:
+      case 2:
+        return <GraduationCap className="w-4 h-4 text-purple-300" />;
+      case 3:
+        return <Award className="w-4 h-4 text-amber-300" />;
+      case 4:
+        return <Code className="w-4 h-4 text-sky-300" />;
+      case 5:
+      default:
+        return <Briefcase className="w-4 h-4 text-pink-300" />;
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Calculate how far through the timeline container the user has scrolled
+      const totalDist = rect.height - windowHeight * 0.4;
+      const currentScroll = windowHeight * 0.75 - rect.top;
+      const progress = Math.min(Math.max(currentScroll / totalDist, 0), 1);
       
+      setScrollProgress(progress);
+
+      // Determine the highest active step (0 to timeline.length - 1)
+      // Milestone 0 (01.) triggers as soon as timeline enters view
+      // Milestone 1 (02.) triggers at ~18% scroll
+      // Milestone 2 (03.) triggers at ~36% scroll
+      // Milestone 3 (04.) triggers at ~54% scroll
+      // Milestone 4 (05.) triggers at ~72% scroll
+      // Milestone 5 (06.) triggers at ~88% scroll
+      const stepThresholds = [0.02, 0.18, 0.36, 0.54, 0.72, 0.88];
+      let currentStep = -1;
+      for (let i = 0; i < stepThresholds.length; i++) {
+        if (progress >= stepThresholds[i]) {
+          currentStep = i;
+        }
+      }
+      setActiveStep(currentStep);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <section
+      id="timeline"
+      ref={containerRef}
+      className="py-32 sm:py-40 relative overflow-hidden bg-transparent text-white min-h-screen"
+    >
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 relative">
-            <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-                <span className="text-[15vw] font-headline font-extrabold text-foreground/10 select-none">
-                    JOURNEY
-                </span>
+        <div className="text-center mb-24 relative space-y-3">
+          {/* Background Ambient Text */}
+          <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none -top-10">
+            <span className="text-[13vw] font-headline font-black text-white/[0.08] tracking-widest select-none drop-shadow-[0_2px_15px_rgba(0,0,0,0.6)]">
+              JOURNEY
+            </span>
+          </div>
+
+          <ScrollAnimation className="relative z-10 space-y-3">
+
+            <div className="flex justify-center my-2">
+              <StrokeText
+                text="MY JOURNEY"
+                fontSize={52}
+                strokeColor="#38bdf8"
+                fillColor="#ffffff"
+                strokeWidth={1.8}
+                drawDuration={1.8}
+                trigger="scroll"
+                fillMode="wipe"
+                letterSpacing={2}
+              />
             </div>
-            <ScrollAnimation className="relative z-10">
-                <h2 className="font-headline text-4xl sm:text-5xl tracking-tight font-bold text-foreground">My Journey</h2>
-                <div className="mt-4 text-2xl text-muted-foreground max-w-2xl mx-auto">
-                A timeline of my key <HoverableText imageUrl="data:image/jpeg;base64,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" imageHint="stone path" className="font-headline font-bold text-3xl">milestones</HoverableText> and <HoverableText imageUrl="data:image/jpeg;base64,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" imageHint="personal journey" className="font-headline font-bold text-3xl">experiences</HoverableText> in the world of tech.
-                </div>
-            </ScrollAnimation>
+            <div className="mt-4 text-xl sm:text-2xl text-slate-200 max-w-2xl mx-auto">
+              A timeline of my key{" "}
+              <HoverableText
+                imageUrl="/images/achievement-academic.png"
+                imageHint="milestones"
+                className="font-headline font-bold text-3xl text-purple-300"
+              >
+                milestones
+              </HoverableText>{" "}
+              and{" "}
+              <HoverableText
+                imageUrl="/images/about-visual.png"
+                imageHint="experiences"
+                className="font-headline font-bold text-3xl text-sky-300"
+              >
+                experiences
+              </HoverableText>{" "}
+              in tech.
+            </div>
+          </ScrollAnimation>
         </div>
+
         <div className="relative max-w-5xl mx-auto">
-          <div className="absolute top-0 h-full w-0.5 bg-border left-4 md:left-1/2 md:-translate-x-1/2" aria-hidden="true"></div>
-          <ul className="space-y-24">
+          {/* Base vertical track line */}
+          <div
+            className="absolute top-0 bottom-0 w-0.5 bg-white/10 left-4 md:left-1/2 md:-translate-x-1/2"
+            aria-hidden="true"
+          />
+
+          {/* Dynamic illuminated neon scroll progress beam */}
+          <div
+            className="absolute top-0 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-sky-400 left-4 md:left-1/2 md:-translate-x-1/2 rounded-full shadow-[0_0_16px_rgba(192,132,252,1)] transition-all duration-200 ease-out"
+            style={{ height: `${Math.min(scrollProgress * 100, 100)}%` }}
+            aria-hidden="true"
+          />
+
+          <ul className="space-y-24 sm:space-y-32">
             {timeline.map((item, index) => {
+              const isUnlocked = activeStep >= index;
+              const isCurrent = activeStep === index;
+              const isEven = index % 2 === 0;
+
               return (
                 <li key={index} className="relative">
-                  <div className="absolute top-1 left-4 w-5 h-5 bg-primary rounded-full -translate-x-1/2 border-4 border-background md:left-1/2"></div>
+                  {/* Glowing Node Dot in Center */}
+                  <div
+                    className={`absolute top-4 left-4 w-8 h-8 rounded-full -translate-x-1/2 border-2 transition-all duration-700 md:left-1/2 z-20 flex items-center justify-center ${
+                      isUnlocked
+                        ? "bg-[#180e29] border-purple-400 scale-125 shadow-[0_0_24px_rgba(192,132,252,1)]"
+                        : "bg-[#0b0712] border-white/15 scale-75 opacity-40"
+                    }`}
+                  >
+                    <div
+                      className={`w-3 h-3 rounded-full transition-all duration-700 ${
+                        isCurrent
+                          ? "bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 animate-ping scale-110"
+                          : isUnlocked
+                          ? "bg-purple-400 scale-100 shadow-[0_0_10px_rgba(192,132,252,0.9)]"
+                          : "bg-white/20 scale-50"
+                      }`}
+                    />
+                  </div>
+
                   <div className="md:grid md:grid-cols-2 md:gap-x-16 items-center">
-                    <ScrollAnimation
-                      as="div"
-                      delay={100}
-                      className="pl-12 md:pl-0 md:text-right"
+                    {/* Big Number Column */}
+                    <div
+                      className={`pl-12 md:pl-0 transition-all duration-700 ease-out ${
+                        isEven ? "md:text-right" : "md:order-2 md:text-left"
+                      } ${
+                        isUnlocked
+                          ? "opacity-100 translate-x-0 translate-y-0 scale-100 blur-0"
+                          : isEven
+                          ? "opacity-0 -translate-x-20 translate-y-16 scale-75 blur-md"
+                          : "opacity-0 translate-x-20 translate-y-16 scale-75 blur-md"
+                      }`}
                     >
-                      <div className="flex justify-end items-center gap-8">
-                        <p className="font-body font-extrabold text-9xl sm:text-[10rem] text-black leading-none">
-                          {(index + 1).toString().padStart(2, '0')}.
+                      <div
+                        className={`flex items-center ${
+                          isEven ? "md:justify-end" : "md:justify-start"
+                        }`}
+                      >
+                        <motion.p
+                          initial={{ scale: 0.8, opacity: 0 }}
+                          animate={
+                            isUnlocked
+                              ? { scale: isCurrent ? 1.06 : 1, opacity: 1 }
+                              : { scale: 0.8, opacity: 0 }
+                          }
+                          transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                          className={`font-headline font-black text-7xl sm:text-8xl md:text-9xl leading-none select-none transition-all duration-500 ${
+                            isCurrent
+                              ? "text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-pink-400 drop-shadow-[0_0_35px_rgba(192,132,252,0.9)]"
+                              : isUnlocked
+                              ? "text-transparent bg-clip-text bg-gradient-to-br from-white/90 via-purple-200/80 to-sky-300/80 drop-shadow-[0_0_20px_rgba(192,132,252,0.4)]"
+                              : "text-white/10"
+                          }`}
+                        >
+                          {(index + 1).toString().padStart(2, "0")}.
+                        </motion.p>
+                      </div>
+                    </div>
+
+                    {/* Milestone Card Column */}
+                    <div
+                      className={`pl-12 md:pl-0 mt-6 md:mt-0 transition-all duration-700 delay-150 ease-out ${
+                        isEven ? "md:order-2" : "md:order-1 md:text-right"
+                      } ${
+                        isUnlocked
+                          ? "opacity-100 translate-x-0 translate-y-0 scale-100 blur-0"
+                          : isEven
+                          ? "opacity-0 translate-x-20 translate-y-16 scale-80 blur-md"
+                          : "opacity-0 -translate-x-20 translate-y-16 scale-80 blur-md"
+                      }`}
+                    >
+                      <div
+                        className={`p-6 sm:p-8 rounded-3xl transition-all duration-500 backdrop-blur-xl ${
+                          isCurrent
+                            ? "bg-white/[0.08] border-2 border-purple-400/80 shadow-[0_0_40px_rgba(192,132,252,0.35)] scale-[1.02]"
+                            : isUnlocked
+                            ? "bg-white/[0.04] border border-white/15 shadow-[0_12px_32px_rgba(0,0,0,0.5)]"
+                            : "bg-white/[0.01] border border-white/5 opacity-20"
+                        }`}
+                      >
+                        <div
+                          className={`flex items-center gap-2 mb-3 ${
+                            !isEven ? "md:justify-end" : ""
+                          }`}
+                        >
+                          <span
+                            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase transition-colors ${
+                              isCurrent
+                                ? "bg-purple-500/30 text-purple-200 border border-purple-400/60 shadow-[0_0_15px_rgba(192,132,252,0.5)]"
+                                : "bg-white/5 text-slate-300 border border-white/10"
+                            }`}
+                          >
+                            {getIconForIndex(index)}
+                            {item.year}
+                          </span>
+                          {isCurrent && (
+                            <span className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-pink-300 animate-pulse">
+                              <Sparkles className="w-3.5 h-3.5" /> Present Focus
+                            </span>
+                          )}
+                        </div>
+
+                        <h4 className="font-headline text-2xl sm:text-3xl font-black text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+                          {item.title}
+                        </h4>
+                        <p className="text-base sm:text-lg text-slate-200 mt-3 leading-relaxed font-normal">
+                          {item.description}
                         </p>
                       </div>
-                    </ScrollAnimation>
-
-                    <ScrollAnimation
-                      as="div"
-                      delay={200}
-                      className="pl-12 md:pl-0 mt-8 md:mt-0"
-                    >
-                      <h4 className="font-body text-4xl sm:text-5xl font-bold">{item.title}</h4>
-                      <p className="text-xl text-muted-foreground mt-4">{item.description}</p>
-                    </ScrollAnimation>
+                    </div>
                   </div>
                 </li>
               );
@@ -71,3 +261,5 @@ export function TimelineSection() {
     </section>
   );
 }
+
+export default TimelineSection;

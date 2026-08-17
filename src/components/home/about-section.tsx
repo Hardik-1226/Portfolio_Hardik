@@ -1,94 +1,126 @@
+"use client";
+
 import { skills } from "@/lib/data";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2, Code2, Server, GitMerge, BrainCircuit, Boxes } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ScrollAnimation } from "../common/scroll-animation";
 import { HoverableText } from "../common/hoverable-text";
-import { Typewriter } from "../common/typewriter";
-import Grainient from "../common/Grainient";
+import { StrokeText } from "../common/StrokeText";
+import { CurvedLoop } from "../common/CurvedLoop";
+import { LogoLoop } from "../common/LogoLoop";
+import { Code2, Server, Terminal, Wrench, Layers, CheckCircle2 } from "lucide-react";
+import { 
+  SiReact, 
+  SiNextdotjs, 
+  SiTypescript, 
+  SiJavascript, 
+  SiTailwindcss, 
+  SiNodedotjs, 
+  SiPython, 
+  SiFastapi, 
+  SiSupabase, 
+  SiPostgresql, 
+  SiGit, 
+  SiDocker, 
+  SiOpencv, 
+  SiThreedotjs,
+  SiSelenium,
+  SiJenkins,
+  SiPostman,
+  SiJira,
+  SiMongodb,
+  SiMysql
+} from "react-icons/si";
 
-const categoryIcons: { [key: string]: React.ReactNode } = {
-  "Frontend": <Code2 className="h-6 w-6 text-accent" />,
-  "Backend": <Server className="h-6 w-6 text-accent" />,
-  "Tools": <GitMerge className="h-6 w-6 text-accent" />,
-  "AI": <BrainCircuit className="h-6 w-6 text-accent" />,
-  "Other": <Boxes className="h-6 w-6 text-accent" />,
+const techLogos = [
+  { node: <SiReact className="text-[#61DAFB] text-2xl" />, title: "React", href: "https://react.dev" },
+  { node: <SiFastapi className="text-[#009688] text-2xl" />, title: "FastAPI", href: "https://fastapi.tiangolo.com" },
+  { node: <SiPython className="text-[#3776AB] text-2xl" />, title: "Python", href: "https://www.python.org" },
+  { node: <SiMongodb className="text-[#47A248] text-2xl" />, title: "MongoDB Atlas", href: "https://mongodb.com" },
+  { node: <SiSelenium className="text-[#43B02A] text-2xl" />, title: "Selenium", href: "https://selenium.dev" },
+  { node: <SiJenkins className="text-[#D24939] text-2xl" />, title: "Jenkins", href: "https://jenkins.io" },
+  { node: <SiPostman className="text-[#FF6C37] text-2xl" />, title: "Postman", href: "https://postman.com" },
+  { node: <SiJira className="text-[#0052CC] text-2xl" />, title: "Jira", href: "https://jira.com" },
+  { node: <SiNextdotjs className="text-white text-2xl" />, title: "Next.js", href: "https://nextjs.org" },
+  { node: <SiTypescript className="text-[#3178C6] text-2xl" />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+  { node: <SiTailwindcss className="text-[#06B6D4] text-2xl" />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+  { node: <SiMysql className="text-[#4479A1] text-2xl" />, title: "MySQL", href: "https://mysql.com" },
+  { node: <SiGit className="text-[#F05032] text-2xl" />, title: "Git", href: "https://git-scm.com" },
+  { node: <SiOpencv className="text-[#5C3EE8] text-2xl" />, title: "OpenCV", href: "https://opencv.org" },
+];
+
+const categoryIcons: Record<string, React.ReactNode> = {
+  "Languages": <Terminal className="h-4 w-4 text-purple-300" />,
+  "Frontend": <Code2 className="h-4 w-4 text-indigo-300" />,
+  "Backend & Database": <Server className="h-4 w-4 text-sky-300" />,
+  "Testing & CI/CD": <CheckCircle2 className="h-4 w-4 text-emerald-300" />,
+  "Data & ML": <Wrench className="h-4 w-4 text-fuchsia-300" />,
+  "Infrastructure & Concepts": <Layers className="h-4 w-4 text-violet-300" />,
 };
 
 export function AboutSection() {
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-visual');
 
   return (
-    <section id="about" className="py-24 sm:py-32 bg-[#708090] relative">
-      <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.4 }}>
-        <Grainient 
-          timeSpeed={0.15}
-          colorBalance={0.1}
-          warpStrength={0.8}
-          warpFrequency={4.0}
-          warpSpeed={1.5}
-          warpAmplitude={40.0}
-          blendAngle={45.0}
-          blendSoftness={0.1}
-          rotationAmount={400.0}
-          noiseScale={1.5}
-          grainAmount={0.08}
-          grainScale={2.5}
-          grainAnimated={true}
-          contrast={1.3}
-          gamma={1.0}
-          saturation={1.1}
-          centerX={0.0}
-          centerY={0.0}
-          zoom={0.8}
-          color1="#FF9FFC"
-          color2="#5227FF"
-          color3="#B19EEF"
-        />
-      </div>
+    <section id="about" className="py-24 sm:py-32 bg-transparent text-white relative">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 relative">
+        <div className="text-center mb-12 relative">
           <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-            <span className="text-[13vw] font-headline font-extrabold text-white/10 select-none">
+            <span className="text-[14vw] font-headline font-extrabold text-white/[0.18] tracking-wider select-none drop-shadow-[0_2px_15px_rgba(0,0,0,0.5)]">
               ABOUT
             </span>
           </div>
-          <ScrollAnimation className="relative z-10">
-            <h1 className="font-headline text-8xl sm:text-6xl tracking-tight font-bold text-white">About Me</h1>
+          <ScrollAnimation className="relative z-10 space-y-3">
+
+            <div className="flex justify-center my-2">
+              <StrokeText
+                text="ABOUT ME"
+                fontSize={52}
+                strokeColor="#c084fc"
+                fillColor="#ffffff"
+                strokeWidth={1.8}
+                drawDuration={1.8}
+                trigger="scroll"
+                fillMode="wipe"
+                letterSpacing={2}
+              />
+            </div>
           </ScrollAnimation>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div className="space-y-6 text-center lg:text-left">
-            <div className="space-y-5 text-2xl font-serif font-light text-white text-pretty">
-              <Typewriter>
-                    I'm a B.Tech student who loves building clean <HoverableText
-                  imageUrl="https://picsum.photos/seed/interfaces/200/200"
-                  imageHint="clean interface"
-                  className="font-headline font-bold text-3xl"
+
+        {/* Curved Loop Marquee */}
+        <div className="my-10">
+          <CurvedLoop
+            marqueeText="✦ REACT.JS ✦ FASTAPI ✦ JAVA ✦ SELENIUM ✦ JMETER ✦ MONGODB ATLAS ✦ SOCKET.IO ✦ TAILWIND CSS ✦ NEXT.JS ✦ 300+ LEETCODE ✦"
+            speed={2}
+            curveAmount={80}
+            className="fill-purple-300 tracking-widest text-2xl sm:text-3xl"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-start mt-12">
+          {/* Bio Column */}
+          <div className="space-y-6">
+            <div className="font-body text-2xl sm:text-3xl leading-relaxed space-y-4">
+              <div className="text-white font-medium">
+                I'm a Graduate Engineer Trainee at Coforge and full-stack developer dedicated to building impactful{" "}
+                <HoverableText
+                  imageUrl="https://picsum.photos/seed/webapps/200/200"
+                  imageHint="digital interface"
+                  className="font-headline font-bold text-2xl sm:text-3xl text-purple-300"
                 >
-                  interfaces
-                </HoverableText>, scalable <HoverableText
-                  imageUrl="https://picsum.photos/seed/systems/200/200"
-                  imageHint="scalable systems"
-                  className="font-headline font-bold text-3xl"
-                >
-                  systems
-                </HoverableText>, and practical <HoverableText
-                  imageUrl="https://picsum.photos/seed/tools/200/200"
-                  imageHint="practical tools"
-                  className="font-headline font-bold text-3xl"
-                >
-                  tools
-                </HoverableText> that help people.
-              </Typewriter>
-              <Typewriter>
-                  I enjoy experimenting with modern web stacks, shipping fast, and continuously improving my craft. My passion lies at the intersection of design, technology, and user experience.
-              </Typewriter>
+                  applications
+                </HoverableText>{" "}
+                that create real-world value.
+              </div>
+              <div className="text-slate-200 text-lg sm:text-xl font-light leading-relaxed">
+                Specializing in React.js, FastAPI, Java, and Enterprise Test Automation (Selenium, JMeter, Jenkins). With experience building e-commerce platforms, AI legal agents, and automated test frameworks with 95%+ pass rates, I focus on performance, reliability, and clean engineering.
+              </div>
             </div>
+
             {aboutImage && (
-              <div className="pt-8 flex justify-center lg:justify-start">
-                <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square rounded-lg overflow-hidden border">
+              <div className="pt-6 flex justify-center lg:justify-start">
+                <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
                   <Image 
                     src={aboutImage.imageUrl} 
                     alt={aboutImage.description} 
@@ -101,35 +133,72 @@ export function AboutSection() {
               </div>
             )}
           </div>
-          <div className="space-y-8">
-            <h3 className="font-headline text-3xl tracking-tight text-center lg:text-left">My Skillset</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
-              {Object.entries(skills).map(([category, skillList], index) => (
-                <ScrollAnimation key={category} delay={index * 150}>
-                  <Card className="h-full bg-card/60 backdrop-blur-sm border-border/50 transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1.5 hover:border-primary">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-4 font-headline text-xl">
-                        {categoryIcons[category] || <CheckCircle2 className="h-6 w-6 text-accent" />}
-                        <span>{category}</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-3 pt-2">
-                        {skillList.map((skill) => (
-                          <li key={skill} className="flex items-center gap-3">
-                            <CheckCircle2 className="h-4 w-4 text-chart-2 shrink-0" />
-                            <span className="text-muted-foreground">{skill}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </ScrollAnimation>
-              ))}
+
+          {/* Sleek Skillset Presentation */}
+          <div className="space-y-6">
+            <div className="flex justify-center lg:justify-start my-2">
+              <StrokeText
+                text="TECHNICAL SKILLSET"
+                fontSize={34}
+                strokeColor="#c084fc"
+                fillColor="#ffffff"
+                strokeWidth={1.5}
+                drawDuration={1.6}
+                trigger="scroll"
+                fillMode="wipe"
+                letterSpacing={2}
+              />
             </div>
+            
+            <ScrollAnimation delay={100} className="space-y-4">
+              {Object.entries(skills).map(([category, items]) => (
+                <div
+                  key={category}
+                  className="group rounded-2xl p-4 sm:p-5 bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-purple-500/40 transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:-translate-y-0.5"
+                >
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <div className="p-1.5 rounded-lg bg-purple-500/10 border border-purple-500/20">
+                      {categoryIcons[category] || <Code2 className="h-4 w-4 text-purple-300" />}
+                    </div>
+                    <h3 className="font-headline font-bold text-base text-white tracking-wide">
+                      {category}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {items.map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 text-xs sm:text-sm rounded-lg bg-white/5 group-hover:bg-purple-500/10 text-slate-300 group-hover:text-purple-200 border border-white/5 group-hover:border-purple-500/20 transition-colors"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </ScrollAnimation>
           </div>
+        </div>
+
+        {/* Interactive Infinite Tech Logo Loop at the End of About Section */}
+        <div className="mt-16 pt-8 border-t border-white/10">
+          <div className="text-center text-xs uppercase tracking-widest text-slate-400 mb-6 font-semibold">
+            Tech Stack & Core Technologies
+          </div>
+          <LogoLoop
+            logos={techLogos}
+            speed={35}
+            direction="left"
+            logoHeight={34}
+            gap={48}
+            hoverSpeed={10}
+            scaleOnHover
+            className="py-2"
+          />
         </div>
       </div>
     </section>
   );
 }
+
+export default AboutSection;
