@@ -15,7 +15,7 @@ const QAPairs = [
   },
   {
     q: ["education", "studies", "academic", "college", "where do you study", "institute", "university", "school", "qualification", "cgpa"],
-    a: "I am currently pursuing a B.Tech in Computer Science (AIML) at GL Bajaj Institute of Technology and Management (2023-2027), with a current CGPA of 7.76. Before that, I graduated from Rajni Public School, scoring 86% in Class XII and 90% in Class X."
+    a: "I am currently pursuing a B.Tech in Computer Science (AIML) at GL Bajaj Institute of Technology and Management (2023-2027), with a current CGPA of 7.76, and serving as a Graduate Engineer Trainee at Coforge."
   },
   {
     q: ["experience", "club", "abhyudaya"],

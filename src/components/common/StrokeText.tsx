@@ -72,9 +72,11 @@ const StrokeText = ({
 
   const fontStyle = useMemo<CSSProperties>(
     () => ({
+      fontFamily: 'Antonio, "Barlow Condensed", "Bebas Neue", sans-serif',
       fontSize: `${fontSize}px`,
       fontWeight,
-      letterSpacing: `${letterSpacing}px`
+      letterSpacing: `${letterSpacing}px`,
+      textTransform: 'uppercase' as const,
     }),
     [fontSize, fontWeight, letterSpacing]
   );

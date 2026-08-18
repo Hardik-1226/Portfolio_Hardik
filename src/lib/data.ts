@@ -75,18 +75,6 @@ export const contact = {
 
 export const timeline = [
   {
-    year: "2020 – 2021",
-    title: "Completed Class X — 90%",
-    description: "Graduated Class X from Rajni Public School with an outstanding score of 90%.",
-    image: "timeline-2020",
-  },
-  {
-    year: "2022 – 2023",
-    title: "Completed Class XII — 86%",
-    description: "Graduated Class XII (PCM) from Rajni Public School with a top score of 86%.",
-    image: "timeline-2021",
-  },
-  {
     year: "2023 – 2027",
     title: "B.Tech in Computer Science (AIML)",
     description: "Pursuing B.Tech in CSE with specialization in AI & Machine Learning at GL Bajaj Institute of Technology and Management, Greater Noida.",

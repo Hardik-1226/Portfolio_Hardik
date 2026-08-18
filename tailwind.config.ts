@@ -10,9 +10,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['PT Sans', 'sans-serif'],
-        headline: ['Literata', 'serif'],
-        code: ['monospace'],
+        body: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+        headline: ['Antonio', '"Barlow Condensed"', '"Bebas Neue"', 'sans-serif'],
+        display: ['Antonio', '"Barlow Condensed"', '"Bebas Neue"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+        code: ['"JetBrains Mono"', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',

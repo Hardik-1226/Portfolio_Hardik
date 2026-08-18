@@ -50,12 +50,12 @@ const techLogos = [
 ];
 
 const categoryIcons: Record<string, React.ReactNode> = {
-  "Languages": <Terminal className="h-4 w-4 text-purple-300" />,
-  "Frontend": <Code2 className="h-4 w-4 text-indigo-300" />,
-  "Backend & Database": <Server className="h-4 w-4 text-sky-300" />,
-  "Testing & CI/CD": <CheckCircle2 className="h-4 w-4 text-emerald-300" />,
-  "Data & ML": <Wrench className="h-4 w-4 text-fuchsia-300" />,
-  "Infrastructure & Concepts": <Layers className="h-4 w-4 text-violet-300" />,
+  "Languages": <Terminal className="h-4 w-4 text-white" />,
+  "Frontend": <Code2 className="h-4 w-4 text-zinc-300" />,
+  "Backend & Database": <Server className="h-4 w-4 text-zinc-300" />,
+  "Testing & CI/CD": <CheckCircle2 className="h-4 w-4 text-white" />,
+  "Data & ML": <Wrench className="h-4 w-4 text-zinc-300" />,
+  "Infrastructure & Concepts": <Layers className="h-4 w-4 text-zinc-300" />,
 };
 
 export function AboutSection() {
@@ -66,23 +66,22 @@ export function AboutSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 relative">
           <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-            <span className="text-[14vw] font-headline font-extrabold text-white/[0.18] tracking-wider select-none drop-shadow-[0_2px_15px_rgba(0,0,0,0.5)]">
+            <span className="text-[14vw] font-headline font-bold text-white/[0.04] uppercase tracking-widest select-none">
               ABOUT
             </span>
           </div>
           <ScrollAnimation className="relative z-10 space-y-3">
-
             <div className="flex justify-center my-2">
               <StrokeText
                 text="ABOUT ME"
-                fontSize={52}
-                strokeColor="#c084fc"
+                fontSize={56}
+                strokeColor="#a1a1aa"
                 fillColor="#ffffff"
                 strokeWidth={1.8}
                 drawDuration={1.8}
                 trigger="scroll"
                 fillMode="wipe"
-                letterSpacing={2}
+                letterSpacing={3}
               />
             </div>
           </ScrollAnimation>
@@ -94,26 +93,18 @@ export function AboutSection() {
             marqueeText="✦ REACT.JS ✦ FASTAPI ✦ JAVA ✦ SELENIUM ✦ JMETER ✦ MONGODB ATLAS ✦ SOCKET.IO ✦ TAILWIND CSS ✦ NEXT.JS ✦ 300+ LEETCODE ✦"
             speed={2}
             curveAmount={80}
-            className="fill-purple-300 tracking-widest text-2xl sm:text-3xl"
+            className="fill-white tracking-widest text-2xl sm:text-3xl drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)]"
           />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-start mt-12">
           {/* Bio Column */}
           <div className="space-y-6">
-            <div className="font-body text-2xl sm:text-3xl leading-relaxed space-y-4">
+            <div className="font-body text-xl sm:text-2xl leading-relaxed space-y-4">
               <div className="text-white font-medium">
-                I'm a Graduate Engineer Trainee at Coforge and full-stack developer dedicated to building impactful{" "}
-                <HoverableText
-                  imageUrl="https://picsum.photos/seed/webapps/200/200"
-                  imageHint="digital interface"
-                  className="font-headline font-bold text-2xl sm:text-3xl text-purple-300"
-                >
-                  applications
-                </HoverableText>{" "}
-                that create real-world value.
+                I'm a Graduate Engineer Trainee at Coforge and full-stack developer dedicated to building impactful applications that create real-world value.
               </div>
-              <div className="text-slate-200 text-lg sm:text-xl font-light leading-relaxed">
+              <div className="text-zinc-300 text-base sm:text-lg font-normal leading-relaxed">
                 Specializing in React.js, FastAPI, Java, and Enterprise Test Automation (Selenium, JMeter, Jenkins). With experience building e-commerce platforms, AI legal agents, and automated test frameworks with 95%+ pass rates, I focus on performance, reliability, and clean engineering.
               </div>
             </div>
@@ -125,7 +116,7 @@ export function AboutSection() {
                     src={aboutImage.imageUrl} 
                     alt={aboutImage.description} 
                     fill 
-                    className="object-cover" 
+                    className="object-cover grayscale hover:grayscale-0 transition-all duration-500" 
                     data-ai-hint={aboutImage.imageHint}
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                   />
@@ -139,14 +130,14 @@ export function AboutSection() {
             <div className="flex justify-center lg:justify-start my-2">
               <StrokeText
                 text="TECHNICAL SKILLSET"
-                fontSize={34}
-                strokeColor="#c084fc"
+                fontSize={36}
+                strokeColor="#a1a1aa"
                 fillColor="#ffffff"
                 strokeWidth={1.5}
                 drawDuration={1.6}
                 trigger="scroll"
                 fillMode="wipe"
-                letterSpacing={2}
+                letterSpacing={3}
               />
             </div>
             
@@ -154,13 +145,13 @@ export function AboutSection() {
               {Object.entries(skills).map(([category, items]) => (
                 <div
                   key={category}
-                  className="group rounded-2xl p-4 sm:p-5 bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-purple-500/40 transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:-translate-y-0.5"
+                  className="group rounded-2xl p-4 sm:p-5 bg-zinc-900/60 hover:bg-zinc-900/90 border border-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:-translate-y-0.5"
                 >
                   <div className="flex items-center gap-2.5 mb-3">
-                    <div className="p-1.5 rounded-lg bg-purple-500/10 border border-purple-500/20">
-                      {categoryIcons[category] || <Code2 className="h-4 w-4 text-purple-300" />}
+                    <div className="p-1.5 rounded-lg bg-white/5 border border-white/10">
+                      {categoryIcons[category] || <Code2 className="h-4 w-4 text-white" />}
                     </div>
-                    <h3 className="font-headline font-bold text-base text-white tracking-wide">
+                    <h3 className="font-headline font-bold text-lg uppercase tracking-wider text-white">
                       {category}
                     </h3>
                   </div>
@@ -168,7 +159,7 @@ export function AboutSection() {
                     {items.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3 py-1 text-xs sm:text-sm rounded-lg bg-white/5 group-hover:bg-purple-500/10 text-slate-300 group-hover:text-purple-200 border border-white/5 group-hover:border-purple-500/20 transition-colors"
+                        className="px-3 py-1 text-xs sm:text-sm rounded-lg bg-white/5 group-hover:bg-white/10 text-zinc-300 group-hover:text-white border border-white/5 group-hover:border-white/20 transition-colors font-mono font-medium"
                       >
                         {skill}
                       </span>

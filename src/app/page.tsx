@@ -37,10 +37,10 @@ export default function Home() {
             overlayScrim={0.6}
           >
             <div className="max-w-3xl mx-auto space-y-3">
-              <h2 className="font-headline font-black text-4xl sm:text-6xl text-white tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
+              <h2 className="font-headline font-bold text-5xl sm:text-7xl text-white uppercase tracking-wide drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
                 Behind the Code
               </h2>
-              <p className="text-base sm:text-xl text-slate-200 font-medium max-w-2xl mx-auto">
+              <p className="text-base sm:text-xl text-zinc-300 font-normal max-w-2xl mx-auto">
                 Blending thoughtful engineering, creative problem solving, and modern web architectures.
               </p>
             </div>
@@ -68,10 +68,10 @@ export default function Home() {
             overlayScrim={0.65}
           >
             <div className="max-w-3xl mx-auto space-y-3">
-              <h2 className="font-headline font-black text-4xl sm:text-6xl text-white tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
+              <h2 className="font-headline font-bold text-5xl sm:text-7xl text-white uppercase tracking-wide drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
                 Milestones of Excellence
               </h2>
-              <p className="text-base sm:text-xl text-slate-200 font-medium max-w-2xl mx-auto">
+              <p className="text-base sm:text-xl text-zinc-300 font-normal max-w-2xl mx-auto">
                 National hackathon victories, algorithmic mastery, and leadership in tech communities.
               </p>
             </div>
@@ -100,10 +100,10 @@ export default function Home() {
             overlayScrim={0.55}
           >
             <div className="max-w-3xl mx-auto space-y-3">
-              <h2 className="font-headline font-black text-4xl sm:text-6xl text-white tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
+              <h2 className="font-headline font-bold text-5xl sm:text-7xl text-white uppercase tracking-wide drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
                 Knowledge & Credentials
               </h2>
-              <p className="text-base sm:text-xl text-slate-200 font-medium max-w-2xl mx-auto">
+              <p className="text-base sm:text-xl text-zinc-300 font-normal max-w-2xl mx-auto">
                 Validated proficiency in Oracle Generative AI, test automation suites, and modern full-stack development.
               </p>
             </div>
