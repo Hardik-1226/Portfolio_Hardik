@@ -315,8 +315,9 @@ function checkConversationalPatterns(input: string): { answer: string; chips: st
   }
 
   // Compliments
-  const compliments = ['good', 'great', 'awesome', 'amazing', 'excellent', 'cool', 'nice', 'impressive', 'wonderful', 'fantastic', 'brilliant', 'beautiful', 'handsome', 'smart', 'intelligent', 'talented', 'genius', 'pro', 'best'];
-  if (compliments.some(c => q.includes(c)) && q.length < 60) {
+  const compliments = ['good', 'great', 'awesome', 'amazing', 'excellent', 'cool', 'nice', 'impressive', 'wonderful', 'fantastic', 'brilliant', 'beautiful', 'handsome', 'smart', 'intelligent', 'talented', 'genius', 'best'];
+  const complimentRegex = new RegExp(`\\b(${compliments.join('|')})\\b`, 'i');
+  if (complimentRegex.test(q) && q.length < 60) {
     return {
       answer: "Thank you for the kind words! 😊 Hardik would appreciate that. Is there something specific you'd like to know about him?",
       chips: ['About Hardik', 'Achievements', 'Projects'],
