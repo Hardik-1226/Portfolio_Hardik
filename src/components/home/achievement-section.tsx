@@ -31,16 +31,16 @@ export function AchievementSection() {
               <StrokeText
                 text="MY ACHIEVEMENTS"
                 fontSize={56}
-                strokeColor="#a1a1aa"
+                strokeColor="#e2e8f0"
                 fillColor="#ffffff"
-                strokeWidth={1.8}
+                strokeWidth={2.0}
                 drawDuration={1.8}
                 trigger="scroll"
                 fillMode="wipe"
                 letterSpacing={3}
               />
             </div>
-            <p className="mt-4 text-lg sm:text-xl text-zinc-300 font-normal max-w-2xl mx-auto">
+            <p className="mt-4 text-lg sm:text-xl text-slate-300 font-medium max-w-2xl mx-auto">
               National hackathons, competitive problem-solving milestones, and community impact.
             </p>
           </ScrollAnimation>
@@ -59,7 +59,7 @@ export function AchievementSection() {
                         src={achImage.imageUrl}
                         alt={ach.title}
                         fill
-                        className="object-cover grayscale hover:grayscale-0 transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                         data-ai-hint={achImage.imageHint}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />

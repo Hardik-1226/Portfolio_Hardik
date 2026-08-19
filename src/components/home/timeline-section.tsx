@@ -79,18 +79,18 @@ export function TimelineSection() {
               <StrokeText
                 text="MY JOURNEY"
                 fontSize={56}
-                strokeColor="#a1a1aa"
+                strokeColor="#e2e8f0"
                 fillColor="#ffffff"
-                strokeWidth={1.8}
+                strokeWidth={2.0}
                 drawDuration={1.8}
                 trigger="scroll"
                 fillMode="wipe"
                 letterSpacing={3}
               />
             </div>
-            <div className="mt-4 text-lg sm:text-xl text-zinc-300 font-normal max-w-2xl mx-auto">
-              A chronology of academic rigor, technical leadership, and industry engineering.
-            </div>
+            <p className="mt-4 text-lg sm:text-xl text-slate-300 font-medium max-w-2xl mx-auto">
+              Key milestones, academic foundation, and engineering leadership.
+            </p>
           </ScrollAnimation>
         </div>
 

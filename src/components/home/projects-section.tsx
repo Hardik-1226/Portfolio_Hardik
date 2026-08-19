@@ -26,24 +26,24 @@ export function ProjectsSection() {
               <StrokeText
                 text="FEATURED PROJECTS"
                 fontSize={56}
-                strokeColor="#a1a1aa"
+                strokeColor="#e2e8f0"
                 fillColor="#ffffff"
-                strokeWidth={1.8}
+                strokeWidth={2.0}
                 drawDuration={1.8}
                 trigger="scroll"
                 fillMode="wipe"
                 letterSpacing={3}
               />
             </div>
-            <div className="mt-4 text-2xl text-zinc-300">
+            <div className="mt-4 text-2xl text-slate-200">
               <RotatingText 
                 texts={['INNOVATIVE SOLUTIONS', 'SCALABLE SYSTEMS', 'TECHNICAL EXCELLENCE', 'REAL-WORLD IMPACT']}
                 rotationInterval={3000}
                 staggerDuration={0.05}
-                className="font-headline font-bold text-2xl sm:text-3xl text-white uppercase tracking-wider"
+                className="font-headline font-black text-2xl sm:text-3xl text-white uppercase tracking-wider"
               />
             </div>
-            <div className="mt-4 text-lg sm:text-xl text-zinc-300 font-normal max-w-2xl mx-auto">
+            <div className="mt-4 text-lg sm:text-xl text-slate-300 font-medium max-w-2xl mx-auto">
               A curated selection of software systems engineered for high performance, reliability, and business impact.
             </div>
           </ScrollAnimation>

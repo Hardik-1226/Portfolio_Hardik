@@ -154,16 +154,16 @@ export function ContactSection() {
           <StrokeText
             text="GET IN TOUCH"
             fontSize={56}
-            strokeColor="#a1a1aa"
+            strokeColor="#e2e8f0"
             fillColor="#ffffff"
-            strokeWidth={1.8}
+            strokeWidth={2.0}
             drawDuration={1.8}
             trigger="scroll"
             fillMode="wipe"
             letterSpacing={3}
           />
         </div>
-        <p className="text-zinc-300 text-base sm:text-lg font-normal relative z-10 max-w-xl mx-auto">
+        <p className="text-slate-300 text-base sm:text-lg font-medium relative z-10 max-w-xl mx-auto">
           Thanks for visiting! Reach out directly or connect with me:
         </p>
 
@@ -171,9 +171,9 @@ export function ContactSection() {
           <StrokeText
             text="ALWAYS CURIOUS • CONSTANTLY LEARNING"
             fontSize={22}
-            strokeColor="#a1a1aa"
+            strokeColor="#e2e8f0"
             fillColor="#ffffff"
-            strokeWidth={1.2}
+            strokeWidth={1.4}
             trigger="scroll"
             fillMode="wipe"
             letterSpacing={3}

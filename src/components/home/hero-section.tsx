@@ -27,13 +27,13 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
           <div className="lg:col-span-3">
-            <div className="font-body text-2xl sm:text-3xl md:text-4xl tracking-tight leading-snug text-center space-y-5 text-white">
+            <div className="font-body text-2xl sm:text-3xl md:text-4xl tracking-tight leading-snug text-center space-y-5 text-slate-100">
               <div className="space-y-2">
                 <h1 className="font-headline font-bold text-5xl sm:text-7xl md:text-8xl tracking-tight uppercase">
                   <MaskedHeading
                     text="Hey, I'm Hardik."
                     mediaType="gradient"
-                    gradient="linear-gradient(135deg, #ffffff 0%, #f4f4f5 45%, #d4d4d8 70%, #a1a1aa 100%)"
+                    gradient="linear-gradient(135deg, #ffffff 0%, #f8fafc 40%, #e2e8f0 70%, #cbd5e1 100%)"
                     className="font-headline font-bold text-5xl sm:text-7xl md:text-8xl text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)] uppercase tracking-tight"
                     trigger="mount"
                   />
@@ -43,17 +43,17 @@ export function HeroSection() {
                 <StrokeText
                   text="GRADUATE ENGINEER & DEVELOPER"
                   fontSize={28}
-                  strokeColor="#a1a1aa"
+                  strokeColor="#e2e8f0"
                   fillColor="#ffffff"
-                  strokeWidth={1.3}
+                  strokeWidth={1.8}
                   drawDuration={1.5}
                   trigger="mount"
                   fillMode="wipe"
                   letterSpacing={3}
                 />
               </div>
-              <div className="text-zinc-200 font-medium">Graduate Engineer Trainee at Coforge</div>
-              <div className="text-lg sm:text-xl text-zinc-300 font-normal max-w-2xl mx-auto leading-relaxed">
+              <div className="text-slate-200 font-semibold tracking-wide uppercase text-sm sm:text-base">Graduate Engineer Trainee at Coforge</div>
+              <div className="text-lg sm:text-xl text-slate-300 font-medium max-w-2xl mx-auto leading-relaxed">
                 Full-Stack Developer specializing in React.js, FastAPI & Java, with hands-on experience in building scalable marketplaces, legal automation, and enterprise test frameworks to inspire and deliver real-world impact.
               </div>
             </div>
@@ -61,7 +61,7 @@ export function HeroSection() {
           <div className="lg:col-span-2 relative w-full h-[520px] sm:h-[600px] overflow-hidden rounded-3xl [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_98%)] shadow-2xl">
             {/* Soft border and inner vignette glow */}
             <div className="absolute inset-0 pointer-events-none rounded-3xl border border-white/10 [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black_100%)] z-10" />
-            <div className="absolute inset-0 pointer-events-none rounded-3xl [box-shadow:inset_0_0_50px_25px_#09090b] z-10" />
+            <div className="absolute inset-0 pointer-events-none rounded-3xl [box-shadow:inset_0_0_50px_25px_#0c0e17] z-10" />
             <DriftWall
               items={driftItems}
               columns={4}
@@ -77,9 +77,10 @@ export function HeroSection() {
               variance={0.45}
               parallax={0.6}
               lift={64}
-              fade={0.2}
-              dim={0.92}
-              overlayColor="#09090b"
+              fade={0.15}
+              dim={0.96}
+              grayscale={false}
+              overlayColor="#0c0e17"
             />
           </div>
         </div>

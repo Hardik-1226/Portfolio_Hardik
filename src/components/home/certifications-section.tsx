@@ -25,16 +25,16 @@ export function CertificationsSection() {
               <StrokeText
                 text="MY CERTIFICATIONS"
                 fontSize={56}
-                strokeColor="#a1a1aa"
+                strokeColor="#e2e8f0"
                 fillColor="#ffffff"
-                strokeWidth={1.8}
+                strokeWidth={2.0}
                 drawDuration={1.8}
                 trigger="scroll"
                 fillMode="wipe"
                 letterSpacing={3}
               />
             </div>
-            <div className="mt-4 text-lg sm:text-xl text-zinc-300 font-normal max-w-2xl mx-auto">
+            <div className="mt-4 text-lg sm:text-xl text-slate-300 font-medium max-w-2xl mx-auto">
               Industry credentials and verified proficiencies in Generative AI, cloud, and test automation.
             </div>
           </ScrollAnimation>
@@ -51,7 +51,7 @@ export function CertificationsSection() {
                         src={certImage.imageUrl}
                         alt={cert.title}
                         fill
-                        className="object-cover grayscale hover:grayscale-0 transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                         data-ai-hint={certImage.imageHint}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />

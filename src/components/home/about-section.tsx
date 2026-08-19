@@ -75,9 +75,9 @@ export function AboutSection() {
               <StrokeText
                 text="ABOUT ME"
                 fontSize={56}
-                strokeColor="#a1a1aa"
+                strokeColor="#e2e8f0"
                 fillColor="#ffffff"
-                strokeWidth={1.8}
+                strokeWidth={2.0}
                 drawDuration={1.8}
                 trigger="scroll"
                 fillMode="wipe"
@@ -116,7 +116,7 @@ export function AboutSection() {
                     src={aboutImage.imageUrl} 
                     alt={aboutImage.description} 
                     fill 
-                    className="object-cover grayscale hover:grayscale-0 transition-all duration-500" 
+                    className="object-cover transition-all duration-500 hover:scale-105" 
                     data-ai-hint={aboutImage.imageHint}
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                   />
