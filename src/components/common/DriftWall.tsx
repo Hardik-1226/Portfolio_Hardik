@@ -281,7 +281,7 @@ export const DriftWall = ({
   const innerClass = cx(
     'pointer-events-none absolute inset-[calc(var(--dw-gap)/2)] block overflow-hidden bg-[#0b0b12]',
     'rounded-[var(--dw-radius)] opacity-[var(--dw-dim)] [transform:translateZ(0)]',
-    'transition-[transform,opacity,box-shadow] duration-[420ms] ease-[cubic-bezier(0.22,1,0.36,1)]',
+    'transition-[transform,opacity,box-shadow] duration-420 ease-drift',
     'group-[.is-active]/tile:opacity-100 group-[.is-active]/tile:[transform:translateZ(var(--dw-lift))]',
     'group-[.is-active]/tile:shadow-[0_24px_60px_-18px_rgba(0,0,0,0.7)]',
     'group-focus-visible/tile:opacity-100 group-focus-visible/tile:[transform:translateZ(var(--dw-lift))]',
@@ -290,12 +290,12 @@ export const DriftWall = ({
   const imgClass = cx(
     'block h-full w-full select-none object-cover',
     '[filter:grayscale(var(--dw-gray))_saturate(1.0)]',
-    'transition-[filter] duration-[420ms] ease-[cubic-bezier(0.22,1,0.36,1)]',
+    'transition-[filter] duration-420 ease-drift',
     'group-[.is-active]/tile:[filter:grayscale(0)_saturate(1.1)] group-focus-visible/tile:[filter:grayscale(0)_saturate(1.1)]'
   );
   const overlayClass = cx(
     'pointer-events-none absolute inset-0 bg-[var(--dw-overlay)] opacity-[0.15]',
-    'transition-opacity duration-[420ms] ease-[cubic-bezier(0.22,1,0.36,1)]',
+    'transition-opacity duration-420 ease-drift',
     'group-[.is-active]/tile:opacity-0 group-focus-visible/tile:opacity-0'
   );
 

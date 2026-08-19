@@ -459,7 +459,7 @@ export const CurvedInput = ({
         </defs>
 
         <path
-          className={`opacity-0 transition-opacity duration-[250ms] ease-in-out ${focused ? 'opacity-[0.28]' : ''}`}
+          className={`opacity-0 transition-opacity duration-250 ease-in-out ${focused ? 'opacity-[0.28]' : ''}`}
           d={bandPath}
           fill="none"
           stroke={accentColor}

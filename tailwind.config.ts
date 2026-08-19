@@ -9,6 +9,16 @@ export default {
   ],
   theme: {
     extend: {
+      transitionDuration: {
+        '10': '10ms',
+        '250': '250ms',
+        '420': '420ms',
+      },
+      transitionTimingFunction: {
+        'smooth': 'cubic-bezier(0.25, 0.1, 0.25, 1)',
+        'drift': 'cubic-bezier(0.22, 1, 0.36, 1)',
+        'standard': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
       fontFamily: {
         body: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
         headline: ['Antonio', '"Barlow Condensed"', '"Bebas Neue"', 'sans-serif'],
